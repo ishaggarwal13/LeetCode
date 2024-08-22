@@ -9,13 +9,13 @@ public:
                 mini++;
                 maxi++;
             }else if(st == ')'){
-                mini--;
+                mini = max(mini-1, 0);
                 maxi--;
             }else {
-                mini--;
+                mini = max(mini-1, 0);
                 maxi++;
             }
-            if(mini<0) mini=0;
+            //if(mini<0) mini=0; //directly can check the condition using max of mini value
             if(maxi<0) return false;
         }
         return (mini==0);
