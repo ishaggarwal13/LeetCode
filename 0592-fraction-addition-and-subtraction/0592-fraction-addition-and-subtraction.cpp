@@ -1,5 +1,6 @@
 class Solution {
 public:
+    //O(n) and O(1)
     string fractionAddition(string expression) {
         int numerator=0, denominator=1; //intially 0/1 
         int i=0, n=expression.size();
