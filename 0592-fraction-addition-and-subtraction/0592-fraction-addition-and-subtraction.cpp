@@ -30,7 +30,7 @@ public:
             numerator = den*numerator + num*denominator;
             denominator = den * denominator;
 
-            int gcdval = gcd(numerator, denominator);
+            int gcdval = gcd(abs(numerator), denominator);
             numerator /= gcdval;
             denominator /= gcdval;
         }
