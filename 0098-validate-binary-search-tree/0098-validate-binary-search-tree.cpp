@@ -11,17 +11,21 @@
  */
 class Solution {
 public: //O(n) & O(1)
-    bool check(TreeNode* root, int* min, int* max){
-        if(root == nullptr) return true; //empty node is bst
-
-        if((min && root->val <= *min) || (max && root->val >= *max)){
-            return false;
-        }
-
-        return check(root->left, min, &(root->val)) 
-            && check(root->right, &(root->val), max);
+    void inorder(TreeNode* root, vector<int>& ans){
+        if(root == nullptr) return;
+        inorder(root->left, ans);
+        ans.push_back(root->val);
+        inorder(root->right, ans);
     }
     bool isValidBST(TreeNode* root) {
-        return check(root, NULL, NULL); //failed for INT_MAX AND MIN SOR USE NULL POINTERS
+        vector<int> ans;
+        inorder(root, ans);
+
+        for(int i=1; i<ans.size(); i++){
+            if(ans[i] <= ans[i-1]){
+                return false;
+            }
+        }
+        return true;
     }
 };
