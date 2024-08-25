@@ -32,6 +32,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0045-jump-game-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/ishaggarwal13/LeetCode/tree/master/0055-jump-game) |
+| [0419-battleships-in-a-board](https://github.com/ishaggarwal13/LeetCode/tree/master/0419-battleships-in-a-board) |
 | [0455-assign-cookies](https://github.com/ishaggarwal13/LeetCode/tree/master/0455-assign-cookies) |
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
 ## Two Pointers
@@ -87,6 +88,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0098-validate-binary-search-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0098-validate-binary-search-tree) |
 | [0145-binary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0145-binary-tree-postorder-traversal) |
 | [0199-binary-tree-right-side-view](https://github.com/ishaggarwal13/LeetCode/tree/master/0199-binary-tree-right-side-view) |
+| [0419-battleships-in-a-board](https://github.com/ishaggarwal13/LeetCode/tree/master/0419-battleships-in-a-board) |
 | [0543-diameter-of-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0543-diameter-of-binary-tree) |
 ## Breadth-First Search
 |  |
@@ -119,4 +121,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0098-validate-binary-search-tree) |
+## Matrix
+|  |
+| ------- |
+| [0419-battleships-in-a-board](https://github.com/ishaggarwal13/LeetCode/tree/master/0419-battleships-in-a-board) |
 <!---LeetCode Topics End-->
