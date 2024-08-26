@@ -13,6 +13,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0620-not-boring-movies](https://github.com/ishaggarwal13/LeetCode/tree/master/0620-not-boring-movies) |
 | [1161-project-employees-i](https://github.com/ishaggarwal13/LeetCode/tree/master/1161-project-employees-i) |
 | [1258-article-views-i](https://github.com/ishaggarwal13/LeetCode/tree/master/1258-article-views-i) |
+| [1390-average-selling-price](https://github.com/ishaggarwal13/LeetCode/tree/master/1390-average-selling-price) |
 | [1415-students-and-examinations](https://github.com/ishaggarwal13/LeetCode/tree/master/1415-students-and-examinations) |
 | [1724-customer-who-visited-but-did-not-make-any-transactions](https://github.com/ishaggarwal13/LeetCode/tree/master/1724-customer-who-visited-but-did-not-make-any-transactions) |
 | [1773-percentage-of-users-attended-a-contest](https://github.com/ishaggarwal13/LeetCode/tree/master/1773-percentage-of-users-attended-a-contest) |
