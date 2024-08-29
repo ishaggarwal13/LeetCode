@@ -25,6 +25,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1390-average-selling-price](https://github.com/ishaggarwal13/LeetCode/tree/master/1390-average-selling-price) |
 | [1415-students-and-examinations](https://github.com/ishaggarwal13/LeetCode/tree/master/1415-students-and-examinations) |
 | [1541-top-travellers](https://github.com/ishaggarwal13/LeetCode/tree/master/1541-top-travellers) |
+| [1625-group-sold-products-by-the-date](https://github.com/ishaggarwal13/LeetCode/tree/master/1625-group-sold-products-by-the-date) |
 | [1724-customer-who-visited-but-did-not-make-any-transactions](https://github.com/ishaggarwal13/LeetCode/tree/master/1724-customer-who-visited-but-did-not-make-any-transactions) |
 | [1773-percentage-of-users-attended-a-contest](https://github.com/ishaggarwal13/LeetCode/tree/master/1773-percentage-of-users-attended-a-contest) |
 | [1801-average-time-of-process-per-machine](https://github.com/ishaggarwal13/LeetCode/tree/master/1801-average-time-of-process-per-machine) |
