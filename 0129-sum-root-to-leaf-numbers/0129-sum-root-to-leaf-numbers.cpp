@@ -11,22 +11,23 @@
  */
 class Solution {
 public:
-    //recursive O(N) & O(H)~O(N)
-    int dfs(TreeNode* root, int currsum){
-        if(!root) return 0;
-        currsum = currsum*10 + root->val; //storing value of root
-
-        //checking for leaf node and return the currsum
-        if(!root->left && !root->right) return currsum;
-
-        int leftsum = dfs(root->left, currsum);
-        int rightsum = dfs(root->right, currsum);
-
-        return leftsum + rightsum;
-    }
-    
+    //iterative using bfs using queue O(N) & O(H)~O(N)
     int sumNumbers(TreeNode* root) {
-        int currsum = 0;
-        return dfs(root, currsum);
+        int totalsum = 0;
+        queue<pair<TreeNode*, int>> q;
+        q.push({root, 0});
+
+        while(!q.empty()){
+            auto [root, currsum] = q.front();
+            q.pop();
+
+            currsum = currsum*10 + root->val;
+            if(!root->left && !root->right) totalsum += currsum;
+
+            if(root->left) q.push({root->left, currsum});
+            if(root->right) q.push({root->right, currsum});
+        }
+
+        return totalsum;
     }
 };
