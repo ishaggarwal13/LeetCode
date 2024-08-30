@@ -105,6 +105,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0098-validate-binary-search-tree) |
 | [0112-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0112-path-sum) |
+| [0113-path-sum-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0113-path-sum-ii) |
 | [0145-binary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0145-binary-tree-postorder-traversal) |
 | [0199-binary-tree-right-side-view](https://github.com/ishaggarwal13/LeetCode/tree/master/0199-binary-tree-right-side-view) |
 | [0543-diameter-of-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0543-diameter-of-binary-tree) |
@@ -114,6 +115,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0098-validate-binary-search-tree) |
 | [0112-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0112-path-sum) |
+| [0113-path-sum-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0113-path-sum-ii) |
 | [0145-binary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0145-binary-tree-postorder-traversal) |
 | [0199-binary-tree-right-side-view](https://github.com/ishaggarwal13/LeetCode/tree/master/0199-binary-tree-right-side-view) |
 | [0419-battleships-in-a-board](https://github.com/ishaggarwal13/LeetCode/tree/master/0419-battleships-in-a-board) |
@@ -132,6 +134,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0098-validate-binary-search-tree) |
 | [0112-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0112-path-sum) |
+| [0113-path-sum-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0113-path-sum-ii) |
 | [0145-binary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0145-binary-tree-postorder-traversal) |
 | [0199-binary-tree-right-side-view](https://github.com/ishaggarwal13/LeetCode/tree/master/0199-binary-tree-right-side-view) |
 | [0543-diameter-of-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0543-diameter-of-binary-tree) |
@@ -186,4 +189,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/ishaggarwal13/LeetCode/tree/master/0984-most-stones-removed-with-same-row-or-column) |
+## Backtracking
+|  |
+| ------- |
+| [0113-path-sum-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0113-path-sum-ii) |
 <!---LeetCode Topics End-->
