@@ -11,24 +11,33 @@
  */
 class Solution {
 public:
-    void dfs(TreeNode* root, int targetSum, vector<int>& currpath, vector<vector<int>>& res){
-        if(!root) return;
-        currpath.push_back(root->val); //add the value of node
-
-        //check for leaf node and if path sums to targetsum
-        if(!root->left && !root->right && targetSum == root->val){
-            res.push_back(currpath);
-        } else { //tarverse through left and right node
-            dfs(root->left, targetSum - root->val, currpath, res);
-            dfs(root->right, targetSum - root->val, currpath, res);
+    vector<vector<int>> res;
+    void solve(TreeNode *root,int targetSum,int sum,vector<int> &vec)
+    {
+        if(!root)
+            return;
+        sum+=root->val;
+        if(!root->left && !root->right)
+        {
+            if(sum==targetSum)
+            {
+                vec.push_back(root->val);
+                
+                res.push_back(vec);
+                vec.pop_back() ;
+            }
+            return;
         }
-        //backtrack remove the last element 
-        currpath.pop_back();
+        vec.push_back(root->val);
+        solve(root->left,targetSum,sum,vec);
+        solve(root->right,targetSum,sum,vec);
+        vec.pop_back();
     }
+    
     vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
-        vector<vector<int>> res;
-        vector<int> currpath;
-        dfs(root, targetSum, currpath, res);
+        int sum=0;
+        vector<int> vec ;
+        solve(root,targetSum,sum,vec);
         return res;
     }
 };
