@@ -26,6 +26,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1338-queries-quality-and-percentage](https://github.com/ishaggarwal13/LeetCode/tree/master/1338-queries-quality-and-percentage) |
 | [1390-average-selling-price](https://github.com/ishaggarwal13/LeetCode/tree/master/1390-average-selling-price) |
 | [1415-students-and-examinations](https://github.com/ishaggarwal13/LeetCode/tree/master/1415-students-and-examinations) |
+| [1462-list-the-products-ordered-in-a-period](https://github.com/ishaggarwal13/LeetCode/tree/master/1462-list-the-products-ordered-in-a-period) |
 | [1541-top-travellers](https://github.com/ishaggarwal13/LeetCode/tree/master/1541-top-travellers) |
 | [1625-group-sold-products-by-the-date](https://github.com/ishaggarwal13/LeetCode/tree/master/1625-group-sold-products-by-the-date) |
 | [1724-customer-who-visited-but-did-not-make-any-transactions](https://github.com/ishaggarwal13/LeetCode/tree/master/1724-customer-who-visited-but-did-not-make-any-transactions) |
