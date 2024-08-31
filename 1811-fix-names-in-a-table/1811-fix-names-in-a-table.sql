@@ -1,6 +1,6 @@
 # Write your MySQL query statement below
-#use concat the string of first char left and rest as right in upper and lower case
-#left(column name, no of charcters) and right(column name, no of chracters)
-select user_id, concat(upper(left(name, 1)), lower(right(name, length(name)-1))) as name
+#use concat the string of first char as upper and rest as lower using substr
+#substr(string_name, start index, end index)
+select user_id, concat(upper(substr(name, 1, 1)), lower(substr(name, 2, length(name)))) as name
 from users
 order by user_id
