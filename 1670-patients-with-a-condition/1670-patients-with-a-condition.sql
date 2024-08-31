@@ -1,3 +1,5 @@
 # Write your MySQL query statement below
 select * from patients
-where conditions like 'DIAB1%' OR conditions like '% DIAB1%'
+where REGEXP_LIKE(conditions, '\\bDIAB1'); 
+#\b matches either a non-word character (in our case, a space) 
+#or the position before the first character in the string
