@@ -4,9 +4,9 @@ public:
         //Time: O(m * n)
         //Space : O(m * n)
         if(m*n != original.size()) return {};
-        vector<vector<int>> ans(m, vector<int>(n,0));
-        for(int i=0; i<original.size(); i++){
-            ans[i/n][i%n] = original[i];
+        vector<vector<int>> ans(m);
+        for(int i=0; i<m; i++){
+            ans[i].assign(original.begin()+i*n, original.begin()+(i+1)*n);
         }
         return ans;
     }
