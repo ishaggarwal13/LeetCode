@@ -38,6 +38,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1811-fix-names-in-a-table](https://github.com/ishaggarwal13/LeetCode/tree/master/1811-fix-names-in-a-table) |
 | [1827-invalid-tweets](https://github.com/ishaggarwal13/LeetCode/tree/master/1827-invalid-tweets) |
 | [1908-recyclable-and-low-fat-products](https://github.com/ishaggarwal13/LeetCode/tree/master/1908-recyclable-and-low-fat-products) |
+| [1942-primary-department-for-each-employee](https://github.com/ishaggarwal13/LeetCode/tree/master/1942-primary-department-for-each-employee) |
 ## String
 |  |
 | ------- |
