@@ -1,12 +1,5 @@
 # Write your MySQL query statement below
 # UNION
-select employee_id, salary as bonus
+select employee_id, salary * (employee_id%2) * (name not like "M%") as bonus
 from employees
-where employee_id%2 <>0 and name not like "M%"
-
-UNION 
-
-select employee_id, 0 as bonus
-from employees
-where employee_id%2 = 0 or name like "M%"
 order by employee_id;
