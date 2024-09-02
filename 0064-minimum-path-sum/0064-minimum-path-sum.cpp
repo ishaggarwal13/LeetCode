@@ -1,40 +1,20 @@
 class Solution {
 public:
     int minPathSum(vector<vector<int>>& grid) {
-        //TC O(log(n⋅m)) AND SC O(n⋅m)
+        //TC O(n⋅m) AND SC O(n⋅m)
         int n = grid.size();
         int m = grid[0].size();
-
-        if(n == 1 && m == 1) return grid[0][0];
 
         vector<vector<int>> dp(n, vector<int>(m, INT_MAX));
         dp[0][0] = grid[0][0];
 
-        vector<pair<int,int>> directions = {{0, 1}, {1, 0}};
-
-        priority_queue<pair<int, pair<int,int>>, vector<pair<int,pair<int,int>>>,
-                    greater<pair<int, pair<int,int>>>> pq;
-        pq.push({grid[0][0], {0,0}});
-
-        while(!pq.empty()){
-            int currsum = pq.top().first;
-            int x = pq.top().second.first;
-            int y = pq.top().second.second;
-            pq.pop();
-
-            if(x == n - 1 && y == m - 1) return currsum;
-
-            for(auto& dir : directions){
-                int newx = x + dir.first;
-                int newy = y + dir.second;
-                
-                if(newx >= 0 && newx < n && newy >= 0 && newy < m){
-                    int pathsum = currsum + grid[newx][newy];
-
-                    if(pathsum < dp[newx][newy]){
-                        dp[newx][newy] = pathsum;
-                        pq.push({pathsum, {newx, newy}});
-                    }
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                if(i>0){
+                    dp[i][j] = min(dp[i][j], dp[i-1][j]+grid[i][j]);
+                }
+                if(j>0){
+                    dp[i][j] = min(dp[i][j], dp[i][j-1]+grid[i][j]);
                 }
             }
         }
