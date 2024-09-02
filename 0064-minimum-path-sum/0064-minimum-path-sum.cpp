@@ -1,6 +1,7 @@
 class Solution {
 public:
     int minPathSum(vector<vector<int>>& grid) {
+        //TC O(log(n⋅m)) AND SC O(n⋅m)
         int n = grid.size();
         int m = grid[0].size();
 
