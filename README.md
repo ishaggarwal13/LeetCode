@@ -69,6 +69,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0045-jump-game-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/ishaggarwal13/LeetCode/tree/master/0055-jump-game) |
 | [0064-minimum-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0064-minimum-path-sum) |
+| [0217-contains-duplicate](https://github.com/ishaggarwal13/LeetCode/tree/master/0217-contains-duplicate) |
 | [0228-summary-ranges](https://github.com/ishaggarwal13/LeetCode/tree/master/0228-summary-ranges) |
 | [0419-battleships-in-a-board](https://github.com/ishaggarwal13/LeetCode/tree/master/0419-battleships-in-a-board) |
 | [0455-assign-cookies](https://github.com/ishaggarwal13/LeetCode/tree/master/0455-assign-cookies) |
@@ -93,6 +94,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sorting
 |  |
 | ------- |
+| [0217-contains-duplicate](https://github.com/ishaggarwal13/LeetCode/tree/master/0217-contains-duplicate) |
 | [0455-assign-cookies](https://github.com/ishaggarwal13/LeetCode/tree/master/0455-assign-cookies) |
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
 ## Bit Manipulation
@@ -217,6 +219,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Hash Table
 |  |
 | ------- |
+| [0217-contains-duplicate](https://github.com/ishaggarwal13/LeetCode/tree/master/0217-contains-duplicate) |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/ishaggarwal13/LeetCode/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 ## Backtracking
 |  |
