@@ -1,10 +1,7 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        unordered_set<int> mp;
-        for(auto num : nums){
-            mp.insert(num);
-        }
-        return nums.size() != mp.size();
+        //tc:O(nlogn) sc:O(n)
+        return nums.size() != set<int>(nums.begin(), nums.end()).size();
     }
 };
