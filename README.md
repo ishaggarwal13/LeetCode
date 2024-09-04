@@ -61,6 +61,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0045-jump-game-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/ishaggarwal13/LeetCode/tree/master/0055-jump-game) |
 | [0064-minimum-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0064-minimum-path-sum) |
+| [0070-climbing-stairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0070-climbing-stairs) |
 | [0664-strange-printer](https://github.com/ishaggarwal13/LeetCode/tree/master/0664-strange-printer) |
 | [0678-valid-parenthesis-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0678-valid-parenthesis-string) |
 ## Array
@@ -121,6 +122,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Math
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0070-climbing-stairs) |
 | [0564-find-the-closest-palindrome](https://github.com/ishaggarwal13/LeetCode/tree/master/0564-find-the-closest-palindrome) |
 | [0592-fraction-addition-and-subtraction](https://github.com/ishaggarwal13/LeetCode/tree/master/0592-fraction-addition-and-subtraction) |
 ## Simulation
@@ -244,4 +246,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0219-contains-duplicate-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0219-contains-duplicate-ii) |
+## Memoization
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0070-climbing-stairs) |
 <!---LeetCode Topics End-->
