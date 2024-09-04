@@ -81,6 +81,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
 | [2006-find-the-student-that-will-replace-the-chalk](https://github.com/ishaggarwal13/LeetCode/tree/master/2006-find-the-student-that-will-replace-the-chalk) |
 | [2035-count-sub-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/2035-count-sub-islands) |
+| [2122-count-special-quadruplets](https://github.com/ishaggarwal13/LeetCode/tree/master/2122-count-special-quadruplets) |
 | [2132-convert-1d-array-into-2d-array](https://github.com/ishaggarwal13/LeetCode/tree/master/2132-convert-1d-array-into-2d-array) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 ## Two Pointers
@@ -233,6 +234,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0219-contains-duplicate-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0219-contains-duplicate-ii) |
 | [0906-walking-robot-simulation](https://github.com/ishaggarwal13/LeetCode/tree/master/0906-walking-robot-simulation) |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/ishaggarwal13/LeetCode/tree/master/0984-most-stones-removed-with-same-row-or-column) |
+| [2122-count-special-quadruplets](https://github.com/ishaggarwal13/LeetCode/tree/master/2122-count-special-quadruplets) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 ## Backtracking
 |  |
@@ -250,4 +252,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0070-climbing-stairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0070-climbing-stairs) |
+## Enumeration
+|  |
+| ------- |
+| [2122-count-special-quadruplets](https://github.com/ishaggarwal13/LeetCode/tree/master/2122-count-special-quadruplets) |
 <!---LeetCode Topics End-->
