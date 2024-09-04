@@ -75,6 +75,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0419-battleships-in-a-board](https://github.com/ishaggarwal13/LeetCode/tree/master/0419-battleships-in-a-board) |
 | [0455-assign-cookies](https://github.com/ishaggarwal13/LeetCode/tree/master/0455-assign-cookies) |
 | [0739-daily-temperatures](https://github.com/ishaggarwal13/LeetCode/tree/master/0739-daily-temperatures) |
+| [0906-walking-robot-simulation](https://github.com/ishaggarwal13/LeetCode/tree/master/0906-walking-robot-simulation) |
 | [1325-path-with-maximum-probability](https://github.com/ishaggarwal13/LeetCode/tree/master/1325-path-with-maximum-probability) |
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
 | [2006-find-the-student-that-will-replace-the-chalk](https://github.com/ishaggarwal13/LeetCode/tree/master/2006-find-the-student-that-will-replace-the-chalk) |
@@ -126,6 +127,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0592-fraction-addition-and-subtraction](https://github.com/ishaggarwal13/LeetCode/tree/master/0592-fraction-addition-and-subtraction) |
+| [0906-walking-robot-simulation](https://github.com/ishaggarwal13/LeetCode/tree/master/0906-walking-robot-simulation) |
 | [2006-find-the-student-that-will-replace-the-chalk](https://github.com/ishaggarwal13/LeetCode/tree/master/2006-find-the-student-that-will-replace-the-chalk) |
 | [2076-sum-of-digits-of-string-after-convert](https://github.com/ishaggarwal13/LeetCode/tree/master/2076-sum-of-digits-of-string-after-convert) |
 | [2132-convert-1d-array-into-2d-array](https://github.com/ishaggarwal13/LeetCode/tree/master/2132-convert-1d-array-into-2d-array) |
@@ -227,6 +229,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0217-contains-duplicate](https://github.com/ishaggarwal13/LeetCode/tree/master/0217-contains-duplicate) |
 | [0219-contains-duplicate-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0219-contains-duplicate-ii) |
+| [0906-walking-robot-simulation](https://github.com/ishaggarwal13/LeetCode/tree/master/0906-walking-robot-simulation) |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/ishaggarwal13/LeetCode/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 ## Backtracking
