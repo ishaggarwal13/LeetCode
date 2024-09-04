@@ -1,19 +1,17 @@
 class Solution {
 public:
-    int countQuadruplets(vector<int>& nums) {
-        //O(n^2) and O(n)
-        unordered_map<int,int> mp;
-        int count=0; 
-        int n = nums.size();
-
-        for(int i=1; i<n; i++){
-            for(int j=0; j<i; j++){
-                mp[nums[i] + nums[j]]++;
-            }
-            for(int k=i+2; k<n; k++){
-                count+=mp[nums[k] - nums[i+1]];
-            }
-        }
-        return count;
+    int countQuadruplets(vector<int>& arr) {
+        //O(n^3) and O(n)
+        int c=0,n=arr.size();
+         for(int i=0;i<n-3;i++){
+             for(int j=i+1;j<n-2;j++){
+                 for(int k=j+1;k<n-1;k++){
+                     for(int l=k+1;l<n;l++){
+                         if(arr[i]+arr[j]+arr[k]==arr[l])c++;
+                     }
+                 }
+             }
+         }
+         return c;
     }
 };
