@@ -1,13 +1,16 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        //O(nlogn) & O(1);
-        sort(nums.begin(), nums.end());
-        for(int i=1; i<nums.size(); i+=3){
-            if(nums[i] != nums[i-1]){
-                return nums[i-1];
+        //O(n) & O(n) map
+        unordered_map<int, int> mp;
+        for(auto i : nums){
+            mp[i]++;
+        }
+        for(auto i : mp){
+            if(i.second == 1){
+                return i.first;
             }
         }
-        return nums[nums.size()-1];
+        return -1;
     }
 };
