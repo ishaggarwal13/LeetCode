@@ -87,6 +87,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2122-count-special-quadruplets](https://github.com/ishaggarwal13/LeetCode/tree/master/2122-count-special-quadruplets) |
 | [2132-convert-1d-array-into-2d-array](https://github.com/ishaggarwal13/LeetCode/tree/master/2132-convert-1d-array-into-2d-array) |
 | [2155-find-missing-observations](https://github.com/ishaggarwal13/LeetCode/tree/master/2155-find-missing-observations) |
+| [2254-check-if-every-row-and-column-contains-all-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/2254-check-if-every-row-and-column-contains-all-numbers) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 ## Two Pointers
 |  |
@@ -224,6 +225,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0419-battleships-in-a-board](https://github.com/ishaggarwal13/LeetCode/tree/master/0419-battleships-in-a-board) |
 | [2035-count-sub-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/2035-count-sub-islands) |
 | [2132-convert-1d-array-into-2d-array](https://github.com/ishaggarwal13/LeetCode/tree/master/2132-convert-1d-array-into-2d-array) |
+| [2254-check-if-every-row-and-column-contains-all-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/2254-check-if-every-row-and-column-contains-all-numbers) |
 ## Monotonic Stack
 |  |
 | ------- |
@@ -253,6 +255,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0906-walking-robot-simulation](https://github.com/ishaggarwal13/LeetCode/tree/master/0906-walking-robot-simulation) |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/ishaggarwal13/LeetCode/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 | [2122-count-special-quadruplets](https://github.com/ishaggarwal13/LeetCode/tree/master/2122-count-special-quadruplets) |
+| [2254-check-if-every-row-and-column-contains-all-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/2254-check-if-every-row-and-column-contains-all-numbers) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 ## Backtracking
 |  |
