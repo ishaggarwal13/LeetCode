@@ -1,19 +1,13 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        //preffix sum by using set
-        unordered_set<int> s;
-        for(auto i : nums){
-            s.insert(i);
+        //sort and then find 
+        sort(nums.begin(), nums.end());
+        for(int i=1; i<nums.size(); i+=2){ //jumps two times as elemets present twice and 1 unique
+            if(nums[i] != nums[i-1]){
+                return nums[i-1];
+            }
         }
-        //sum of unique elemets and double it 
-        int sum=0;
-        for(auto i : s){
-            sum += i;
-        }
-        sum = sum*2;
-        //now sub the nums array sum from double unique elemets sum as other elemet appear two times
-        int sumOriginal = accumulate(nums.begin(), nums.end(), 0);
-        return sum - sumOriginal;
+        return nums[nums.size()-1]; //return last element as we are not checking till last
     }
 };
