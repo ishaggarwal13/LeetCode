@@ -167,6 +167,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0199-binary-tree-right-side-view](https://github.com/ishaggarwal13/LeetCode/tree/master/0199-binary-tree-right-side-view) |
 | [0543-diameter-of-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0543-diameter-of-binary-tree) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0776-n-ary-tree-postorder-traversal) |
+| [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -180,12 +181,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0543-diameter-of-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0543-diameter-of-binary-tree) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0776-n-ary-tree-postorder-traversal) |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/ishaggarwal13/LeetCode/tree/master/0984-most-stones-removed-with-same-row-or-column) |
+| [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
 | [2035-count-sub-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/2035-count-sub-islands) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [0112-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0112-path-sum) |
 | [0199-binary-tree-right-side-view](https://github.com/ishaggarwal13/LeetCode/tree/master/0199-binary-tree-right-side-view) |
+| [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
 | [2035-count-sub-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/2035-count-sub-islands) |
 ## Binary Tree
 |  |
@@ -197,11 +200,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0145-binary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0145-binary-tree-postorder-traversal) |
 | [0199-binary-tree-right-side-view](https://github.com/ishaggarwal13/LeetCode/tree/master/0199-binary-tree-right-side-view) |
 | [0543-diameter-of-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0543-diameter-of-binary-tree) |
+| [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
 ## Linked List
 |  |
 | ------- |
 | [0002-add-two-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/0002-add-two-numbers) |
 | [0023-merge-k-sorted-lists](https://github.com/ishaggarwal13/LeetCode/tree/master/0023-merge-k-sorted-lists) |
+| [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
 | [3501-delete-nodes-from-linked-list-present-in-array](https://github.com/ishaggarwal13/LeetCode/tree/master/3501-delete-nodes-from-linked-list-present-in-array) |
 ## Divide and Conquer
 |  |
