@@ -1,7 +1,5 @@
 # Write your MySQL query statement below
-SELECT b.Name AS Department, a.Name AS Employee, Salary FROM
-(SELECT *, MAX(Salary) OVER(PARTITION BY DepartmentId) AS max_val
-FROM Employee) a
-JOIN Department b
-ON a.DepartmentId = b.Id
-WHERE Salary = max_val;
+SELECT Department.name AS Department ,Employee.name AS Employee, Employee.salary
+FROM Department  JOIN Employee  ON Employee.departmentId=Department.id 
+WHERE(departmentId, salary) IN
+(SELECT departmentId,MAX(salary) FROM Employee GROUP BY departmentId) ;
