@@ -1,31 +1,22 @@
 class Solution {
 public:
     bool areNumbersAscending(string s) {
-        vector<int> numbers;
-        int num=0;
-        bool isnum = false;
-        for(auto c : s){
-            if(isdigit(c)){
-                num = num*10 + (c - '0');
-                isnum = true;
-            } else{
-                if(isnum){
-                    numbers.push_back(num);
-                    num=0; //set back to 0
-                    isnum = false;
-                }
-            }
-        }
-        //add last number to numbers vector
-        if(isnum){
-           numbers.push_back(num); 
-        }
+        int prev = -1;
+        int curr = -1;
+        string temp = "";
+        s += "";
 
-        for(int i=1; i<numbers.size(); i++){
-            if(numbers[i-1] >= numbers[i]){
-                return false;
+        for(int i=0; i<=s.size(); i++){
+            if(isdigit(s[i])){
+                temp = temp + s[i];
+            } else if(temp.size()){
+                curr = stoi(temp); //storing the integer into curr
+                if(prev >= curr) return false; //checking asec condn
+                prev = curr; //if not then setting prev to curr
+                temp = ""; //set back to empty string
             }
         }
+        
         return true;
     }
 };
