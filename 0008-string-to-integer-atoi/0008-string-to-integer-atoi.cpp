@@ -1,30 +1,36 @@
 class Solution {
 public:
     int myAtoi(string s) {
-        int len = s.size();
+        int n = s.size();
+        int sign = 1;
         double num = 0;
 
         int i=0;
-        while(s[i] == ' '){ //white space
+        while(i<n && s[i] == ' '){ //white space
             i++;
         }
 
-        bool pos = s[i] == '+';
-        bool neg = s[i] == '-';
-        pos == true ? i++ : i;
-        neg == true ? i++ : i;
+        if(s[i] == '-'){
+            sign = -1;
+            i++;
+        } else if(s[i] == '+'){
+            i++;
+        }
 
-        while(i<len && s[i] >= '0' && s[i] <= '9'){
+        while(i<n && s[i] >= '0' && s[i] <= '9'){
             num = num*10 + (s[i] - '0'); //extracting the digit
+            if(num > INT_MAX && sign == -1){
+                return INT_MIN;
+            } else if(num > INT_MAX && sign == 1){
+                return INT_MAX;
+            }
             i++;
         }
 
-        num = neg ? -num : num;
+        if(sign == -1){
+            return num*sign;
+        }
 
-        //edge condition of 32-bit int
-        num = (num > INT_MAX) ? INT_MAX : num;
-        num = (num < INT_MIN) ? INT_MIN : num;
-
-        return int(num);
+        return (num*sign);
     }
 };
