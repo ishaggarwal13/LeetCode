@@ -17,14 +17,16 @@ public:
         ListNode* dummy = new ListNode(0); //to create sorted list
         ListNode* curr = head;
         while(curr){
-            ListNode* prev = dummy;
+            ListNode* prev = dummy; //prev points to dummy for every curr node
             ListNode* next = curr->next; //storing next node to traverse the list
+            //traverse from dummy thorugh teh list to find the right spot
             while(prev->next && prev->next->val < curr->val){
                 prev = prev->next;
             }
+            //find sport now set curr->next suppose 3->, prev 2 and prev->next 4
             curr->next = prev->next;
-            prev->next = curr;
-            curr = next;
+            prev->next = curr; //prev = 2 prev->next 2->3->4
+            curr = next; //curr points back to list
         }
         return dummy->next;
     }
