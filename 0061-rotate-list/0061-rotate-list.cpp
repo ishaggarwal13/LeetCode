@@ -34,7 +34,7 @@ public:
             temp = temp->next;
         }
 
-        //declare new head and disconnect the tail from newhead
+        //declare head and disconnect the tail from head
         head = temp->next;
         temp->next = nullptr;
 
