@@ -29,15 +29,15 @@ public:
         temp->next = head;
 
         //finding new tail by (n-k)
-        ListNode* newTail = head;
+        temp = head;
         for(int i=1; i<n-k; i++){
-            newTail = newTail->next;
+            temp = temp->next;
         }
 
         //declare new head and disconnect the tail from newhead
-        ListNode* newHead = newTail->next;
-        newTail->next = nullptr;
+        head = temp->next;
+        temp->next = nullptr;
 
-        return newHead;
+        return head;
     }
 };
