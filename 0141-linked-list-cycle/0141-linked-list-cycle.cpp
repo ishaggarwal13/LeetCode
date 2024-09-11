@@ -9,18 +9,18 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        //O(n) & O(1)
-        //Floyd's Cycle-Finding algo (hare and tortoise) 
-        //fast will find slow one is there is cycle
-        if(!head) return false;
+        //O(n) & O(n)
+        //using hash table to store the visised nodes 
+        
+        unordered_set<ListNode*> visNodes;
+        ListNode* curr = head;
 
-        ListNode* slow = head;
-        ListNode* fast = head;
-
-        while(fast && fast->next){
-            slow = slow->next;
-            fast = fast->next->next;
-            if(fast == slow) return true;
+        while(curr){
+            if(visNodes.find(curr) != visNodes.end()){
+                return true;
+            }
+            visNodes.insert(curr);
+            curr = curr->next;
         }
         return false;
     }
