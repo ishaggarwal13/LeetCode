@@ -9,6 +9,8 @@
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
+        if(!head) return head;
+        
         ListNode* slow = head;
         ListNode* fast = head;
 
