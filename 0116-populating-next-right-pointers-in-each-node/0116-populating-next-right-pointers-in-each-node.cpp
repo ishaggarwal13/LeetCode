@@ -20,15 +20,13 @@ class Solution {
 public:
     Node* connect(Node* root) {
         if(!root) return nullptr;
-        connecting(root->left, root->right);
-        return root;
-    }
-    void connecting(Node* left, Node* right){
-        if(!left) return;
+        
+        if(root->left) root->left->next = root->right; //for one subtree
 
-        left->next = right; //pointing left->next to right
-        connecting(left->left, left->right); //left and right node of same left parent
-        connecting(left->right, right->left); //left and right of diff node that bridge
-        connecting(right->left, right->right); //left and right node of same right parent
+        if(root->right && root->next) root->right->next = root->next->left; //for two subtree the bridge
+
+        connect(root->left);
+        connect(root->right);
+        return root;
     }
 };
