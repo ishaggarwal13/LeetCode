@@ -20,30 +20,28 @@ class Solution {
 public:
     Node* connect(Node* root) {
         if(!root) return NULL;
-        //using queue as tree is not a perfect binary tree so q, will be helpfull to maintain nodes at each level
-        queue<Node*> q;
-        q.push(root);
+        
+        Node* level = root;
 
-        while(!q.empty()){
-            int level = q.size();
-            Node* prev = nullptr; //for every new level prev set to null
+        while(level){
+            Node* curr = level;
+            Node* dummy = new Node(0);
+            Node* prev = dummy;
 
-            for(int i=0; i<level; i++){
-                Node* node = q.front();
-                q.pop();
-
-                if(prev) {
-                    prev->next = node;
+            while(curr){
+                if(curr->left != nullptr){
+                    prev->next = curr->left; //set left node to prev
+                    prev = prev->next; //move prev pointer
                 }
-                prev = node;
-
-                if(node->left) q.push(node->left);
-                if(node->right) q.push(node->right);
+                if(curr->right != nullptr){
+                    prev->next = curr->right; //set prev node next to curr right node
+                    prev = prev->next;
+                }
+                curr = curr->next;
             }
-            //set last node to null
-            if(prev) prev->next = nullptr;
+            level = dummy->next; //set to next level
+            delete dummy; //free dummy space;
         }
-
         return root;
     }
 };
