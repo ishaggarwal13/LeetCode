@@ -10,28 +10,22 @@
  */
 class Solution {
 public:
+    ListNode* node;
     ListNode* reverseBetween(ListNode* head, int left, int right) {
-        //base case
-        if(!head || left == right) return head;
-
-        //create dummy node to handle edge cases
-        ListNode* dummy = new ListNode(0);
-        dummy->next = head;
-        ListNode* prev = dummy;
-        for(int i=1; i<left; i++){
-            prev = prev->next; //move prev to one node before the left
+        if(left == 1){
+            if(left == right){
+                node = head->next;
+                return head;
+            }
+            //reversing the list
+            ListNode* nextNode = reverseBetween(head->next, left, right-1);
+            head->next->next = head;
+            head->next = node;
+            return nextNode;
         }
-
-        ListNode* curr = prev->next;
-        ListNode* next = nullptr; //for next node after finding left node
-        
-        for(int i=0; i<right-left; i++){
-            next = curr->next; //next points to next node of curr
-            curr->next = next->next; //detach next node from the list
-            next->next = prev->next; //attach next node with curr node
-            prev->next = next; //points prev next to next node
-        }
-
-        return dummy->next;
+         
+        //till when we get the left = 1 which means it will start from left
+        head->next = reverseBetween(head->next, left-1, right-1);
+        return head;
     }
 };
