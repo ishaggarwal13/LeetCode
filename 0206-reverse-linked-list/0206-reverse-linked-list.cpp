@@ -11,16 +11,12 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        ListNode* prev = nullptr;
-        ListNode* curr = head;
-        
-        while(curr){
-            ListNode* next = curr->next; //next points to next node from curr
-            curr->next = prev; //now next pointer of 1->null which is prev
-            prev = curr; //now prev points to 1 which later pointing null
-            curr = next; //npw curr will point to next element to move forward
-        }
+        if(!head || !head->next) return head;
 
-        return prev;
+        //newnode points to last node
+        ListNode* newNode = reverseList(head->next); //head->next points to 5
+        head->next->next = head; //head->next = 5, 5->next = 4
+        head->next = nullptr;
+        return newNode;
     }
 };
