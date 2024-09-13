@@ -265,6 +265,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0142-linked-list-cycle-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0142-linked-list-cycle-ii) |
 | [0147-insertion-sort-list](https://github.com/ishaggarwal13/LeetCode/tree/master/0147-insertion-sort-list) |
 | [0148-sort-list](https://github.com/ishaggarwal13/LeetCode/tree/master/0148-sort-list) |
+| [0206-reverse-linked-list](https://github.com/ishaggarwal13/LeetCode/tree/master/0206-reverse-linked-list) |
 | [0725-split-linked-list-in-parts](https://github.com/ishaggarwal13/LeetCode/tree/master/0725-split-linked-list-in-parts) |
 | [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
 | [2411-spiral-matrix-iv](https://github.com/ishaggarwal13/LeetCode/tree/master/2411-spiral-matrix-iv) |
@@ -373,4 +374,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0002-add-two-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/0002-add-two-numbers) |
 | [0021-merge-two-sorted-lists](https://github.com/ishaggarwal13/LeetCode/tree/master/0021-merge-two-sorted-lists) |
 | [0024-swap-nodes-in-pairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0024-swap-nodes-in-pairs) |
+| [0206-reverse-linked-list](https://github.com/ishaggarwal13/LeetCode/tree/master/0206-reverse-linked-list) |
 <!---LeetCode Topics End-->
