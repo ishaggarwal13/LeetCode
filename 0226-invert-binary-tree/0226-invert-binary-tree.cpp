@@ -12,11 +12,22 @@
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
-        //mirror tree
+        //mirror tree - BFS FOR O(N) & O(N)
         if(root == NULL) return NULL;
-        swap(root->left, root->right);
-        invertTree(root->left);
-        invertTree(root->right);
+
+        queue<TreeNode*> q;
+        q.push(root);
+
+        while(!q.empty()){
+            TreeNode* curr = q.front();
+            q.pop();
+
+            swap(curr->left, curr->right);
+
+            if(curr->left) q.push(curr->left);
+            if(curr->right) q.push(curr->right);
+        }
+
         return root;
     }
 };
