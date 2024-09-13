@@ -11,15 +11,11 @@ public:
             preffix[i] = preffix[i-1] ^ arr[i]; //storing xor values from start
         }
 
-        for(int i=0; i<queries.size(); i++){
-            int start = queries[i][0];
-            int end = queries[i][1];
+        for(const auto& q : queries){
+            int start = q[0];
+            int end = q[1];
 
-            if(start == 0) {
-                ans.push_back(preffix[end]);
-            } else {
-                ans.push_back(preffix[start-1]^preffix[end]);
-            }
+            ans.push_back(start>0 ? (preffix[start-1]^preffix[end]) : preffix[end]);
         }
         return ans;
     }
