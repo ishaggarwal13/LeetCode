@@ -70,6 +70,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1786-count-the-number-of-consistent-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/1786-count-the-number-of-consistent-strings) |
 | [1933-number-of-different-integers-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1933-number-of-different-integers-in-a-string) |
 | [2076-sum-of-digits-of-string-after-convert](https://github.com/ishaggarwal13/LeetCode/tree/master/2076-sum-of-digits-of-string-after-convert) |
+| [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2168-check-if-numbers-are-ascending-in-a-sentence](https://github.com/ishaggarwal13/LeetCode/tree/master/2168-check-if-numbers-are-ascending-in-a-sentence) |
 | [3567-convert-date-to-binary](https://github.com/ishaggarwal13/LeetCode/tree/master/3567-convert-date-to-binary) |
 ## Dynamic Programming
@@ -131,6 +132,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0455-assign-cookies](https://github.com/ishaggarwal13/LeetCode/tree/master/0455-assign-cookies) |
 | [0678-valid-parenthesis-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
+| [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 ## Sorting
 |  |
@@ -178,6 +180,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0268-missing-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0268-missing-number) |
 | [0564-find-the-closest-palindrome](https://github.com/ishaggarwal13/LeetCode/tree/master/0564-find-the-closest-palindrome) |
 | [0592-fraction-addition-and-subtraction](https://github.com/ishaggarwal13/LeetCode/tree/master/0592-fraction-addition-and-subtraction) |
+| [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2155-find-missing-observations](https://github.com/ishaggarwal13/LeetCode/tree/master/2155-find-missing-observations) |
 | [2903-insert-greatest-common-divisors-in-linked-list](https://github.com/ishaggarwal13/LeetCode/tree/master/2903-insert-greatest-common-divisors-in-linked-list) |
 | [3567-convert-date-to-binary](https://github.com/ishaggarwal13/LeetCode/tree/master/3567-convert-date-to-binary) |
@@ -388,4 +391,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0021-merge-two-sorted-lists](https://github.com/ishaggarwal13/LeetCode/tree/master/0021-merge-two-sorted-lists) |
 | [0024-swap-nodes-in-pairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0024-swap-nodes-in-pairs) |
 | [0206-reverse-linked-list](https://github.com/ishaggarwal13/LeetCode/tree/master/0206-reverse-linked-list) |
+## Game Theory
+|  |
+| ------- |
+| [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 <!---LeetCode Topics End-->
