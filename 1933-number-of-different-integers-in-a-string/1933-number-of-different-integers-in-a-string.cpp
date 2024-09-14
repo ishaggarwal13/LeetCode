@@ -1,23 +1,19 @@
 class Solution {
 public:
     int numDifferentIntegers(string word) {
-        vector<string> v;
+        unordered_set<string> s;
 
         for(int i=0; i<word.size(); i++){
-            if(isdigit(word[i]) == true){
+            if(isdigit(word[i])){
                 string ans = "";
-                while(word[i] == '0') i++;
-                while(isdigit(word[i]) == true){
+                while(i<word.size() && word[i] == '0') i++;
+                
+                while(i<word.size() && isdigit(word[i])){
                     ans += word[i];
                     i++;
                 }
-                v.push_back(ans);
+                s.insert(ans);
             }
-        }
-
-        unordered_set<string> s;
-        for(int i=0; i<v.size(); i++){
-            s.insert(v[i]);
         }
         return s.size();
     }
