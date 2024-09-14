@@ -1,15 +1,16 @@
 class Solution {
 public:
-    int count(int index, int curr, int target, vector<int>& nums){
+    int cnt = 0;
+    void count(int index, int curr, int target, vector<int>& nums){
         if(index == nums.size()){
             if(target == curr){
-                return 1;
+                cnt++;
             }
-            return 0;
+            return;
         }
         //include exclude
-         return count(index+1, (curr | nums[index]), target, nums) + 
-                count(index+1 , curr, target, nums);
+        count(index+1, (curr | nums[index]), target, nums);
+        count(index+1 , curr, target, nums);
     }
     int countMaxOrSubsets(vector<int>& nums) {
         int target = 0;
@@ -17,6 +18,7 @@ public:
         for(auto num : nums){
             target |= num;
         }
-        return count(0, 0, target, nums);
+        count(0, 0, target, nums);
+        return cnt;
     }
 };
