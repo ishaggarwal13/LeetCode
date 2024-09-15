@@ -91,6 +91,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0036-valid-sudoku](https://github.com/ishaggarwal13/LeetCode/tree/master/0036-valid-sudoku) |
 | [0045-jump-game-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/ishaggarwal13/LeetCode/tree/master/0055-jump-game) |
+| [0056-merge-intervals](https://github.com/ishaggarwal13/LeetCode/tree/master/0056-merge-intervals) |
 | [0064-minimum-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0064-minimum-path-sum) |
 | [0075-sort-colors](https://github.com/ishaggarwal13/LeetCode/tree/master/0075-sort-colors) |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
@@ -144,6 +145,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sorting
 |  |
 | ------- |
+| [0056-merge-intervals](https://github.com/ishaggarwal13/LeetCode/tree/master/0056-merge-intervals) |
 | [0075-sort-colors](https://github.com/ishaggarwal13/LeetCode/tree/master/0075-sort-colors) |
 | [0147-insertion-sort-list](https://github.com/ishaggarwal13/LeetCode/tree/master/0147-insertion-sort-list) |
 | [0148-sort-list](https://github.com/ishaggarwal13/LeetCode/tree/master/0148-sort-list) |
