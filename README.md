@@ -119,6 +119,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [2503-longest-subarray-with-maximum-bitwise-and](https://github.com/ishaggarwal13/LeetCode/tree/master/2503-longest-subarray-with-maximum-bitwise-and) |
 | [2536-determine-if-two-events-have-conflict](https://github.com/ishaggarwal13/LeetCode/tree/master/2536-determine-if-two-events-have-conflict) |
+| [3034-points-that-intersect-with-cars](https://github.com/ishaggarwal13/LeetCode/tree/master/3034-points-that-intersect-with-cars) |
 | [3501-delete-nodes-from-linked-list-present-in-array](https://github.com/ishaggarwal13/LeetCode/tree/master/3501-delete-nodes-from-linked-list-present-in-array) |
 ## Two Pointers
 |  |
@@ -368,6 +369,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2122-count-special-quadruplets](https://github.com/ishaggarwal13/LeetCode/tree/master/2122-count-special-quadruplets) |
 | [2254-check-if-every-row-and-column-contains-all-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/2254-check-if-every-row-and-column-contains-all-numbers) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
+| [3034-points-that-intersect-with-cars](https://github.com/ishaggarwal13/LeetCode/tree/master/3034-points-that-intersect-with-cars) |
 | [3501-delete-nodes-from-linked-list-present-in-array](https://github.com/ishaggarwal13/LeetCode/tree/master/3501-delete-nodes-from-linked-list-present-in-array) |
 ## Backtracking
 |  |
@@ -380,6 +382,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1435-xor-queries-of-a-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/1435-xor-queries-of-a-subarray) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/ishaggarwal13/LeetCode/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [2006-find-the-student-that-will-replace-the-chalk](https://github.com/ishaggarwal13/LeetCode/tree/master/2006-find-the-student-that-will-replace-the-chalk) |
+| [3034-points-that-intersect-with-cars](https://github.com/ishaggarwal13/LeetCode/tree/master/3034-points-that-intersect-with-cars) |
 ## Sliding Window
 |  |
 | ------- |
