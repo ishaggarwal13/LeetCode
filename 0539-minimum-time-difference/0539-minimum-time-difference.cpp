@@ -1,13 +1,13 @@
 class Solution {
 public:
+    int minutes(string time) {
+        return ( ((((time[0] - '0')*10) + (time[1] - '0')) * 60) + (((time[3] - '0')*10) + (time[4] - '0')) );
+    }
     int findMinDifference(vector<string>& timePoints) {
         vector<int> arr;
         //CONVERT TIME STAMP INTO MINUTES
         for(auto time : timePoints){
-            int hr = stoi(time.substr(0,2));
-            int min = stoi(time.substr(3,2));
-            int minutes = hr*60 + min;
-            arr.push_back(minutes);
+            arr.push_back(minutes(time));
         }
         sort(arr.begin(), arr.end());
 
