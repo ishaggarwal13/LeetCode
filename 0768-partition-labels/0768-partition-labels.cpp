@@ -1,17 +1,22 @@
 class Solution {
 public:
     vector<int> partitionLabels(string s) {
-        unordered_map<char, int> mp;
+        int m[256] = {0};
+        unordered_set<char> mp;
+
         for(int i=0; i<s.length(); i++){
-            mp[s[i]] = i; //stored last occurence of each char
+            m[s[i]] = i; //stored last occurence of each char in arr
         }
-        int start=0, end=0;
+
         vector<int> ans;
-        for(int i=0; i<s.length(); i++){
-            end = max(end, mp[s[i]]); //updating the end and storing max value
-            if(end == i){
-                ans.push_back(end-start+1);
-                start = end+1; //update the start for updating the ans value
+
+        for(int i=0, j=-1; i<s.length(); i++){
+            if(m[s[i]] == i){
+                if(mp.erase(s[i]); empty(mp))
+                    ans.push_back(i-j), j=i;
+                else;
+            } else{
+                mp.insert(s[i]);
             }
         }
         return ans;
