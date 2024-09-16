@@ -4,18 +4,8 @@ public:
         vector<int> arr;
         //CONVERT TIME STAMP INTO MINUTES
         for(auto time : timePoints){
-            string s = time;
-            int hr=0, min=0, i=0;
-            //extract hours
-            while(s[i] != ':'){
-                hr = hr*10 + (s[i] - '0');
-                i++;
-            }
-            i++;
-            while(i<s.size()){
-                min = min*10 + (s[i] - '0');
-                i++;
-            }
+            int hr = stoi(time.substr(0,2));
+            int min = stoi(time.substr(3,2));
             int minutes = hr*60 + min;
             arr.push_back(minutes);
         }
