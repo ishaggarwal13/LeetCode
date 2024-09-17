@@ -127,6 +127,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2254-check-if-every-row-and-column-contains-all-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/2254-check-if-every-row-and-column-contains-all-numbers) |
 | [2411-spiral-matrix-iv](https://github.com/ishaggarwal13/LeetCode/tree/master/2411-spiral-matrix-iv) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
+| [2497-maximum-matching-of-players-with-trainers](https://github.com/ishaggarwal13/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
 | [2503-longest-subarray-with-maximum-bitwise-and](https://github.com/ishaggarwal13/LeetCode/tree/master/2503-longest-subarray-with-maximum-bitwise-and) |
 | [2536-determine-if-two-events-have-conflict](https://github.com/ishaggarwal13/LeetCode/tree/master/2536-determine-if-two-events-have-conflict) |
 | [3034-points-that-intersect-with-cars](https://github.com/ishaggarwal13/LeetCode/tree/master/3034-points-that-intersect-with-cars) |
@@ -144,6 +145,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0455-assign-cookies](https://github.com/ishaggarwal13/LeetCode/tree/master/0455-assign-cookies) |
 | [0768-partition-labels](https://github.com/ishaggarwal13/LeetCode/tree/master/0768-partition-labels) |
 | [1028-interval-list-intersections](https://github.com/ishaggarwal13/LeetCode/tree/master/1028-interval-list-intersections) |
+| [2497-maximum-matching-of-players-with-trainers](https://github.com/ishaggarwal13/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
 ## Greedy
 |  |
 | ------- |
@@ -156,6 +158,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
 | [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
+| [2497-maximum-matching-of-players-with-trainers](https://github.com/ishaggarwal13/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
 ## Sorting
 |  |
 | ------- |
@@ -172,6 +175,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1137-height-checker](https://github.com/ishaggarwal13/LeetCode/tree/master/1137-height-checker) |
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
+| [2497-maximum-matching-of-players-with-trainers](https://github.com/ishaggarwal13/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
 ## Bit Manipulation
 |  |
 | ------- |
