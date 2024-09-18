@@ -1,14 +1,18 @@
 class Solution {
 public:
     string largestNumber(vector<int>& nums) {
+        vector<string> temp;
+        for(auto i : nums){
+            temp.push_back(to_string(i));
+        }
         //use custom compare function
-        sort(nums.begin(), nums.end(), [](const auto a, const auto b){
-            return (to_string(a) + to_string(b)) > (to_string(b) + to_string(a));
+        sort(temp.begin(), temp.end(), [](const string &a, const string &b){
+            return (b + a) < (a + b);
         });
 
-        string ans = "";
-        for(int i=0; i<nums.size(); i++){
-            ans += to_string(nums[i]);
+        string ans;
+        for(const auto& num : temp){
+            ans += num;
         }
         if(nums[0] == 0) return "0";
         return ans;
