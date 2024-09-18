@@ -14,7 +14,7 @@ public:
         for(const auto& num : temp){
             ans += num;
         }
-        if(nums[0] == 0) return "0";
+        if(temp[0] == "0") return "0";
         return ans;
     }
 };
