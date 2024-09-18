@@ -116,6 +116,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0906-walking-robot-simulation](https://github.com/ishaggarwal13/LeetCode/tree/master/0906-walking-robot-simulation) |
 | [1018-largest-perimeter-triangle](https://github.com/ishaggarwal13/LeetCode/tree/master/1018-largest-perimeter-triangle) |
 | [1028-interval-list-intersections](https://github.com/ishaggarwal13/LeetCode/tree/master/1028-interval-list-intersections) |
+| [1047-maximize-sum-of-array-after-k-negations](https://github.com/ishaggarwal13/LeetCode/tree/master/1047-maximize-sum-of-array-after-k-negations) |
 | [1137-height-checker](https://github.com/ishaggarwal13/LeetCode/tree/master/1137-height-checker) |
 | [1325-path-with-maximum-probability](https://github.com/ishaggarwal13/LeetCode/tree/master/1325-path-with-maximum-probability) |
 | [1435-xor-queries-of-a-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/1435-xor-queries-of-a-subarray) |
@@ -159,6 +160,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0678-valid-parenthesis-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0768-partition-labels](https://github.com/ishaggarwal13/LeetCode/tree/master/0768-partition-labels) |
 | [1018-largest-perimeter-triangle](https://github.com/ishaggarwal13/LeetCode/tree/master/1018-largest-perimeter-triangle) |
+| [1047-maximize-sum-of-array-after-k-negations](https://github.com/ishaggarwal13/LeetCode/tree/master/1047-maximize-sum-of-array-after-k-negations) |
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
 | [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
@@ -177,6 +179,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0455-assign-cookies](https://github.com/ishaggarwal13/LeetCode/tree/master/0455-assign-cookies) |
 | [0539-minimum-time-difference](https://github.com/ishaggarwal13/LeetCode/tree/master/0539-minimum-time-difference) |
 | [1018-largest-perimeter-triangle](https://github.com/ishaggarwal13/LeetCode/tree/master/1018-largest-perimeter-triangle) |
+| [1047-maximize-sum-of-array-after-k-negations](https://github.com/ishaggarwal13/LeetCode/tree/master/1047-maximize-sum-of-array-after-k-negations) |
 | [1137-height-checker](https://github.com/ishaggarwal13/LeetCode/tree/master/1137-height-checker) |
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
