@@ -1,12 +1,5 @@
 class Solution {
 public:
-    int help(int x, int y, char op){
-        if(op == '+') return x+y;
-        if(op == '-') return x-y;
-        if(op == '*') return x*y;
-        return 0;
-        
-    }
     vector<int> diffWaysToCompute(string exp) {
         vector<int> res;
         bool isnum = true;
@@ -21,8 +14,12 @@ public:
 
                 for(int x : left){
                     for(int y : right){
-                        int val = help(x, y, exp[i]);
-                        res.push_back(val);
+                        if(exp[i] == '+') 
+                            res.push_back(x+y);
+                        else if(exp[i] == '-') 
+                            res.push_back(x-y);
+                        else
+                            res.push_back(x*y);
                     }
                 }
             }
