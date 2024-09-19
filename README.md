@@ -64,6 +64,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0171-excel-sheet-column-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0171-excel-sheet-column-number) |
 | [0179-largest-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0179-largest-number) |
 | [0205-isomorphic-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/0205-isomorphic-strings) |
+| [0241-different-ways-to-add-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [0290-word-pattern](https://github.com/ishaggarwal13/LeetCode/tree/master/0290-word-pattern) |
 | [0539-minimum-time-difference](https://github.com/ishaggarwal13/LeetCode/tree/master/0539-minimum-time-difference) |
 | [0564-find-the-closest-palindrome](https://github.com/ishaggarwal13/LeetCode/tree/master/0564-find-the-closest-palindrome) |
@@ -88,6 +89,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0055-jump-game](https://github.com/ishaggarwal13/LeetCode/tree/master/0055-jump-game) |
 | [0064-minimum-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0064-minimum-path-sum) |
 | [0070-climbing-stairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0070-climbing-stairs) |
+| [0241-different-ways-to-add-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [0664-strange-printer](https://github.com/ishaggarwal13/LeetCode/tree/master/0664-strange-printer) |
 | [0678-valid-parenthesis-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0678-valid-parenthesis-string) |
 ## Array
@@ -226,6 +228,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0070-climbing-stairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0070-climbing-stairs) |
 | [0168-excel-sheet-column-title](https://github.com/ishaggarwal13/LeetCode/tree/master/0168-excel-sheet-column-title) |
 | [0171-excel-sheet-column-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0171-excel-sheet-column-number) |
+| [0241-different-ways-to-add-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [0258-add-digits](https://github.com/ishaggarwal13/LeetCode/tree/master/0258-add-digits) |
 | [0268-missing-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0268-missing-number) |
 | [0539-minimum-time-difference](https://github.com/ishaggarwal13/LeetCode/tree/master/0539-minimum-time-difference) |
@@ -441,6 +444,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0070-climbing-stairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0070-climbing-stairs) |
+| [0241-different-ways-to-add-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 ## Enumeration
 |  |
 | ------- |
@@ -458,6 +462,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0021-merge-two-sorted-lists](https://github.com/ishaggarwal13/LeetCode/tree/master/0021-merge-two-sorted-lists) |
 | [0024-swap-nodes-in-pairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0024-swap-nodes-in-pairs) |
 | [0206-reverse-linked-list](https://github.com/ishaggarwal13/LeetCode/tree/master/0206-reverse-linked-list) |
+| [0241-different-ways-to-add-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 ## Game Theory
 |  |
 | ------- |
