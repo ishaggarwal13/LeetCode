@@ -64,6 +64,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/ishaggarwal13/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0008-string-to-integer-atoi](https://github.com/ishaggarwal13/LeetCode/tree/master/0008-string-to-integer-atoi) |
+| [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0168-excel-sheet-column-title](https://github.com/ishaggarwal13/LeetCode/tree/master/0168-excel-sheet-column-title) |
 | [0171-excel-sheet-column-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0171-excel-sheet-column-number) |
 | [0179-largest-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0179-largest-number) |
@@ -149,6 +150,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Two Pointers
 |  |
 | ------- |
+| [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0061-rotate-list](https://github.com/ishaggarwal13/LeetCode/tree/master/0061-rotate-list) |
 | [0075-sort-colors](https://github.com/ishaggarwal13/LeetCode/tree/master/0075-sort-colors) |
 | [0082-remove-duplicates-from-sorted-list-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0082-remove-duplicates-from-sorted-list-ii) |
@@ -487,6 +489,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## String Matching
 |  |
 | ------- |
+| [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0214-shortest-palindrome](https://github.com/ishaggarwal13/LeetCode/tree/master/0214-shortest-palindrome) |
 ## Hash Function
 |  |
