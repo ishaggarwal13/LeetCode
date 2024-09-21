@@ -1,33 +1,20 @@
 class Solution {
 public:
-    vector<int> lexicalOrder(int n) {
-        vector<int> result;
-        int cur = 1;
+    void solve(int i, int n,vector<int> &v){
+        //base case
+        if(i>n) return; // if the number choosen is larger than n that is out of bound and we return
 
-        for (int i = 0; i < n; i++) { // n=102
-            result.push_back(cur); // 1 // 10 // 100 // 
-            if (cur * 10 <= n) { // 1000 // 1010
-                // Move to the next level (next digit)
-                cur *= 10;  // 10 // 100 
-            } 
-            else {
-                // Go back if cur exceeds n
-                if (cur >= n) { cur /= 10; } // 1010 -> 101
-
-                // Increment to the next number
-                // e.g cur = 109
-                cur++; // 101 // 102 
-
-                
-                // Handle ending with 9 or out of bounds
-                // e.g. cur = 110
-                while (cur % 10 == 0) {  // zero at 10 multipules
-                    cur /= 10;
-                }
-                // e.g. cur = 11
-            }
+        //recersive case
+        v.push_back(i); // we push the i when it is in the range
+        for(int j=0;j<=9;j++){
+            solve(i*10+j,n,v); // after insert the i we move to the next number starting with i and check for all possibility and insert them 
         }
-
-        return result;
+    }
+    vector<int> lexicalOrder(int n) {
+        vector<int> ans;
+        for(int i=1;i<10;i++){
+            solve(i,n,ans); // we have to insert the number in order from 1 to 9 so we use the loop for it and will insert all the number starting with this digit before moving ahead
+        }
+        return ans;
     }
 };
