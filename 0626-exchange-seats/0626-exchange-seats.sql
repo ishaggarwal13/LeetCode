@@ -1,10 +1,12 @@
 # Write your MySQL query statement below
-SELECT CASE
-           WHEN s.id % 2 <> 0 AND s.id = (SELECT COUNT(*) FROM Seat) THEN s.id
-           WHEN s.id % 2 = 0 THEN s.id - 1
-           ELSE
-               s.id + 1
-           END AS id,
-       student
-FROM Seat AS s
+SELECT 
+    CASE 
+        WHEN id = (SELECT MAX(id) FROM seat) AND id % 2 = 1
+            THEN id 
+        WHEN id % 2 = 1
+            THEN id + 1
+        ELSE id - 1
+    END AS id,
+    student
+FROM seat
 ORDER BY id
