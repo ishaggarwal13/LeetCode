@@ -1,16 +1,23 @@
 class Solution {
 public:
     int getLucky(string s, int k) {
-        string t="";
-        for(char c:s){
-            t+=to_string(c-'a'+1);
-        }
-        for(int i=0;i<k;i++){
-        //     cout<<t<<' ';
-            int num=0;
-            for(auto i:t)num+=i-'0';
-            t=to_string(num);
-        }
-        return stoi(t);
+        int len = s.length();
+      string numstr;
+      for(char c : s)
+      {
+        numstr += to_string(c - 'a' + 1);
+      }
+      int num;
+      while(k > 0)
+      {
+        num = 0;
+      for( char c : numstr)
+      {
+        num += c - '0';
+      }
+      numstr = to_string(num);
+      k--;
+      }
+      return num;
     }
 };
