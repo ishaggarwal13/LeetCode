@@ -1,56 +1,33 @@
 class Solution {
 public:
-    int length(int n){
-        string ans=to_string(n); 
-        
-        return ans.size();
-    }
     int longestCommonPrefix(vector<int>& arr1, vector<int>& arr2) {
-        unordered_set<int> unst;
-        //  dekho agr mujhe common prefix pta hia lo longest ho
-        // simple n
-        // to kyu n mai pehle array ka sab 
-        // prefix daal du
-        // aur second ka nikalte time check kr lu..
-        // kya bolte ho...samjha me aaya kya \U0001fae0\U0001fae0
-        for(auto it:arr1){
-            while(it>0){
-                // dekho agr num 123 hai to prefix kya hoga
-                // 1 12 123 
-                // bas ye loop vhi kaam kr rha hai...\U0001f44d\U0001f44d\U0001f44d
-                unst.insert(it);
-                it/=10;
+        unordered_set<string>st;
+        // Iterate each string in the arr1
+        for(int i=0;i<arr1.size();i++)
+        {
+            string val=to_string(arr1[i]);
+            string prefix;
+            // iterate each character, append it to prefix and add the prefix to the set
+            // e.g. if val is 100, for 1st iteration, prefix="1", 2nd: prefix="10", 3rd: prefix="100" etc
+            // after first outer loop, set = Set("1", "10", "100")
+            for(auto ch:val)
+            {
+                prefix+=ch;
+                st.insert(prefix);
             }
         }
-        int maxi=0;
-        for(auto it:arr2){
-            while(it>0){
-                // bas same kaam dusre array ke liye lekin
-                // check krenge kya vo kisi array 1 ke 
-                // prefix se match kar rha...
-                if(unst.find(it)!=unst.end()){
-
-                    // ye kya abhi bhai, abhi to tumne bola tha
-                    // common pta kro aur ye kya
-                    // arey bhai hame number ka 
-                    // lemgth chaiye n
-                    // esiloiye ek function bnaya hai
-                    // uske liye...smjhe
-                    maxi=max(maxi,length(it));
-
-                    // break kyu kiya????
-                    // dekho...bhai agr 
-                    // 1234 match kr gya...aur hme 
-                    // length maximum chaiye....to kya ham use chhote
-                    // portion ko check krenge nhi n..
-                    // bas esiliye break kiya hai...
-                    break;
-                }
-                it/=10;
+        int ans=0;
+        // Check every prefix combination in arr2, to see if it exists in the set we created above
+        for(int i=0;i<arr2.size();i++)
+        {
+            string val=to_string(arr2[i]);
+            string prefix;
+            for(auto ch:val)
+            {
+                prefix+=ch;
+                if(st.count(prefix))ans=max(ans,(int)prefix.size());
             }
         }
-        // length jo maximum prefix match huaa...
-        // machate rho....❤️\U0001f60a✅
-        return maxi;
+        return ans;
     }
 };
