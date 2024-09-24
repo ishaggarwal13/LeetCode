@@ -15,14 +15,14 @@ public:
         ListNode* prev = nullptr;
         ListNode* curr = head;
 
-        while (curr){
-            if (NUMS.find(curr -> val) != NUMS.end()){
-                if (prev) prev -> next = curr -> next;
-                else head = curr -> next;
+        while(curr){
+            if(NUMS.find(curr->val) != NUMS.end()){
+                if(prev) prev->next = curr->next; //skip node which is present in array
+                else head = curr->next; //if prev is null means curr is at head
             } else {
                 prev = curr;
             }
-            curr = curr -> next;
+            curr = curr->next;
         }
         return head;
     }  
