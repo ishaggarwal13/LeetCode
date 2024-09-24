@@ -11,42 +11,37 @@
 class Solution {
 public:
     vector<ListNode*> splitListToParts(ListNode* head, int k) {
-       int length = 0;
-        vector<ListNode*> ans;
-        ListNode* temp = head;
+       int n=0;
+        ListNode* temp=head;
         while(temp){
-            length++;
-            temp = temp -> next;
+            temp=temp->next;
+            n++;
         }
-        temp = head;
-        int count = length/k;
-        int rem = length%k;
-        ans.push_back(temp);
-        while(--k){
-            ListNode* prev = temp;
+        vector<ListNode*>ans;
+        temp=head;
+        int size=n/k;
+        int rem=n%k;
+        while(temp){
+            ListNode* c=new ListNode(100);
+            ListNode* tempC=c;
+            int s=size;
             if(rem>0){
-                for(int i = 0; i<count+1; i++){
-                    if(temp){
-                        prev = temp;
-                        temp = temp -> next;
-                    }
-                }
+                s+=1;
                 rem--;
             }
-            else{
-                for(int i = 0; i<count; i++){
-                    if(temp){
-                        prev = temp;
-                        temp = temp -> next;
-                    }
-                }
+            for(int i=1;i<=s;++i){
+                tempC->next=temp;
+                temp=temp->next;
+                tempC=tempC->next;
             }
-            //can optimize by using while(temp) only for making groups of nodes but will do that later sometime else cuz so much bored  
-            //cout<< temp -> val;
-            if(prev){
-                prev -> next = NULL;
+            tempC->next=NULL;
+            ans.push_back(c->next);
+        }
+        if(ans.size()<k){
+            int extra=k-ans.size();
+            for(int i=1;i<=extra;++i){
+                ans.push_back(NULL);
             }
-            ans.push_back(temp);
         }
         return ans;
     }
