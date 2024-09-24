@@ -10,33 +10,44 @@
  */
 class Solution {
 public:
-    vector<ListNode*> splitListToParts(ListNode* root, int k) {
-       vector<ListNode*> parts(k, nullptr);
-
-        // Calculate the length of the linked list.
-        int len = 0;
-        for (ListNode* node = root; node; node = node->next)
-            len++;
-        
-        int n = len/k, r=len%k; //n=equal part divided and r is the extra 1 added from first to r
-
-        ListNode* node = root, *prev = nullptr;
-
-        // Loop through each part.
-        for (int i = 0; node && i < k; i++, r--) {
-            // Store the current node as the start of the current part.
-            parts[i] = node;
-            // Traverse n + 1 nodes if there are remaining extra nodes (r > 0).
-            // Otherwise, traverse only n nodes.
-            for (int j = 0; j < n + (r > 0); j++) {
-                prev = node;
-                node = node->next;
-            }
-            // Disconnect the current part from the rest of the list by setting prev->next to nullptr.
-            prev->next = nullptr;
+    vector<ListNode*> splitListToParts(ListNode* head, int k) {
+       int length = 0;
+        vector<ListNode*> ans;
+        ListNode* temp = head;
+        while(temp){
+            length++;
+            temp = temp -> next;
         }
-
-        // Return the array of k parts.
-        return parts;
+        temp = head;
+        int count = length/k;
+        int rem = length%k;
+        ans.push_back(temp);
+        while(--k){
+            ListNode* prev = temp;
+            if(rem>0){
+                for(int i = 0; i<count+1; i++){
+                    if(temp){
+                        prev = temp;
+                        temp = temp -> next;
+                    }
+                }
+                rem--;
+            }
+            else{
+                for(int i = 0; i<count; i++){
+                    if(temp){
+                        prev = temp;
+                        temp = temp -> next;
+                    }
+                }
+            }
+            //can optimize by using while(temp) only for making groups of nodes but will do that later sometime else cuz so much bored  
+            //cout<< temp -> val;
+            if(prev){
+                prev -> next = NULL;
+            }
+            ans.push_back(temp);
+        }
+        return ans;
     }
 };
