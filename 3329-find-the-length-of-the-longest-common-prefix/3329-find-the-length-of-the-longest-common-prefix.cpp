@@ -1,32 +1,44 @@
+struct TrieNode {
+	int next[10];
+	TrieNode() {
+		fill(next, next + 10, -1);
+	}
+};
+TrieNode trie[65'000]; int trieSize;
+void insert(const string& s) {
+	int v = 0;
+	for(char c : s) {
+		if(trie[v].next[c-'0'] == -1) {
+			trie[v].next[c-'0'] = trieSize;
+			fill(trie[trieSize].next, trie[trieSize].next + 26, -1);
+            trieSize++;
+		}
+		v = trie[v].next[c-'0'];
+	}
+}
+
+int go(const string& s) {
+	int v = 0; int len = 0;
+	for(char c : s) {
+		if(trie[v].next[c-'0'] == -1) {
+			return len;
+		}
+		v = trie[v].next[c-'0'];
+        len++;
+	}
+	return len;
+}
 class Solution {
 public:
     int longestCommonPrefix(vector<int>& arr1, vector<int>& arr2) {
-        unordered_set<string>st;
-        // Iterate each string in the arr1
-        for(int i=0;i<arr1.size();i++)
-        {
-            string val=to_string(arr1[i]);
-            string prefix;
-            // iterate each character, append it to prefix and add the prefix to the set
-            // e.g. if val is 100, for 1st iteration, prefix="1", 2nd: prefix="10", 3rd: prefix="100" etc
-            // after first outer loop, set = Set("1", "10", "100")
-            for(auto ch:val)
-            {
-                prefix+=ch;
-                st.insert(prefix);
-            }
+        trieSize = 1;
+        fill(trie[0].next, trie[0].next + 26, -1);
+        for(int n : arr1) {
+            insert(to_string(n));
         }
-        int ans=0;
-        // Check every prefix combination in arr2, to see if it exists in the set we created above
-        for(int i=0;i<arr2.size();i++)
-        {
-            string val=to_string(arr2[i]);
-            string prefix;
-            for(auto ch:val)
-            {
-                prefix+=ch;
-                if(st.count(prefix))ans=max(ans,(int)prefix.size());
-            }
+        int ans = 0;
+        for(int n : arr2) {
+            ans = max(ans, go(to_string(n)));
         }
         return ans;
     }
