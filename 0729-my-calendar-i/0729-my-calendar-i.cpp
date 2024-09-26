@@ -1,18 +1,20 @@
 class MyCalendar {
 public:
-    vector<pair<int, int>> ranges;
+    map<int, int> mp;
     MyCalendar() {
         
     }
     bool book(int start, int end) {
-        for (auto const& pair : ranges) {
-            int r_start = pair.first;
-            int r_end = pair.second;
-            if (start < r_end && end > r_start)
-                return false;
+        auto it = mp.upper_bound(start);
+		// it->first = min end time greater than start
+		// it->second = start time of above obtained end time
+        if (it == mp.end() || it->second >= end)
+        {
+            mp[end] = start;
+            return true;
         }
-        ranges.push_back(make_pair(start, end));
-        return true;
+        else
+            return false;
     }
 };
 
