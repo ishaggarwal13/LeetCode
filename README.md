@@ -136,6 +136,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0495-teemo-attacking](https://github.com/ishaggarwal13/LeetCode/tree/master/0495-teemo-attacking) |
 | [0539-minimum-time-difference](https://github.com/ishaggarwal13/LeetCode/tree/master/0539-minimum-time-difference) |
 | [0729-my-calendar-i](https://github.com/ishaggarwal13/LeetCode/tree/master/0729-my-calendar-i) |
+| [0731-my-calendar-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0731-my-calendar-ii) |
 | [0739-daily-temperatures](https://github.com/ishaggarwal13/LeetCode/tree/master/0739-daily-temperatures) |
 | [0906-walking-robot-simulation](https://github.com/ishaggarwal13/LeetCode/tree/master/0906-walking-robot-simulation) |
 | [0924-fair-candy-swap](https://github.com/ishaggarwal13/LeetCode/tree/master/0924-fair-candy-swap) |
@@ -396,6 +397,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0109-convert-sorted-list-to-binary-search-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0109-convert-sorted-list-to-binary-search-tree) |
 | [0268-missing-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0268-missing-number) |
 | [0729-my-calendar-i](https://github.com/ishaggarwal13/LeetCode/tree/master/0729-my-calendar-i) |
+| [0731-my-calendar-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0731-my-calendar-ii) |
 | [0924-fair-candy-swap](https://github.com/ishaggarwal13/LeetCode/tree/master/0924-fair-candy-swap) |
 | [2006-find-the-student-that-will-replace-the-chalk](https://github.com/ishaggarwal13/LeetCode/tree/master/2006-find-the-student-that-will-replace-the-chalk) |
 ## Matrix
@@ -464,6 +466,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Prefix Sum
 |  |
 | ------- |
+| [0731-my-calendar-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0731-my-calendar-ii) |
 | [1435-xor-queries-of-a-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/1435-xor-queries-of-a-subarray) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/ishaggarwal13/LeetCode/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [2006-find-the-student-that-will-replace-the-chalk](https://github.com/ishaggarwal13/LeetCode/tree/master/2006-find-the-student-that-will-replace-the-chalk) |
@@ -534,12 +537,15 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0729-my-calendar-i](https://github.com/ishaggarwal13/LeetCode/tree/master/0729-my-calendar-i) |
+| [0731-my-calendar-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0731-my-calendar-ii) |
 ## Segment Tree
 |  |
 | ------- |
 | [0729-my-calendar-i](https://github.com/ishaggarwal13/LeetCode/tree/master/0729-my-calendar-i) |
+| [0731-my-calendar-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0731-my-calendar-ii) |
 ## Ordered Set
 |  |
 | ------- |
 | [0729-my-calendar-i](https://github.com/ishaggarwal13/LeetCode/tree/master/0729-my-calendar-i) |
+| [0731-my-calendar-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0731-my-calendar-ii) |
 <!---LeetCode Topics End-->
