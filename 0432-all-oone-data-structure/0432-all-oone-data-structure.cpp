@@ -1,39 +1,40 @@
 class AllOne {
 public:
-    unordered_map<string,int> count;  // Stores the count of each key
-    set<pair<int,string>> se;         // Sorted set to keep counts and keys
-    
+    unordered_map<string, int> freq;
     AllOne() {
-        count.clear();  // Initialize the count map
+       // nothing to do here
     }
-
-    // Increment the count of the key
+    
     void inc(string key) {
-        int n = count[key];   // Get current count
-        count[key]++;         // Increment the count
-        se.erase({n, key});   // Remove the old pair from set
-        se.insert({n+1, key}); // Insert the new pair with updated count
+        freq[key]++;
     }
-
-    // Decrement the count of the key
+    
     void dec(string key) {
-        int n = count[key];   // Get current count
-        count[key]--;         // Decrement the count
-        se.erase({n, key});   // Remove the old pair from set
-        if (count[key] > 0) se.insert({n-1, key});  // If count > 0, insert updated pair
-        else count.erase(key);  // If count reaches 0, remove the key from map
+        freq[key]--;
     }
-
-    // Get the key with the maximum count
+    
     string getMaxKey() {
-        if (!se.empty()) return se.rbegin()->second;  // Last element gives the maximum
-        return "";
+        int mx = 0;
+        string ans = "";
+        for(auto& val:freq){
+            if(val.second > mx){
+                mx = val.second;
+                ans = val.first;
+            }
+        }
+        return ans;
     }
-
-    // Get the key with the minimum count
+    
     string getMinKey() {
-        if (!se.empty()) return se.begin()->second;  // First element gives the minimum
-        return "";
+        int mini = INT_MAX;
+        string ans = "";
+        for(auto& val:freq){
+            if(val.second!=0 and val.second < mini){
+                mini = val.second;
+                ans = val.first;
+            }
+        }
+        return ans;
     }
 };
 
