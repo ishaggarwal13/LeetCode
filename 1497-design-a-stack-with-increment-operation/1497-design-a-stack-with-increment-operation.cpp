@@ -1,62 +1,33 @@
 class CustomStack {
 public:
-    queue<int> q;
-    int mx;
-    
+    vector<int> v;
+    int curInd = -1, mxCapacity;
 public:
     CustomStack(int maxSize) {
-        mx = maxSize;
+        v = vector<int> (maxSize);
+        mxCapacity = maxSize;
     }
     
     void push(int x) {
-        if (q.size() == mx) return;
-        q.push(x);
+        if(curInd == mxCapacity-1){return;}
+        curInd++;
+        v[curInd] = x;
     }
     
     int pop() {
-        if (q.empty()) return -1;  // Return -1 if the stack is empty
-        
-        int n = q.size() - 1;
-        queue<int> tmp_q;
-        
-        // Move all elements except the last one to a temporary queue
-        for (int i = 0; i < n; i++) {
-            tmp_q.push(q.front());
-            q.pop();
-        }
-        
-        // This is the element to be removed (top of the stack)
-        int poppedElement = q.front();
-        q.pop();
-        
-        // Restore the elements back into the original queue
-        while (!tmp_q.empty()) {
-            q.push(tmp_q.front());
-            tmp_q.pop();
-        }
-        
-        return poppedElement;  // Return the popped element
+        if(curInd==-1){return -1;}
+        int ans = v[curInd];
+        v[curInd] = -1;
+        curInd--;
+
+        return ans;
     }
     
     void increment(int k, int val) {
-        int n = min(k, (int)q.size());  // Increment only the first k elements
-        queue<int> tmp_q;
-        
-        // Increment the first k elements
-        for (int i = 0; i < n; i++) {
-            int incrementedValue = q.front() + val;
-            tmp_q.push(incrementedValue);
-            q.pop();
+        int n = min(k,curInd+1);
+        for(int i=0;i<n;i++){
+            v[i] += val;
         }
-        
-        // Move the rest of the elements as they are
-        while (!q.empty()) {
-            tmp_q.push(q.front());
-            q.pop();
-        }
-        
-        // Restore the elements back into the original queue
-        q = tmp_q;
     }
 };
 
