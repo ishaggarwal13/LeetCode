@@ -5,10 +5,7 @@ public:
         vector<int> freq(k, 0);
 
         for(int num : arr){
-            int rem = num % k;
-            if(rem < 0){
-                rem += k;
-            }
+            int rem = ((num % k) + k) % k; 
             freq[rem]++;
         }
 
