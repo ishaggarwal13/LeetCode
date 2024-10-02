@@ -1,21 +1,21 @@
 class Solution {
 public:
-    vector<int> arrayRankTransform(vector<int>& arr) {
-        vector<int> temp = arr;
-        unordered_map<int, int> mp;
-
-        //sort the array and remove duplicate element
-        sort(temp.begin(), temp.end());
-        temp.erase(unique(temp.begin(), temp.end()), temp.end());
-
-        //add rank and value to map
-        for(int i=0; i<temp.size(); i++){
-            mp[temp[i]] = i+1;
+    using int2=pair<int, int>;
+    static vector<int> arrayRankTransform(vector<int>& arr) {
+        const int n=arr.size();
+        vector<int2> arrIdx(n);
+        for(int i=0; int x: arr){
+            arrIdx[i]={x, i};
+            i++;
         }
-
-        for(int i=0; i<arr.size(); i++){
-            arr[i] = mp[arr[i]];
+        sort(arrIdx.begin(), arrIdx.end());
+        vector<int> ans(n);
+        int prev=INT_MIN, curr=0;
+        for(auto& [x, i]: arrIdx){
+            if (x>prev) curr++;
+            ans[i]=curr;
+            prev=x;
         }
-        return arr;
+        return ans;
     }
 };
