@@ -152,6 +152,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1435-xor-queries-of-a-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/1435-xor-queries-of-a-subarray) |
 | [1497-design-a-stack-with-increment-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/1497-design-a-stack-with-increment-operation) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/ishaggarwal13/LeetCode/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
+| [1694-make-sum-divisible-by-p](https://github.com/ishaggarwal13/LeetCode/tree/master/1694-make-sum-divisible-by-p) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/1786-count-the-number-of-consistent-strings) |
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
 | [2006-find-the-student-that-will-replace-the-chalk](https://github.com/ishaggarwal13/LeetCode/tree/master/2006-find-the-student-that-will-replace-the-chalk) |
@@ -472,6 +473,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1256-rank-transform-of-an-array](https://github.com/ishaggarwal13/LeetCode/tree/master/1256-rank-transform-of-an-array) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/ishaggarwal13/LeetCode/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/ishaggarwal13/LeetCode/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
+| [1694-make-sum-divisible-by-p](https://github.com/ishaggarwal13/LeetCode/tree/master/1694-make-sum-divisible-by-p) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/1786-count-the-number-of-consistent-strings) |
 | [1933-number-of-different-integers-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1933-number-of-different-integers-in-a-string) |
 | [2122-count-special-quadruplets](https://github.com/ishaggarwal13/LeetCode/tree/master/2122-count-special-quadruplets) |
@@ -494,6 +496,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0731-my-calendar-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0731-my-calendar-ii) |
 | [1435-xor-queries-of-a-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/1435-xor-queries-of-a-subarray) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/ishaggarwal13/LeetCode/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
+| [1694-make-sum-divisible-by-p](https://github.com/ishaggarwal13/LeetCode/tree/master/1694-make-sum-divisible-by-p) |
 | [2006-find-the-student-that-will-replace-the-chalk](https://github.com/ishaggarwal13/LeetCode/tree/master/2006-find-the-student-that-will-replace-the-chalk) |
 | [3034-points-that-intersect-with-cars](https://github.com/ishaggarwal13/LeetCode/tree/master/3034-points-that-intersect-with-cars) |
 ## Sliding Window
