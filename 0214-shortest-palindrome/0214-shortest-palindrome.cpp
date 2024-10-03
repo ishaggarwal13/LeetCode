@@ -1,33 +1,29 @@
 class Solution {
-public:
+public: 
     string shortestPalindrome(string s) {
-        int n = s.size();
-        
-        int i = 0; //  i = 0 to n-1
-        int j = n - 1; // j = n-1 to 0
-        
-        // Find the largest prefix palindrome
-        while (j >= 0) {
-            if (s[i] == s[j]) {
-                i++;
-            }
-            j--;
-        }
-        
-        // calculate remain
-        string remain = s.substr(i); // s trim from i to end
-        
-        // If the entire string is already a palindrome
-        // means remain = ""
-        if( remain.size()==0 ){ return s; }
+        int count = kmp(string(s.rbegin(), s.rend()), s);
+        return string(s.rbegin(), s.rend()).substr(0, s.length() - count) + s;
+    }
 
-        string rev_remain = remain;
-        reverse(rev_remain.begin(), rev_remain.end());
-        
-        // Uncomment Below to see How LPP is printing for each step
-        // cout<< rev_remain <<" "<< s.substr(0,i) <<" "<< remain <<endl;
-        
-        // recurively calculate shortest palindrome in the longest prefix string
-        return rev_remain + shortestPalindrome(s.substr(0, i)) + remain;
+private:
+    int kmp(const string &txt, const string &patt) {
+        string newString = patt + '#' + txt;
+        vector<int> pi(newString.length(), 0);
+        int i = 1, k = 0;
+        while (i < newString.length()) {
+            if (newString[i] == newString[k]) {
+                k++;
+                pi[i] = k;
+                i++;
+            } else {
+                if (k > 0) {
+                    k = pi[k - 1];
+                } else {
+                    pi[i] = 0;
+                    i++;
+                }
+            }
+        }
+        return pi.back();
     }
 };
