@@ -1,25 +1,20 @@
 class Solution {
 public:
     long long dividePlayers(vector<int>& skill) {
-        sort(skill.begin(), skill.end());
-        long long sum = 0;
-        for(auto it: skill) sum+=it;
-
-        int n = skill.size();
-        int size = n/2;
-        if(sum%size!=0) return -1;
-        
-        long long target = sum/size;
-        long long ans=0;
-        int i=0, j=n-1;
-        while(i<=j){
-            if(skill[i]+skill[j] == target){
-                ans+=(skill[i]*skill[j]);
-            }
-            else return -1;
-            i++;
-            j--;
+        vector<pair<int,int>> ans;
+        sort(skill.begin(),skill.end());
+        if(skill.size()==2){
+          return skill[0]*skill[1];
         }
-        return ans;
+        int val = skill[0]+skill[skill.size()-1];
+        long long prod=0;
+        for(int i=0;i<skill.size()/2;i++){
+          if(val != (skill[i]+skill[skill.size()-i-1])){
+            return -1;
+          }
+          prod += (long long)skill[i]*(long long)skill[skill.size()-i-1];
+        }
+        
+        return prod;
     }
 };
