@@ -121,6 +121,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0045-jump-game-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/ishaggarwal13/LeetCode/tree/master/0055-jump-game) |
 | [0056-merge-intervals](https://github.com/ishaggarwal13/LeetCode/tree/master/0056-merge-intervals) |
+| [0057-insert-interval](https://github.com/ishaggarwal13/LeetCode/tree/master/0057-insert-interval) |
 | [0064-minimum-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0064-minimum-path-sum) |
 | [0075-sort-colors](https://github.com/ishaggarwal13/LeetCode/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/ishaggarwal13/LeetCode/tree/master/0088-merge-sorted-array) |
