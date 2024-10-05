@@ -1,21 +1,21 @@
 class MyCalendar {
 public:
-    map<int, int> mp;
     MyCalendar() {
         
     }
+    
     bool book(int start, int end) {
-        auto it = mp.upper_bound(start);
-		// it->first = min end time greater than start
-		// it->second = start time of above obtained end time
-        if (it == mp.end() || it->second >= end)
-        {
-            mp[end] = start;
-            return true;
+        for (auto it : m_vEvents) {
+            int intersectStart = max(it.first, start);
+            int intersectEnd = min(it.second, end);
+            if (intersectStart < intersectEnd)
+                return false;
         }
-        else
-            return false;
+        m_vEvents.push_back({start, end});
+        return true;
     }
+private:
+    vector<pair<int, int>> m_vEvents;
 };
 
 /**
