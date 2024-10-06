@@ -1,30 +1,41 @@
 class Solution {
 public:
     bool areSentencesSimilar(string sentence1, string sentence2) {
-        // two vectors to store words of both sentence
-        vector<string>s1;
-        vector<string>s2;
-        string word;
-        stringstream iss(sentence1);//storing each word of sentence 1
-            while(iss>>word)
-               s1.push_back(word);
-        string word1;
-        stringstream iss1(sentence2);//storing each word of sentence 2
-            while(iss1>>word1)
-                 s2.push_back(word1);
-        int start1=0,start2=0,end1=s1.size()-1,end2=s2.size()-1;
-        while(start1<=end1&&start2<=end2)
-        {
-            if(s1[start1]==s2[start2]) // if start of both vectors are equal
-            {
-                start1++; start2++;
+        // Helper function to split the sentence into words
+        auto splitWords = [](const string& sentence) {
+            vector<string> words;
+            string word = "";
+            for (char c : sentence) {
+                if (c == ' ') {
+                    if (!word.empty()) {
+                        words.push_back(word);
+                        word = "";
+                    }
+                } else {
+                    word += c;
+                }
             }
-            else if(s1[end1]==s2[end2]) //if end of both vectors are equal
-            {
-                end1--; end2--;
-            }
-            else  return false;
-        }
-        return true;
+            if (!word.empty()) words.push_back(word);
+            return words;
+        };
+
+        // Split both sentences into words
+        vector<string> words1 = splitWords(sentence1);
+        vector<string> words2 = splitWords(sentence2);
+        
+        // Ensure words1 is the longer sentence
+        if (words1.size() < words2.size()) swap(words1, words2);
+        
+        int start = 0, end = 0;
+        int n1 = words1.size(), n2 = words2.size();
+        
+        // Compare from the start
+        while (start < n2 && words1[start] == words2[start]) start++;
+        
+        // Compare from the end
+        while (end < n2 && words1[n1 - end - 1] == words2[n2 - end - 1]) end++;
+        
+        // Check if the remaining unmatched part is in the middle
+        return start + end >= n2;
     }
 };
