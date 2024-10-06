@@ -1,33 +1,35 @@
 class CustomStack {
 public:
-    vector<int> v;
-    int curInd = -1, mxCapacity;
-public:
+    vector<int> arr;
+    int i=0;
     CustomStack(int maxSize) {
-        v = vector<int> (maxSize);
-        mxCapacity = maxSize;
+        arr.resize(maxSize);
+        return ;
     }
     
     void push(int x) {
-        if(curInd == mxCapacity-1){return;}
-        curInd++;
-        v[curInd] = x;
+        if(i==arr.size()){
+            return;
+        }
+        arr[i] = x;
+        i++;
+        return;
     }
     
     int pop() {
-        if(curInd==-1){return -1;}
-        int ans = v[curInd];
-        v[curInd] = -1;
-        curInd--;
-
-        return ans;
+        i--;
+        if(i<0){
+            i=0;
+            return -1;
+        }
+        return arr[i];
     }
     
     void increment(int k, int val) {
-        int n = min(k,curInd+1);
-        for(int i=0;i<n;i++){
-            v[i] += val;
+        for(int i=0;i<(min((int)arr.size(),k));i++){
+            arr[i] += val;
         }
+        return;
     }
 };
 
