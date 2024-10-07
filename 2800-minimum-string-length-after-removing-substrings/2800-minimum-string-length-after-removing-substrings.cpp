@@ -2,21 +2,16 @@ class Solution {
 public:
     int minLength(string s) {
         stack<char> st;
-
-        for(int i=0; i<s.length(); i++){
-            char curr = s[i];
-
-            if(st.empty()){
-                st.push(curr);
-                continue;
-            }
-
-            if(curr == 'B' && st.top() == 'A'){
+        int n=s.size();
+        for(int i=0;i<n;i++){
+            if(!st.empty() && ((st.top() == 'A' && s[i] == 'B') ||
+                
+                (st.top() =='C' && s[i]=='D')
+                 
+                )){
                 st.pop();
-            } else if(curr == 'D' && st.top() == 'C'){
-                st.pop();
-            } else{
-                st.push(curr);
+            }else{
+                st.push(s[i]);
             }
         }
         return st.size();
