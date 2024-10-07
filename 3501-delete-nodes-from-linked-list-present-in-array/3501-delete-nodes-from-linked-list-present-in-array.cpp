@@ -10,24 +10,24 @@
  */
 class Solution {
 public:
-    ListNode* modifiedList(vector<int>& excludeValues, ListNode* head) {
-        bitset<100001> excludeSet; 
-        for (int val : excludeValues) {
-            excludeSet.set(val);
+    ListNode* modifiedList(vector<int>& nums, ListNode* head) {
+        ios::sync_with_stdio(false);
+        cin.tie(nullptr);
+
+        bitset<100001> bs;
+        for(const int & i : nums){
+            bs.set(i);
         }
         
-        ListNode dummy(0);
-        dummy.next = head;
-        ListNode* curr = &dummy;
-        
-        while (curr->next) {
-            if (excludeSet[curr->next->val]) {
-                curr->next = curr->next->next;  
-            } else {
-                curr = curr->next;  
+        head = new ListNode(-1,head);
+        ListNode * prev = head;
+        while(head->next){
+            if(bs[head->next->val]){
+                head->next = head->next->next;
+            }else{
+                head = head->next;
             }
         }
-        
-        return dummy.next;
+        return prev->next;
     }  
 };
