@@ -1,19 +1,30 @@
 class Solution {
 public:
     int minLength(string s) {
+        if(s.length() == 1) return 1;
+
         stack<char> st;
-        int n=s.size();
-        for(int i=0;i<n;i++){
-            if(!st.empty() && ((st.top() == 'A' && s[i] == 'B') ||
-                
-                (st.top() =='C' && s[i]=='D')
-                 
-                )){
+        for(auto c : s){
+            if(!st.empty()){
+                if(c == 'B' && st.top() == 'A'){
                 st.pop();
-            }else{
-                st.push(s[i]);
+                continue;
             }
+            else if(c == 'D' && st.top() == 'C'){
+                st.pop();
+                continue;
+            }
+            }
+                st.push(c);
         }
-        return st.size();
+
+        string t = "";
+        while(!st.empty()){
+            char x = st.top();
+            t += x;
+            st.pop();
+        }
+
+        return t.length();
     }
 };
