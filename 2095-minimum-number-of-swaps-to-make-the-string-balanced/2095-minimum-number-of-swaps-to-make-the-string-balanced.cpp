@@ -2,11 +2,17 @@ class Solution {
 public:
     int minSwaps(string s) {
         int count = 0;
+        int moves = 0;
         for(char ch : s){
-            if(ch == '[') count++;
-            else if(count != 0) count--;
+            if(ch == ']') {
+                if(count == 0){
+                    count++;
+                    moves++;
+                } else {
+                    count--;
+                }
+            } else count++;
         }
-
-        return (count+1)/2;
+        return moves;
     }
 };
