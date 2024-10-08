@@ -95,6 +95,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1923-sentence-similarity-iii](https://github.com/ishaggarwal13/LeetCode/tree/master/1923-sentence-similarity-iii) |
 | [1933-number-of-different-integers-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1933-number-of-different-integers-in-a-string) |
 | [2076-sum-of-digits-of-string-after-convert](https://github.com/ishaggarwal13/LeetCode/tree/master/2076-sum-of-digits-of-string-after-convert) |
+| [2095-minimum-number-of-swaps-to-make-the-string-balanced](https://github.com/ishaggarwal13/LeetCode/tree/master/2095-minimum-number-of-swaps-to-make-the-string-balanced) |
 | [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2168-check-if-numbers-are-ascending-in-a-sentence](https://github.com/ishaggarwal13/LeetCode/tree/master/2168-check-if-numbers-are-ascending-in-a-sentence) |
 | [2494-sum-of-prefix-scores-of-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/2494-sum-of-prefix-scores-of-strings) |
@@ -198,6 +199,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0768-partition-labels](https://github.com/ishaggarwal13/LeetCode/tree/master/0768-partition-labels) |
 | [1028-interval-list-intersections](https://github.com/ishaggarwal13/LeetCode/tree/master/1028-interval-list-intersections) |
 | [1923-sentence-similarity-iii](https://github.com/ishaggarwal13/LeetCode/tree/master/1923-sentence-similarity-iii) |
+| [2095-minimum-number-of-swaps-to-make-the-string-balanced](https://github.com/ishaggarwal13/LeetCode/tree/master/2095-minimum-number-of-swaps-to-make-the-string-balanced) |
 | [2497-maximum-matching-of-players-with-trainers](https://github.com/ishaggarwal13/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
 | [2581-divide-players-into-teams-of-equal-skill](https://github.com/ishaggarwal13/LeetCode/tree/master/2581-divide-players-into-teams-of-equal-skill) |
 | [3471-minimum-average-of-smallest-and-largest-elements](https://github.com/ishaggarwal13/LeetCode/tree/master/3471-minimum-average-of-smallest-and-largest-elements) |
@@ -213,6 +215,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1018-largest-perimeter-triangle](https://github.com/ishaggarwal13/LeetCode/tree/master/1018-largest-perimeter-triangle) |
 | [1047-maximize-sum-of-array-after-k-negations](https://github.com/ishaggarwal13/LeetCode/tree/master/1047-maximize-sum-of-array-after-k-negations) |
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
+| [2095-minimum-number-of-swaps-to-make-the-string-balanced](https://github.com/ishaggarwal13/LeetCode/tree/master/2095-minimum-number-of-swaps-to-make-the-string-balanced) |
 | [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [2497-maximum-matching-of-players-with-trainers](https://github.com/ishaggarwal13/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
@@ -264,6 +267,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0739-daily-temperatures](https://github.com/ishaggarwal13/LeetCode/tree/master/0739-daily-temperatures) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0776-n-ary-tree-postorder-traversal) |
 | [1497-design-a-stack-with-increment-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/1497-design-a-stack-with-increment-operation) |
+| [2095-minimum-number-of-swaps-to-make-the-string-balanced](https://github.com/ishaggarwal13/LeetCode/tree/master/2095-minimum-number-of-swaps-to-make-the-string-balanced) |
 | [2800-minimum-string-length-after-removing-substrings](https://github.com/ishaggarwal13/LeetCode/tree/master/2800-minimum-string-length-after-removing-substrings) |
 ## Counting
 |  |
