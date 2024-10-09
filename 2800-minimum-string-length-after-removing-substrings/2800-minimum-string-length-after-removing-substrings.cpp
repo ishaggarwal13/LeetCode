@@ -1,16 +1,16 @@
 class Solution {
 public:
     int minLength(string s) {
-        stack<int> st;
+        int idx = 0; //act like stack pointer
         for(char ch : s){
-            if(!st.empty() && 
-            ((st.top() == 'A' && ch == 'B') || 
-            (st.top() == 'C' && ch == 'D'))) {
-                st.pop();
+            if(idx>0 && 
+            ((s[idx - 1] == 'A' && ch == 'B') || 
+            (s[idx - 1] == 'C' && ch == 'D'))) {
+                idx--;
             } else {
-                st.push(ch);
+                s[idx++] = ch;
             }
         }
-        return st.size();
+        return idx;
     }
 };
