@@ -12,5 +12,5 @@ class Solution(object):
             if count > 0:
               count-=1
         return (count+1)//2
-        """to get interger value without fraction part"""
+        """ // to get interger value without fraction part"""
         
