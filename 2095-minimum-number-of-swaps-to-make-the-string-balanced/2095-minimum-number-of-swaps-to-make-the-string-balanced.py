@@ -4,13 +4,13 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        stack = []
-        for i in s :
-            if i == '[':
-                stack.append(i) 
-            elif stack:
-                stack.pop()
-
-        return (len(stack) + 1) // 2 
+        count=0
+        for i  in s:
+          if i == '[':
+            count+=1
+          else:
+            if count > 0:
+              count-=1
+        return (count+1)//2
         """to get interger value without fraction part"""
         
