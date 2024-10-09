@@ -4,12 +4,11 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        index = 0
-        for ch in s :
-            if index > 0 and ((s[index - 1] == 'A' and ch == 'B') or (s[index - 1] == 'C' and ch == 'D')):
-                index -= 1
+        stack = []
+        for ch in s:
+            if stack and stack[-1] + ch in ('AB', 'CD'):
+                stack.pop()
             else:
-                s = s[:index] + ch
-                index += 1
-        return index
+                stack.append(ch)
+        return len(stack)
         
