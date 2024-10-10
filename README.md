@@ -148,6 +148,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0906-walking-robot-simulation](https://github.com/ishaggarwal13/LeetCode/tree/master/0906-walking-robot-simulation) |
 | [0924-fair-candy-swap](https://github.com/ishaggarwal13/LeetCode/tree/master/0924-fair-candy-swap) |
 | [0948-sort-an-array](https://github.com/ishaggarwal13/LeetCode/tree/master/0948-sort-an-array) |
+| [1002-maximum-width-ramp](https://github.com/ishaggarwal13/LeetCode/tree/master/1002-maximum-width-ramp) |
 | [1018-largest-perimeter-triangle](https://github.com/ishaggarwal13/LeetCode/tree/master/1018-largest-perimeter-triangle) |
 | [1028-interval-list-intersections](https://github.com/ishaggarwal13/LeetCode/tree/master/1028-interval-list-intersections) |
 | [1047-maximize-sum-of-array-after-k-negations](https://github.com/ishaggarwal13/LeetCode/tree/master/1047-maximize-sum-of-array-after-k-negations) |
@@ -269,6 +270,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0739-daily-temperatures](https://github.com/ishaggarwal13/LeetCode/tree/master/0739-daily-temperatures) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0776-n-ary-tree-postorder-traversal) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/ishaggarwal13/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
+| [1002-maximum-width-ramp](https://github.com/ishaggarwal13/LeetCode/tree/master/1002-maximum-width-ramp) |
 | [1497-design-a-stack-with-increment-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/1497-design-a-stack-with-increment-operation) |
 | [2095-minimum-number-of-swaps-to-make-the-string-balanced](https://github.com/ishaggarwal13/LeetCode/tree/master/2095-minimum-number-of-swaps-to-make-the-string-balanced) |
 | [2800-minimum-string-length-after-removing-substrings](https://github.com/ishaggarwal13/LeetCode/tree/master/2800-minimum-string-length-after-removing-substrings) |
@@ -455,6 +457,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0739-daily-temperatures](https://github.com/ishaggarwal13/LeetCode/tree/master/0739-daily-temperatures) |
+| [1002-maximum-width-ramp](https://github.com/ishaggarwal13/LeetCode/tree/master/1002-maximum-width-ramp) |
 ## Graph
 |  |
 | ------- |
