@@ -1,17 +1,27 @@
 class Solution {
+string getValue(string s) {
+        int sum = 0, val;
+        
+        for(auto ch : s) {
+            val = ch - '0';
+            sum += val;
+        }
+
+        return to_string(sum);
+    }
+
 public:
     int getLucky(string s, int k) {
-        string str="";
-        for(int i=0;i<s.length();i++)
-            str=str+ to_string(s[i]-'a'+1);
-        while(k!=0)
-        {
-            int ans=0;
-            for(int i=0;i<str.length();i++)
-                ans=ans+str[i]-'0';
-            str=to_string(ans);
-            k--;
+        string temp = "";
+
+        for(int i = 0; i < s.length(); i++) {
+            temp += to_string(s[i] - 'a' + 1);
         }
-        return stoi(str);
+
+        while(k--){
+            temp = getValue(temp);
+        }
+
+        return stoi(temp);
     }
 };
