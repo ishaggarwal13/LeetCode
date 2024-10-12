@@ -1,29 +1,27 @@
 class Solution {
 public:
     int minGroups(vector<vector<int>>& intervals) {
-        vector<int> start_times, end_times;
+        sort(intervals.begin(), intervals.end());
+        
+		// Heap stores the ending interval of each group
+        priority_queue<int,vector<int>,greater<int>> heap;
+        
+        int ans = 1;
+		heap.push(intervals[0][1]);
 
-        // Extract start and end times
-        for (const auto& interval : intervals) {
-            start_times.push_back(interval[0]);
-            end_times.push_back(interval[1]);
-        }
-
-        // Sort start and end times
-        sort(start_times.begin(), start_times.end());
-        sort(end_times.begin(), end_times.end());
-
-        int end_ptr = 0, group_count = 0;
-
-        // Traverse through the start times
-        for (int start : start_times) {
-            if (start > end_times[end_ptr]) {
-                end_ptr++;
-            } else {
-                group_count++;
+        for(int i=1; i<intervals.size(); i++){
+			// If the current interval merges with the min group, then it should be added in new group 
+			// No need to check with other group intervals, because it merges with all other groups as we're maintaing min heap
+            if(intervals[i][0] <= heap.top()){
+                heap.push(intervals[i][1]);
+            }
+			// Curr interval not merging with min group, then update the group interval
+            else{
+                heap.pop();
+                heap.push(intervals[i][1]);
             }
         }
-
-        return group_count;
+        
+        return heap.size();
     }
 };
