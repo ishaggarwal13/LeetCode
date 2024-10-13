@@ -1,31 +1,32 @@
 class Solution {
 public:
     int minSubarray(vector<int>& nums, int p) {
-        long long totalSum = accumulate(nums.begin(), nums.end(), 0LL);  // Use 0LL to force long long
-
-        int remainder = totalSum % p;
-
-        if (remainder == 0)
-            return 0;
-
-        int n = nums.size();
-        int minLength = n;
-        int prefixSum = 0;
-        unordered_map<int, int> prefixSums;
-
-        prefixSums[0] = -1;
-
-        for (int i = 0; i < n; i++) {
-            prefixSum = (prefixSum + nums[i]) % p;
-            int target = (prefixSum - remainder + p) % p;
-
-            if (prefixSums.find(target) != prefixSums.end()) {
-                minLength = min(minLength, i - prefixSums[target]);
-            }
-
-            prefixSums[prefixSum] = i;
+        long totalSum = 0;
+        for (int num : nums) {
+            totalSum += num;
         }
 
-        return minLength == n ? -1 : minLength;
+        // Find the remainder when total sum is divided by p
+        int rem = totalSum % p;
+        if (rem == 0) return 0; // If the remainder is 0, no subarray needs to be removed
+
+        unordered_map<int, int> prefixMod;
+        prefixMod[0] = -1;  // Initialize for handling full prefix
+        long prefixSum = 0;
+        int minLength = nums.size();
+
+        for (int i = 0; i < nums.size(); ++i) {
+            prefixSum += nums[i];
+            int currentMod = prefixSum % p;
+            int targetMod = (currentMod - rem + p) % p;
+
+            if (prefixMod.find(targetMod) != prefixMod.end()) {
+                minLength = min(minLength, i - prefixMod[targetMod]);
+            }
+
+            prefixMod[currentMod] = i;
+        }
+
+        return minLength == nums.size() ? -1 : minLength;
     }
 };
