@@ -9,19 +9,19 @@ public:
         //pop the pq
         //psh the ceil value which ceil(nums[i] / 3) or (nums[i] + 2)/3
         //score is teh answer
-        priority_queue<int> pq(nums.begin(), nums.end());
-        long long score = 0;
+        make_heap(nums.begin(), nums.end());
+        long long score=0;
         for(int i=0; i<k; i++){
-            int x = pq.top();
-            score += x;
-            if(x == 1){
-                score += (k-1-i);
+            pop_heap(nums.begin(), nums.end());
+            int x=nums.back();
+            score+=x;
+            if (x==1){
+                score+=(k-1-i);
                 break;
             }
-            pq.pop();
-            pq.push((x+2)/3);
+            nums.back()=(x+2)/3;
+            push_heap(nums.begin(), nums.end());
         }
-
         return score;
     }
 };
