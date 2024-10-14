@@ -1,21 +1,28 @@
+#include <execution>
 class Solution {
 public:
-    using int2=pair<int, int>;
-    static vector<int> arrayRankTransform(vector<int>& arr) {
-        const int n=arr.size();
-        vector<int2> arrIdx(n);
-        for(int i=0; int x: arr){
-            arrIdx[i]={x, i};
-            i++;
+    constexpr inline vector<int> arrayRankTransform(vector<int>& arr) {
+        if (arr.empty()) {
+            return {};
         }
-        sort(arrIdx.begin(), arrIdx.end());
-        vector<int> ans(n);
-        int prev=INT_MIN, curr=0;
-        for(auto& [x, i]: arrIdx){
-            if (x>prev) curr++;
-            ans[i]=curr;
-            prev=x;
+        const int n = arr.size();
+        vector<pair<int, int>> result(n);        
+        transform(
+            arr.begin(), arr.end(), result.begin(),
+            [i = 0](int value) mutable { return make_pair(value, i++); });
+        sort(execution::par_unseq,
+            result.begin(), result.end(),
+            [](const pair<int, int>& p1, const pair<int, int>& p2){
+                return p1.first < p2.first;
+            });
+        int rank = 1;
+        for (int i = 0; i < n - 1; ++i) {
+            arr[result[i].second] = rank;
+            if (result[i].first != result[i + 1].first) {
+                ++rank;
+            }
         }
-        return ans;
+        arr[result.back().second] = rank;
+        return arr;        
     }
 };
