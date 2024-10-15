@@ -6,8 +6,8 @@ class Solution(object):
         """
         black = 0
         swap = 0
-        for i in range(len(s)):
-            if s[i] == '1':
+        for i in s:
+            if i == '1':
                 black += 1
             else:
                 swap += black
