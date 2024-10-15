@@ -1,27 +1,34 @@
 class Solution {
 public:
     int minGroups(vector<vector<int>>& intervals) {
-        sort(intervals.begin(), intervals.end());
-        
-		// Heap stores the ending interval of each group
-        priority_queue<int,vector<int>,greater<int>> heap;
-        
-        int ans = 1;
-		heap.push(intervals[0][1]);
+        // creating vectors for start and end time
+        // pushing teh elements of intervals speratly into start and end vectors
+        // sorting both the vectors ascending
+        // declare group count and end pointer and then traverse over start time
+        // will check that start > end time so that it is not overlapping and 
+        // will inc the count of end time
+        // else ->it is overlapping inc the gorup count
+        // return group count
 
-        for(int i=1; i<intervals.size(); i++){
-			// If the current interval merges with the min group, then it should be added in new group 
-			// No need to check with other group intervals, because it merges with all other groups as we're maintaing min heap
-            if(intervals[i][0] <= heap.top()){
-                heap.push(intervals[i][1]);
-            }
-			// Curr interval not merging with min group, then update the group interval
-            else{
-                heap.pop();
-                heap.push(intervals[i][1]);
+        vector<int> start, end;
+
+        for(auto interval : intervals){
+            start.push_back(interval[0]);
+            end.push_back(interval[1]);
+        }
+
+        sort(start.begin(), start.end());
+        sort(end.begin(), end.end());
+
+        int groupcount=0, end_pt=0;
+        for(auto s : start){
+            if(s > end[end_pt]){
+                end_pt++;
+            } else {
+                groupcount++;
             }
         }
-        
-        return heap.size();
+
+        return groupcount;
     }
 };
