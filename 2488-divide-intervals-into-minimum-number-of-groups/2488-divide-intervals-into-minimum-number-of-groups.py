@@ -1,9 +1,5 @@
-class Solution(object):
-    def minGroups(self, intervals):
-        """
-        :type intervals: List[List[int]]
-        :rtype: int
-        """
+class Solution:
+    def minGroups(self, intervals: List[List[int]]) -> int:
         start = []
         end = []
 
@@ -24,4 +20,3 @@ class Solution(object):
                 group_count += 1
         
         return group_count
-        
