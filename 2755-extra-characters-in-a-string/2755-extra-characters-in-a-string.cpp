@@ -1,31 +1,25 @@
 class Solution {
-bool startWith(string& s, int index, string& comp) {
-        if (index + comp.size() > s.size()) {
-            return false;
-        }
-        for (int i = 0; i < comp.size(); i++) {
-            if (s[index + i] != comp[i]) {
-                return false;
-            }
-        }
-        return true;
-
-    }
 public:
     int minExtraChar(string s, vector<string>& dictionary) {
-        vector<unsigned long> minDp(s.size()+1, s.size());
-        unsigned long minChar = s.size();
-        for (int i = 0; i < s.size(); i++) {
-            for (int j = 0; j < dictionary.size(); j++) {
-                if (startWith(s, i, dictionary[j])) {
-                    for (int k = i+dictionary[j].size(); k <= s.size(); k++) {
-                        minDp[k] = min(minDp[k], minDp[i] - dictionary[j].size());
-                        // printf("k %d min %d i %d j %s\n", k, minDp[k], i, dictionary[j].c_str());
-                        minChar = min(minChar, minDp[k]);
-                    }
+        vector<pair<int, int>> seq;
+        for (const auto& word: dictionary) {
+            int pos = -1, n = word.size();
+            do {
+                pos = s.find(word, pos + 1);
+                if (pos >= 0) seq.push_back(pair<int, int>(pos, pos + n));
+            } while(pos != string::npos);
+        }
+        int n = s.size(), m = seq.size();
+        vector<int> dp(n);
+        for (int i = 0; i < n; ++i) {
+            dp[i] = i ? min(dp[i - 1] + 1, i + 1) : 1;
+            for (int j = 0; j < m; ++j) {
+                if (seq[j].second - 1 == i) {
+                    int front = seq[j].first - 1;
+                    dp[i] = front >= 0 ? min(dp[i], dp[front]) : 0;
                 }
             }
         }
-        return minChar;
+        return dp[n - 1];
     }
 };
