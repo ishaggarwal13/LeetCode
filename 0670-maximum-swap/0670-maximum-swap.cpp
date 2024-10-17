@@ -10,22 +10,26 @@ public:
         // after loop ends return original num
 
         string str = to_string(num);
-        int n = str.size();
-
-        int last[10] = {-1};
-
-        for(int i=0; i<n; i++){
-            last[str[i] - '0'] = i; // for eg 234 so at last[2] = 0
-        }
+        string s1 = str;
+        int n = s1.size();
 
         for(int i=0; i<n; i++){
-            for(int d=9; d>str[i] - '0'; d--){
-                if(last[d] > i){
-                    swap(str[i], str[last[d]]);
-                    return stoi(str);
-                }
+            int index = getmax(str, i);
+            swap(str[i], str[index]);
+            if(s1 != str){
+                break;
             }
         }
-        return num;
+        int number = stoi(str);
+        return number;
+    }
+    static int getmax(string str, int i){
+        int max = i;
+        for(int j=i; j<str.length(); j++){
+            if(str[max] <= str[j]){
+                max = j;
+            }
+        }
+        return max;
     }
 };
