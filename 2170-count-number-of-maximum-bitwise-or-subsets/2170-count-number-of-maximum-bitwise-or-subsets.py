@@ -1,21 +1,16 @@
 class Solution:
-    def backtrack(self, nums, index, currentOR, maxOR, count):
-        if currentOR == maxOR:
-            count[0] += 1
-        
-        for i in range(index, len(nums)):
-            self.backtrack(nums, i + 1, currentOR | nums[i], maxOR, count)
-    
     def countMaxOrSubsets(self, nums: List[int]) -> int:
-        maxOR = 0
+        max_or = 0
+        prev = Counter()
+        prev[0] = 1
         
-        # Step 1: Compute the maximum OR
-        for num in nums:
-            maxOR |= num
+        for elem in nums:
+            max_or |= elem
+
+            current = Counter()
+            for prev_or, cnt in prev.items():
+                current[prev_or | elem] += cnt
+            prev.update(current)
         
-        count = [0]
-        # Step 2: Backtrack to count the subsets
-        self.backtrack(nums, 0, 0, maxOR, count)
-        
-        return count[0]
+        return prev[max_or]
         
