@@ -1,24 +1,28 @@
 class Solution {
 public:
-    int cnt = 0;
-    void count(int index, int curr, int target, vector<int>& nums){
-        if(index == nums.size()){
-            if(target == curr){
-                cnt++;
-            }
-            return;
+    void backtrack(const vector<int> &nums, int index, int currentOR, int maxOR, int &count)
+    {
+        if (currentOR == maxOR) {
+            count++;
         }
-        //include exclude
-        count(index+1, (curr | nums[index]), target, nums);
-        count(index+1 , curr, target, nums);
+
+        for (int i = index; i < nums.size(); ++i) {
+            backtrack(nums, i + 1, currentOR | nums[i], maxOR, count);
+        }
     }
-    int countMaxOrSubsets(vector<int>& nums) {
-        int target = 0;
-        //find maximum or
-        for(auto num : nums){
-            target |= num;
+
+    int countMaxOrSubsets(vector<int> &nums)
+    {
+        int maxOR = 0;
+
+        // Step 1: Compute the maximum OR
+        for (int num : nums) {
+            maxOR |= num;
         }
-        count(0, 0, target, nums);
-        return cnt;
+        int count = 0;
+        // Step 2: Backtrack to count the subsets
+        backtrack(nums, 0, 0, maxOR, count);
+
+        return count;
     }
 };
