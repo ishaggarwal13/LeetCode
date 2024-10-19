@@ -17,6 +17,8 @@ public:
             return findKthBit(n-1, k);
         } else{
             int mirroredK = mid - (k - mid); 
+            // finding index of right half into left half 
+            // such as k = 6 then in left half it should be 2
             return findKthBit(n - 1, mirroredK) == '0' ? '1' : '0';
         }
     }
