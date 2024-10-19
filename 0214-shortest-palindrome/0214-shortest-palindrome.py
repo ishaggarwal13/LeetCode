@@ -1,7 +1,14 @@
 class Solution(object):
     def shortestPalindrome(self, s):
-        r = s[::-1]
-        for i in range(len(s) + 1):
-            if s.startswith(r[i:]):
-                return r[:i] + s
+        i = 0
+        n = len(s)
+
+        for c in s[::-1]:
+            if c == s[i]:
+                i += 1
+
+        if i == n:
+            return s
+        sub = s[i:]
+        return sub[::-1] + self.shortestPalindrome(s[0:i]) + sub
         
