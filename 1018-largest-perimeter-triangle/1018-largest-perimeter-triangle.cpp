@@ -1,19 +1,16 @@
 class Solution {
 public:
     int largestPerimeter(vector<int>& nums) {
-        // sort side length in descending order
-        std::sort( nums.rbegin(), nums.rend() );
-        
-        for( int i = 0 ; i < nums.size()-2 ; i++ ){
-            
-            // Accept: find the triangle with largest perimeter
-            if( nums[i] < ( nums[i+1] + nums[i+2]) ){
-                return nums[i] + nums[i+1] + nums[i+2];
+        sort(nums.begin(), nums.end());
+        int i = 0, j = 1, k = 2, ans = 0;
+        while(k < nums.size()){
+            if(nums[i] + nums[j] > nums[k]){
+                ans = max(ans, nums[i] + nums[j] + nums[k]);
             }
-            
+            i++;
+            j++;
+            k++;
         }
-        
-        // Reject: impossible to make triangle
-        return 0;
+        return ans;
     }
 };
