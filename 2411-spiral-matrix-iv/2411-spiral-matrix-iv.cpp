@@ -11,40 +11,43 @@
 class Solution {
 public:
     vector<vector<int>> spiralMatrix(int m, int n, ListNode* head) {
-        vector<vector<int>> matrix(m, vector<int>(n, -1));
-        
-        int topRow = 0, bottomRow = m - 1, leftColumn = 0, rightColumn = n - 1;
-        
-        while (head) {
-            // Fill top row
-            for (int col = leftColumn; col <= rightColumn && head; ++col) {
-                matrix[topRow][col] = head->val;
-                head = head->next;
+        vector<vector<int>> nums(m,vector<int>(n,-1));
+        ListNode* ptr = head;
+        int i=0,j=0, endcol=n-1, endrow=m-1, startrow=1, startcol=0;
+        int dir = 0;
+        while(ptr){
+            nums[i][j] = ptr->val;
+            ptr = ptr->next;
+            if(dir==0){
+                if(j==endcol){
+                    dir=1;
+                    i++;
+                    endcol--;
+                }else j++;
             }
-            topRow++;
-            
-            // Fill right column
-            for (int row = topRow; row <= bottomRow && head; ++row) {
-                matrix[row][rightColumn] = head->val;
-                head = head->next;
+            else if(dir==1){
+                if(i==endrow){
+                    dir=2;
+                    j--;
+                    endrow--;
+                }else i++;
             }
-            rightColumn--;
-            
-            // Fill bottom row
-            for (int col = rightColumn; col >= leftColumn && head; --col) {
-                matrix[bottomRow][col] = head->val;
-                head = head->next;
+            else if(dir==2){
+                if(j==startcol){
+                    dir=3;
+                    i--;
+                    startcol++;
+                }else j--;
             }
-            bottomRow--;
-            
-            // Fill left column
-            for (int row = bottomRow; row >= topRow && head; --row) {
-                matrix[row][leftColumn] = head->val;
-                head = head->next;
+            else{
+                if(i==startrow){
+                    dir=0;
+                    j++;
+                    startrow++;
+                }else i--;
             }
-            leftColumn++;
         }
-        
-        return matrix;
+
+        return nums;
     }
 };
