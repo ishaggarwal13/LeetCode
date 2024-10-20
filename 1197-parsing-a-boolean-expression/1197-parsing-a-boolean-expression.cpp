@@ -1,34 +1,30 @@
 class Solution {
 public:
-    bool parseBoolExpr(string expression) {
-        stack<char> st;
+    bool parseBoolExpr(string e) {
+        auto it = e.begin();
+        return parse(it);
+    }
 
-        for(char c : expression){
-            if(c == ',' || c == '(')
-                continue;
-            if(c == '&' || c == '|' || c == '!' || 
-                c == 'f' || c == 't'){
-                st.push(c);
-            } else if(c == ')'){
-                bool hastrue = false , hasfalse = false;
-
-                while(st.top() != '!' && st.top() != '&' && st.top() != '|'){
-                    char topval = st.top();
-                    st.pop();
-                    if(topval == 'f') hasfalse = true;
-                    if(topval == 't') hastrue = true;
-                }
-                char op = st.top();
-                st.pop();
-                if(op == '!'){
-                    st.push(hastrue ? 'f' : 't');
-                } else if (op == '&'){
-                    st.push(hasfalse ? 'f' : 't');
-                } else {
-                    st.push(hastrue ? 't' : 'f');
-                }
-            }
+    bool parse(string::iterator& it) {
+        switch (*(it++)) {
+            case 't': return true;
+            case 'f': return false;
+            case '|': return parse(it, false, [](bool init, bool val){ return init || val; });
+            case '&': return parse(it, true,  [](bool init, bool val){ return init && val; });
+            case '!': return parse(it, false, [](bool init, bool val){ return !val; });
         }
-        return st.top() == 't';
+        return false;
+    }
+
+    bool parse(string::iterator& it, bool init, function<bool(bool, bool)> op) {
+        it++; // skip '('
+        while (true) {
+            auto b = parse(it);
+            init = op(init, b);
+            if (*it == ')') break;
+            it++; // skip ','
+        }
+        it++; // skip ')'
+        return init;
     }
 };
