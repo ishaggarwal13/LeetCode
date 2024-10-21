@@ -1,37 +1,26 @@
 class Solution {
 public:
-    int maxUniqueSplit(string s) {
-        unordered_set<string> seen;
-        int maxCount = 0;
-        backtrack(s, 0, seen, 0, maxCount);
-        return maxCount;
-    }
-
-private:
-    void backtrack(const string& s, int start, unordered_set<string>& seen,
-                   int count, int& maxCount) {
-        // Prune: If the current count plus remaining characters can't exceed
-        // maxCount, return
-        if (count + (s.size() - start) <= maxCount) return;
-
-        // Base case: If we reach the end of the string, update maxCount
-        if (start == s.size()) {
-            maxCount = max(maxCount, count);
+    void dfs(int i, int n, string &str, unordered_set<string> &s, int &ans) {
+        if(i == n) {
+            ans = max(ans, (int)s.size());
             return;
         }
-
-        // Try every possible substring starting from 'start'
-        for (int end = start + 1; end <= s.size(); ++end) {
-            string substring = s.substr(start, end - start);
-            // If the substring is unique
-            if (seen.find(substring) == seen.end()) {
-                // Add the substring to the seen set
-                seen.insert(substring);
-                // Recursively count unique substrings from the next position
-                backtrack(s, end, seen, count + 1, maxCount);
-                // Backtrack: remove the substring from the seen set
-                seen.erase(substring);
+        string t;
+        for(int j=i; j<n; j++) {
+            t += str[j];
+            if(s.find(t) == s.end()) {
+                s.insert(t);
+                dfs(j + 1, n, str, s, ans);
+                s.erase(t);
             }
         }
+    }
+public:
+    int maxUniqueSplit(string str) {
+        int n = str.size(), ans = 0;
+        unordered_set<string> s;
+
+        dfs(0, n, str, s, ans);
+        return ans;
     }
 };
