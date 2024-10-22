@@ -12,29 +12,33 @@
 class Solution {
 public:
     long long kthLargestLevelSum(TreeNode* root, int k) {
-        vector<long long> res;
-        queue<TreeNode*> q;
+        // declare the res vector to store the sum on each level
+        // decalre the queue to start bfs
+        // in bfs use level to find the sum at each level and store them in res
+        // check the base condition is k > res.size()
+        // sort the res in desec order to find the kth largest sum
+        // return res[k-1]
+        vector<vector<int>>v;
+        int i,n;
+        if(!root)return -1;        
+        queue<TreeNode*>q;
+        priority_queue<long long>pq;
         q.push(root);
-
         while(!q.empty()){
-            int level = q.size();
-            long long sum = 0;
-            for(int i=0; i<level; i++){
-                TreeNode* node = q.front();
+            n=q.size();
+            long long sum=0;
+            for(i=0;i<n;i++){
+                TreeNode* x = q.front();
                 q.pop();
-
-                sum += (long long)node->val;
-
-                if(node->left) q.push(node->left);
-                if(node->right) q.push(node->right);
+                sum+=x->val;
+                if(x->left)q.push(x->left);
+                if(x->right)q.push(x->right);
             }
-            res.push_back(sum); // store the sum of curr level
+            pq.push(sum);
         }
-
-        if(k > res.size()) return -1;
-
-        sort(res.begin(), res.end(), greater<long long>());
-
-        return res[k-1];
+        if(pq.size()<k)return -1;
+        k=k-1;
+        while(k--)pq.pop();
+        return pq.top();
     }
 };
