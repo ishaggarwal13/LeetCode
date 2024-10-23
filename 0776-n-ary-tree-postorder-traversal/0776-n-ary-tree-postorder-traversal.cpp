@@ -20,22 +20,18 @@ public:
 
 class Solution {
 public:
-    vector<int> postorder(Node* root) {
-        if(!root) return {};
-        vector<int> ans;
-        stack<Node*> st;
-        st.push(root);
-
-        while(!st.empty()){
-            Node* curr = st.top();
-            st.pop();
-            // Insert the value in the begin to reverse the vector
-            ans.insert(ans.begin(), curr->val);
-
-            for(auto it : curr->children){
-                st.push(it);
-            }
+    void post(vector<int>&ans,Node* root){
+        if(root==NULL){
+            return;
         }
+        for(auto i:root->children){
+            post(ans,i);
+        }
+        ans.push_back(root->val);
+    }
+    vector<int> postorder(Node* root) {
+        vector<int>ans;
+        post(ans,root);
         return ans;
     }
 };
