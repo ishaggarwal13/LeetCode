@@ -21,16 +21,21 @@ public:
 class Solution {
 public:
     vector<int> postorder(Node* root) {
+        if(!root) return {};
         vector<int> ans;
-        helper(root, ans);
-        return ans;
-    }
+        stack<Node*> st;
+        st.push(root);
 
-    void helper(Node* root, vector<int>& ans){
-        if(!root) return;
-        for(auto it : root->children){
-            helper(it, ans);
+        while(!st.empty()){
+            Node* curr = st.top();
+            st.pop();
+            // Insert the value in the begin to reverse the vector
+            ans.insert(ans.begin(), curr->val);
+
+            for(auto it : curr->children){
+                st.push(it);
+            }
         }
-        ans.push_back(root->val);
+        return ans;
     }
 };
