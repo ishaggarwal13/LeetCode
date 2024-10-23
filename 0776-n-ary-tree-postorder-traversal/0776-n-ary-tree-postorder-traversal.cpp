@@ -21,7 +21,6 @@ public:
 class Solution {
 public:
     vector<int> postorder(Node* root) {
-        if(!root) return {};
         vector<int> ans;
         helper(root, ans);
         return ans;
@@ -29,8 +28,8 @@ public:
 
     void helper(Node* root, vector<int>& ans){
         if(!root) return;
-        for(int i=0; i<root->children.size(); i++){
-            helper(root->children[i], ans);
+        for(auto it : root->children){
+            helper(it, ans);
         }
         ans.push_back(root->val);
     }
