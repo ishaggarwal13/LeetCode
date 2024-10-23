@@ -27,15 +27,19 @@ public:
         // for preorder we have RLR
         // now we will push root to the array and check for the root is null or not return empty vector
         // now using for loop we will traverse through the each child of the node and add into the vector
-        if(!root) return {};
 
+        if(!root) return {};
         vector<int> ans;
+        helper(root, ans);
+        return ans;
+    }
+
+    void helper(Node* root, vector<int>& ans){
+        if(!root) return;
         ans.push_back(root->val);
 
-        for(int i=0; i<root->children.size(); i++){
-            vector<int> v1 = preorder(root->children[i]);
-            ans.insert(ans.end(), v1.begin(), v1.end());
+        for(auto it : root->children){
+            helper(it, ans);
         }
-        return ans;
     }
 };
