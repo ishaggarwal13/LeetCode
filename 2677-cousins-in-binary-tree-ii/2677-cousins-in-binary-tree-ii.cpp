@@ -13,42 +13,27 @@ class Solution {
 public:
     // find sum of nodes on each level
     // then del the siblings nodes from the sum and keep the cousins nodes
+    vector<int> depthSum;
+    void dfs1(TreeNode* root, int d) {
+        if (!root) return;
+        if (d >= depthSum.size()) depthSum.push_back(root->val);
+        else depthSum[d] += root->val;
+        dfs1(root->left, d + 1);
+        dfs1(root->right, d + 1);
+    }
+
+    void dfs2(TreeNode* root, int val, int d) {
+        if (!root) return;
+        root->val = val;
+        int c = d + 1 < depthSum.size() ? depthSum[d + 1] : 0;
+        c -= (root->left != nullptr ? root->left->val : 0);
+        c -= (root->right != nullptr ? root->right->val : 0);
+        if (root->left) dfs2(root->left, c, d + 1);
+        if (root->right) dfs2(root->right, c, d + 1);
+    }
     TreeNode* replaceValueInTree(TreeNode* root) {
-        // set root value to 0 as there is no sbiling nodes to root
-        root->val = 0;
-        // start bfs or dfs anything to find the sum of level
-        queue<TreeNode*> q;
-        q.push(root);
-
-        while(!q.empty()){
-            int level = q.size();
-            int sum = 0;
-            vector<TreeNode*> buff;
-
-            for(int i=0; i<level; i++){
-                TreeNode* curr = q.front();
-                q.pop();
-                buff.push_back(curr);
-
-                if(curr->left) {
-                    q.push(curr->left);
-                    sum += curr->left->val;
-                }
-
-                if(curr->right) {
-                    q.push(curr->right);
-                    sum += curr->right->val;
-                }
-            }
-
-            for(auto node : buff){
-                int t = sum;
-                if(node->left) t -= node->left->val;
-                if(node->right) t -= node->right->val;
-                if(node->left) node->left->val = t;
-                if(node->right) node->right->val = t;
-            }
-        }
+        dfs1(root, 0);
+        dfs2(root, 0, 0);
         return root;
     }
 };
