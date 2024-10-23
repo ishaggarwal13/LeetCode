@@ -20,16 +20,18 @@ public:
 
 class Solution {
 public:
-    void postorder(Node* root, vector<int>& res){
-        if(!root) return;
-        for(auto n : root->children) {
-            postorder(n, res);
-        }
-        res.push_back(root->val);
-    }
     vector<int> postorder(Node* root) {
-        vector<int> res;
-        postorder(root, res);
-        return res;
+        if(!root) return {};
+        vector<int> ans;
+        helper(root, ans);
+        return ans;
+    }
+
+    void helper(Node* root, vector<int>& ans){
+        if(!root) return;
+        for(int i=0; i<root->children.size(); i++){
+            helper(root->children[i], ans);
+        }
+        ans.push_back(root->val);
     }
 };
