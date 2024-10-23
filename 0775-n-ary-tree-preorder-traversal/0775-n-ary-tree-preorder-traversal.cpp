@@ -30,16 +30,23 @@ public:
 
         if(!root) return {};
         vector<int> ans;
-        helper(root, ans);
-        return ans;
-    }
+        // for iterative approch use stack space to work like recursion
+        // for pre order push root node onto the stack first
+        stack<Node*> stackNode;
+        stackNode.push(root);
 
-    void helper(Node* root, vector<int>& ans){
-        if(!root) return;
-        ans.push_back(root->val);
+        while(!stackNode.empty()){
+            Node* curr = stackNode.top();
+            stackNode.pop();
+            ans.push_back(curr->val);
 
-        for(auto it : root->children){
-            helper(it, ans);
+            // push child nodes in reverse order in stack as it is pre order
+            for(int i = curr->children.size()-1; i>=0; i--){
+                if(curr->children[i]){
+                    stackNode.push(curr->children[i]);
+                }
+            }
         }
+        return ans;
     }
 };
