@@ -359,6 +359,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0764-n-ary-tree-level-order-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0764-n-ary-tree-level-order-traversal) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0775-n-ary-tree-preorder-traversal) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0776-n-ary-tree-postorder-traversal) |
+| [0988-flip-equivalent-binary-trees](https://github.com/ishaggarwal13/LeetCode/tree/master/0988-flip-equivalent-binary-trees) |
 | [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
 | [2646-kth-largest-sum-in-a-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/2646-kth-largest-sum-in-a-binary-tree) |
 | [2677-cousins-in-binary-tree-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/2677-cousins-in-binary-tree-ii) |
@@ -381,6 +382,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0775-n-ary-tree-preorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0775-n-ary-tree-preorder-traversal) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0776-n-ary-tree-postorder-traversal) |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/ishaggarwal13/LeetCode/tree/master/0984-most-stones-removed-with-same-row-or-column) |
+| [0988-flip-equivalent-binary-trees](https://github.com/ishaggarwal13/LeetCode/tree/master/0988-flip-equivalent-binary-trees) |
 | [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
 | [2035-count-sub-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/2035-count-sub-islands) |
 | [2677-cousins-in-binary-tree-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/2677-cousins-in-binary-tree-ii) |
@@ -413,6 +415,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0199-binary-tree-right-side-view](https://github.com/ishaggarwal13/LeetCode/tree/master/0199-binary-tree-right-side-view) |
 | [0226-invert-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0543-diameter-of-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0543-diameter-of-binary-tree) |
+| [0988-flip-equivalent-binary-trees](https://github.com/ishaggarwal13/LeetCode/tree/master/0988-flip-equivalent-binary-trees) |
 | [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
 | [2646-kth-largest-sum-in-a-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/2646-kth-largest-sum-in-a-binary-tree) |
 | [2677-cousins-in-binary-tree-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/2677-cousins-in-binary-tree-ii) |
