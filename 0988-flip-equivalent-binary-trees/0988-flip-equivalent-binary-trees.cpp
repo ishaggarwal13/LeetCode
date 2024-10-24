@@ -11,39 +11,19 @@
  */
 class Solution {
 public:
-    bool areEqualVal(TreeNode* n1, TreeNode* n2) {
-        if (n1 == nullptr && n2 == nullptr)
-            return true;
-        else if (n1 != nullptr && n2 != nullptr && n1->val == n2->val)
-            return true;
-        else
-            return false;
-    }
-
     bool flipEquiv(TreeNode* root1, TreeNode* root2) {
-        stack<pair<TreeNode*, TreeNode*>> st;
-        st.push({root1, root2});
+        if(!root1 && !root2)
+            return true;
+        if(!root1 || !root2 || root1->val != root2->val)
+            return false;
+        
+        bool left1, right1, left2, right2;
 
-        while (!st.empty()) {
-            auto temp = st.top();
-            st.pop();
-            TreeNode* n1 = temp.first;
-            TreeNode* n2 = temp.second;
-            if (n1 == nullptr && n2 == nullptr)
-                continue;
-            if (n1 == nullptr || n2 == nullptr || n1->val != n2->val)
-                return false;
+        left1 = flipEquiv(root1->left, root2->left);
+        right1 = flipEquiv(root1->right, root2->right);
+        left2 = flipEquiv(root1->left, root2->right);
+        right2 = flipEquiv(root1->right, root2->left);
 
-            if (areEqualVal(n1->left, n2->left) && areEqualVal(n1->right, n2->right)) {
-                st.push({n1->left, n2->left});
-                st.push({n1->right, n2->right});
-            } else if (areEqualVal(n1->left, n2->right) && areEqualVal(n1->right, n2->left)) {
-                st.push({n1->left, n2->right});
-                st.push({n1->right, n2->left});
-            } else {
-                return false;
-            }
-        }
-        return true;
+        return ((left1 && right1) || (left2 && right2));
     }
 };
