@@ -12,14 +12,14 @@
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
-        //mirror tree - DFS FOR O(N) & O(N)
+        //mirror tree - BFS FOR O(N) & O(N)
         if(root == NULL) return NULL;
 
-        stack<TreeNode*> s;
+        queue<TreeNode*> s;
         s.push(root);
 
         while(!s.empty()){
-            TreeNode* curr = s.top();
+            TreeNode* curr = s.front();
             s.pop();
 
             swap(curr->left, curr->right);
