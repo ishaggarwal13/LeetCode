@@ -9,44 +9,33 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+#include <execution>
+pair<TreeNode*, int> que[100005];
+int ft, rr;
 class Solution {
 public:
     TreeNode* replaceValueInTree(TreeNode* root) {
-        // set root value to 0 as there is no sbiling nodes to root
-        root->val = 0;
-        // start bfs or dfs anything to find the sum of level
-        queue<TreeNode*> q;
-        q.push(root);
-
-        while(!q.empty()){
-            int level = q.size();
-            int sum = 0;
-            vector<TreeNode*> buff;
-
-            for(int i=0; i<level; i++){
-                TreeNode* curr = q.front();
-                q.pop();
-                buff.push_back(curr);
-
-                if(curr->left) {
-                    q.push(curr->left);
-                    sum += curr->left->val;
-                }
-
-                if(curr->right) {
-                    q.push(curr->right);
-                    sum += curr->right->val;
-                }
+        ft=rr=0;
+        que[rr++]={root, root->val};
+        int dep=0;
+        while(rr-ft){
+            int sz=rr-ft;
+            int st=ft;
+            int sum=0;
+            while(sz--){
+                auto front = que[ft++];
+                TreeNode* now = front.first;
+                sum+=now->val;
+                int child_sum = 0;
+                if(now->left)child_sum += now->left->val;
+                if(now->right)child_sum += now->right->val;
+                if(now->left)que[rr++]={now->left, child_sum};
+                if(now->right)que[rr++]={now->right, child_sum};
             }
-
-            for(auto node : buff){
-                int t = sum;
-                if(node->left) t -= node->left->val;
-                if(node->right) t -= node->right->val;
-                if(node->left) node->left->val = t;
-                if(node->right) node->right->val = t;
-            }
+            for(;st<ft;st++)
+                que[st].first->val = sum - que[st].second;
         }
+
         return root;
     }
 };
