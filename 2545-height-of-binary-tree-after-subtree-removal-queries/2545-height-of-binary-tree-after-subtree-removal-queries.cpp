@@ -11,54 +11,40 @@
  */
 class Solution {
 public:
-    // Array to store the maximum height of the tree after removing each node
-    int maxHeightAfterRemoval[100001];
-    int currentMaxHeight = 0;
+    vector<int> depth, levelArr, max1, max2;
 
-    vector<int> treeQueries(TreeNode* root, vector<int>& queries) {
-        traverseLeftToRight(root, 0);
-        currentMaxHeight = 0;  // Reset for the second traversal
-        traverseRightToLeft(root, 0);
+    int height(TreeNode* root, int level) {
+        if (!root) return 0;
+        levelArr[root->val] = level;
+        depth[root->val] = 1 + max(height(root->left, level + 1), height(root->right, level + 1));
 
-        // Process queries and build the result vector
-        int queryCount = queries.size();
-        vector<int> queryResults(queryCount);
-        for (int i = 0; i < queryCount; i++) {
-            queryResults[i] = maxHeightAfterRemoval[queries[i]];
+    
+        if (max1[level] < depth[root->val]) {
+            max2[level] = max1[level];
+            max1[level] = depth[root->val];
+        } else if (max2[level] < depth[root->val]) {
+            max2[level] = depth[root->val];
         }
 
-        return queryResults;
+        return depth[root->val];
     }
 
-private:
-    // Left to right traversal
-    void traverseLeftToRight(TreeNode* node, int currentHeight) {
-        if (node == nullptr) return;
+    vector<int> treeQueries(TreeNode* root, vector<int>& queries) {
+        depth.resize(100001, 0);
+        levelArr.resize(100001, 0);
+        max1.resize(100001, 0);
+        max2.resize(100001, 0);
 
-        // Store the maximum height if this node were removed
-        maxHeightAfterRemoval[node->val] = currentMaxHeight;
+        // Compute depths and max depths for each level
+        height(root, 0);
 
-        // Update the current maximum height
-        currentMaxHeight = max(currentMaxHeight, currentHeight);
+        // Process each query
+        for (int i = 0; i < queries.size(); i++) {
+            int q = queries[i];
+            int level = levelArr[q];
+            queries[i] = (max1[level] == depth[q] ? max2[level] : max1[level]) + level - 1;
+        }
 
-        // Traverse left subtree first, then right
-        traverseLeftToRight(node->left, currentHeight + 1);
-        traverseLeftToRight(node->right, currentHeight + 1);
-    }
-
-    // Right to left traversal
-    void traverseRightToLeft(TreeNode* node, int currentHeight) {
-        if (node == nullptr) return;
-
-        // Update the maximum height if this node were removed
-        maxHeightAfterRemoval[node->val] =
-            max(maxHeightAfterRemoval[node->val], currentMaxHeight);
-
-        // Update the current maximum height
-        currentMaxHeight = max(currentHeight, currentMaxHeight);
-
-        // Traverse right subtree first, then left
-        traverseRightToLeft(node->right, currentHeight + 1);
-        traverseRightToLeft(node->left, currentHeight + 1);
+        return queries;
     }
 };
