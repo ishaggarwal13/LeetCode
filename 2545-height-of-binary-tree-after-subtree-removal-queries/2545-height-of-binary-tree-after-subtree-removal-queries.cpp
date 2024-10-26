@@ -9,52 +9,34 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+ const int N=100001;
 class Solution {
 public:
-    unordered_map<int, pair<int,int>> mp; // {height, depth}
-    int depth(TreeNode* cur, int cur_h){
-        if(cur == NULL){
-            return -1;
-        }
-        int left = depth(cur->left, cur_h + 1);
-        int right = depth(cur->right, cur_h + 1);
-        int cur_d = max(left, right) + 1;
-        mp[cur->val] = {cur_h, cur_d};
-        // cout << "Mp " << cur->val << ", h " << cur_h << ", d " << cur_d << endl;
-        return cur_d;
+    int val2H[N], removal[N];
+    int h(TreeNode* root){
+        if (!root) return -1;
+        int x=root->val;
+        if (val2H[x]!=-1) return val2H[x];
+        return val2H[x]=1+max(h(root->left), h(root->right));
+    }
+
+    void dfs(TreeNode* root, int level, int maxLevel){
+        if (!root) return;
+        int x=root->val;
+        removal[x]=maxLevel;
+        dfs(root->left, level+1, max(maxLevel, 1+level+h(root->right)));
+        dfs(root->right, level+1, max(maxLevel, 1+level+h(root->left)));
     }
 
     vector<int> treeQueries(TreeNode* root, vector<int>& queries) {
-        depth(root, 0);
-        unordered_map<int, vector<int>> nei;
+        memset(val2H, -1, sizeof(val2H));
+        memset(removal, -1, sizeof(removal));
+        dfs(root, 0, 0);
 
-        for(auto& [key, val] : mp){
-            int h = val.first;
-            int d = val.second;
-            nei[h].push_back(d);
-            sort(nei[h].begin(), nei[h].end(), greater<int>());
-            if(nei[h].size() > 2){
-                nei[h].pop_back();
-            }
-        }
-
-
-        vector<int> res(queries.size());
-        for(int i = 0; i < queries.size(); i++){
-            int h = mp[queries[i]].first;
-            int d = mp[queries[i]].second;
-            if(nei[h].size() == 1){
-                res[i] = h - 1;
-            }else{
-                if(nei[h][0] == d){
-                    res[i] = h + nei[h][1];
-                }else{
-                    res[i] = h + nei[h][0];
-                }
-            }
-        }
-
-        return res;
-        
+        vector<int> ans(queries.size());
+        int i=0;
+        for(int q: queries)
+            ans[i++]=removal[q];
+        return ans;
     }
 };
