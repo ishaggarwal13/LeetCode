@@ -9,34 +9,55 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
- const int N=100001;
 class Solution {
 public:
-    int val2H[N], removal[N];
-    int h(TreeNode* root){
-        if (!root) return -1;
-        int x=root->val;
-        if (val2H[x]!=-1) return val2H[x];
-        return val2H[x]=1+max(h(root->left), h(root->right));
-    }
+    unordered_map<int, pair<int, int>> mp;
+    unordered_map<int, vector<pair<int, int>>> mp2;
 
-    void dfs(TreeNode* root, int level, int maxLevel){
-        if (!root) return;
-        int x=root->val;
-        removal[x]=maxLevel;
-        dfs(root->left, level+1, max(maxLevel, 1+level+h(root->right)));
-        dfs(root->right, level+1, max(maxLevel, 1+level+h(root->left)));
-    }
+    int height(TreeNode* root, int level = 0) 
+    {
+        if (!root)
+            return 0;
+        if (mp.find(root->val) != mp.end())
+            return mp[root->val].first;
 
+        int l = height(root->left, level + 1);
+        int r = height(root->right, level + 1);
+        int curr = 1 + max(l, r);
+
+        mp[root->val] = {curr, level};
+
+        mp2[level].push_back({root->val, curr});
+
+        return curr;
+    }
     vector<int> treeQueries(TreeNode* root, vector<int>& queries) {
-        memset(val2H, -1, sizeof(val2H));
-        memset(removal, -1, sizeof(removal));
-        dfs(root, 0, 0);
+        int H = height(root) - 1;
+        int m = queries.size();
 
-        vector<int> ans(queries.size());
-        int i=0;
-        for(int q: queries)
-            ans[i++]=removal[q];
+        vector<int> ans(m, H);
+        for (int i = 0; i < m; i++)
+        {
+            int q = queries[i];
+            int lev = mp[q].second;
+            int maxi = 0;
+            int secondMaxi = 0;
+            for (auto a : mp2[lev]) 
+            {
+                if (a.second > maxi) 
+                {
+                    secondMaxi = maxi;
+                    maxi = a.second;
+                } 
+                else if (a.second > secondMaxi) 
+                {
+                    secondMaxi = a.second;
+                }
+            }
+
+            if (maxi == mp[q].first) ans[i] = H - maxi + secondMaxi;
+        }
+
         return ans;
     }
 };
