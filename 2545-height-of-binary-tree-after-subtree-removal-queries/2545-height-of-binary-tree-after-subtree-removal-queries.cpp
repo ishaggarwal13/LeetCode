@@ -11,40 +11,50 @@
  */
 class Solution {
 public:
-    vector<int> depth, levelArr, max1, max2;
-
-    int height(TreeNode* root, int level) {
-        if (!root) return 0;
-        levelArr[root->val] = level;
-        depth[root->val] = 1 + max(height(root->left, level + 1), height(root->right, level + 1));
-
-    
-        if (max1[level] < depth[root->val]) {
-            max2[level] = max1[level];
-            max1[level] = depth[root->val];
-        } else if (max2[level] < depth[root->val]) {
-            max2[level] = depth[root->val];
+    unordered_map<int, pair<int,int>> mp; // {height, depth}
+    int depth(TreeNode* cur, int cur_h){
+        if(cur == NULL){
+            return -1;
         }
-
-        return depth[root->val];
+        int left = depth(cur->left, cur_h + 1);
+        int right = depth(cur->right, cur_h + 1);
+        int cur_d = max(left, right) + 1;
+        mp[cur->val] = {cur_h, cur_d};
+        // cout << "Mp " << cur->val << ", h " << cur_h << ", d " << cur_d << endl;
+        return cur_d;
     }
 
     vector<int> treeQueries(TreeNode* root, vector<int>& queries) {
-        depth.resize(100001, 0);
-        levelArr.resize(100001, 0);
-        max1.resize(100001, 0);
-        max2.resize(100001, 0);
+        depth(root, 0);
+        unordered_map<int, vector<int>> nei;
 
-        // Compute depths and max depths for each level
-        height(root, 0);
-
-        // Process each query
-        for (int i = 0; i < queries.size(); i++) {
-            int q = queries[i];
-            int level = levelArr[q];
-            queries[i] = (max1[level] == depth[q] ? max2[level] : max1[level]) + level - 1;
+        for(auto& [key, val] : mp){
+            int h = val.first;
+            int d = val.second;
+            nei[h].push_back(d);
+            sort(nei[h].begin(), nei[h].end(), greater<int>());
+            if(nei[h].size() > 2){
+                nei[h].pop_back();
+            }
         }
 
-        return queries;
+
+        vector<int> res(queries.size());
+        for(int i = 0; i < queries.size(); i++){
+            int h = mp[queries[i]].first;
+            int d = mp[queries[i]].second;
+            if(nei[h].size() == 1){
+                res[i] = h - 1;
+            }else{
+                if(nei[h][0] == d){
+                    res[i] = h + nei[h][1];
+                }else{
+                    res[i] = h + nei[h][0];
+                }
+            }
+        }
+
+        return res;
+        
     }
 };
