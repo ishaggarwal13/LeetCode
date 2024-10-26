@@ -1,16 +1,24 @@
 class Solution(object):
     def getLucky(self, s, k):
-        # Convert each character in the string to its corresponding numeric value
-        number = ''
-        for x in s:
-            number += str(ord(x) - ord('a') + 1)
-        
-        # Perform the transformation `k` times
-        while k > 0:
-            temp = 0
-            for x in number:
-                temp += int(x)  # Sum the digits of the current number
-            number = str(temp)  # Convert the sum back to a string
-            k -= 1
-        return int(number)
-        
+        """
+        :type s: str
+        :type k: int
+        :rtype: int
+        """
+        num = 0
+        total = 0
+        for c in s:
+            num = ord(c) - 96
+            while num > 0:
+                total += num % 10
+                num = num // 10
+        num = total
+        total = 0
+
+        for _ in range(k-1):
+            while num > 0:
+                total += num % 10
+                num = num // 10
+            num = total
+            total = 0
+        return num
