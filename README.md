@@ -123,6 +123,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0647-palindromic-substrings](https://github.com/ishaggarwal13/LeetCode/tree/master/0647-palindromic-substrings) |
 | [0664-strange-printer](https://github.com/ishaggarwal13/LeetCode/tree/master/0664-strange-printer) |
 | [0678-valid-parenthesis-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0678-valid-parenthesis-string) |
+| [1402-count-square-submatrices-with-all-ones](https://github.com/ishaggarwal13/LeetCode/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [2755-extra-characters-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/2755-extra-characters-in-a-string) |
 ## Array
 |  |
@@ -164,6 +165,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1325-path-with-maximum-probability](https://github.com/ishaggarwal13/LeetCode/tree/master/1325-path-with-maximum-probability) |
 | [1331-path-with-maximum-gold](https://github.com/ishaggarwal13/LeetCode/tree/master/1331-path-with-maximum-gold) |
 | [1350-remove-sub-folders-from-the-filesystem](https://github.com/ishaggarwal13/LeetCode/tree/master/1350-remove-sub-folders-from-the-filesystem) |
+| [1402-count-square-submatrices-with-all-ones](https://github.com/ishaggarwal13/LeetCode/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [1435-xor-queries-of-a-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/1435-xor-queries-of-a-subarray) |
 | [1497-design-a-stack-with-increment-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/1497-design-a-stack-with-increment-operation) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/ishaggarwal13/LeetCode/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
@@ -500,6 +502,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0064-minimum-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0064-minimum-path-sum) |
 | [0419-battleships-in-a-board](https://github.com/ishaggarwal13/LeetCode/tree/master/0419-battleships-in-a-board) |
 | [1331-path-with-maximum-gold](https://github.com/ishaggarwal13/LeetCode/tree/master/1331-path-with-maximum-gold) |
+| [1402-count-square-submatrices-with-all-ones](https://github.com/ishaggarwal13/LeetCode/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [2035-count-sub-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/2035-count-sub-islands) |
 | [2132-convert-1d-array-into-2d-array](https://github.com/ishaggarwal13/LeetCode/tree/master/2132-convert-1d-array-into-2d-array) |
 | [2254-check-if-every-row-and-column-contains-all-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/2254-check-if-every-row-and-column-contains-all-numbers) |
