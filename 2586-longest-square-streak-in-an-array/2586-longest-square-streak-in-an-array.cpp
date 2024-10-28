@@ -1,28 +1,26 @@
 class Solution {
 public:
     int longestSquareStreak(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        unordered_set<int> seen(nums.begin(), nums.end());
+        constexpr int N{100'000};
+        std::array<bool, N+1> ns{};
 
-        int maxStreak = 0;
+        for(const int i : nums) { ns[i] = true; }
 
-        for(auto num : nums){
-            int currNum = num;
-            int streak = 0;
+        int ans{-1};
 
-            while(seen.find(currNum) != seen.end()){
-                streak++;
-                seen.erase(currNum);
-                if (currNum > 100000 || currNum > sqrt(100000)) break;
-                
-                currNum *= currNum;
+        for(size_t i{0}; i<N; ++i) {
+            if (ns[i] == false) { continue; }
+
+            int len{0};
+            size_t index{i};
+            while(index < N && ns[index]) {
+                ++len;
+                index = index * index;
             }
 
-            if(streak >= 2){
-                maxStreak = max(maxStreak, streak);
-            }
+            if (len > 1) { ans = std::max(ans, len); }
         }
 
-        return (maxStreak > 1) ? maxStreak : -1;
+        return ans;
     }
 };
