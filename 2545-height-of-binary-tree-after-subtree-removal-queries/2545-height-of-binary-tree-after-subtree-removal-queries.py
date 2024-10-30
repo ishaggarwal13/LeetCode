@@ -6,54 +6,44 @@
 #         self.right = right
 class Solution:
     def treeQueries(self, root: Optional[TreeNode], queries: List[int]) -> List[int]:
-        # Initialize arrays to store heights and node information
-        heights = [0] * 50000  # Heights of leaf nodes
-        d = [0] * 100001      # Depth of each node
-        l = [0] * 100001      # Left index for each node
-        r = [0] * 100001      # Right index for each node
-        len_leaves = 0        # Counter for leaf nodes
+
+        def recur(nn):
+
+            if nn.left:
+                ll, la = recur(nn.left)
+                if nn.right:
+                    rl, ra = recur(nn.right)
+                else:
+                    la[ll[-1]] = 1  # if ll[-1] is deleted, max hight = 0
+                    ll.append(nn.val)
+                    return ll, la
+            elif nn.right:
+                rl, ra = recur(nn.right)
+                ra[rl[-1]] = 1  # if rl[-1] is deleted, max hight = 0
+                rl.append(nn.val)
+                return rl, ra
+            else:
+                return [nn.val], {}
+
+            if len(ll) >= len(rl):
+                la[ll[-1]] = len(rl) + 1
+                ll.append(nn.val)
+                return ll, la
+            else:
+                ra[rl[-1]] = len(ll) + 1
+                rl.append(nn.val)
+                return rl, ra
+
+        longest, alt_d = recur(root)
+        ll = len(longest) - 1
+        new_alt = 0
+        new_alt_d = {}
+        for i, x in enumerate(longest[::-1][1:]):
+            alt = alt_d[x] + i - 1
+            new_alt = max(new_alt, alt)
+            new_alt_d[x] = new_alt
+
+        return [ new_alt_d[q] if q in new_alt_d else ll for q in queries ]
         
-        def search(p: TreeNode, h: int) -> None:
-            nonlocal len_leaves
-            d[p.val] = h  # Store current node's depth
-            
-            # If leaf node found
-            if not p.left and not p.right:
-                heights[len_leaves] = h    # Store leaf height
-                l[p.val] = r[p.val] = len_leaves  # Both indices same for leaf
-                len_leaves += 1
-                return
-            
-            l[p.val] = len_leaves  # Store left index for current node
-            
-            # Recursively process left and right subtrees
-            if p.left:
-                search(p.left, h + 1)
-            if p.right:
-                search(p.right, h + 1)
-                
-            r[p.val] = len_leaves - 1  # Store right index for current node
-        
-        # Process the tree starting from root
-        search(root, 0)
-        
-        n = len_leaves  # Total number of leaf nodes
-        maxl = [0] * n  # Max heights from left
-        maxr = [0] * n  # Max heights from right
-        
-        # Build prefix and suffix maximum arrays
-        for i in range(1, n):
-            maxl[i] = max(maxl[i-1], heights[i-1])  # Max height from left
-            maxr[n-i-1] = max(maxr[n-i], heights[n-i])  # Max height from right
-        
-        ret = []  # Result list
-        
-        # Process each query
-        for query in queries:
-            # Find maximum height excluding current node's subtree
-            maxxl = maxl[l[query]]  # Max height to the left
-            maxxr = maxr[r[query]]  # Max height to the right
-            # Result is max of (max left height, max right height, current depth-1)
-            ret.append(max(max(maxxl, maxxr), d[query]-1))
-        
-        return ret     
+
+      
