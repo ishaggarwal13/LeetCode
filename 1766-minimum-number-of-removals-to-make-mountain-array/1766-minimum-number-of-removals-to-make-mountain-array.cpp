@@ -1,36 +1,39 @@
 class Solution {
 public:
+    vector<int> getLongestIncreasingSubsequenceLength(vector<int>& v) {
+        vector<int> lisLen(v.size(), 1);
+        vector<int> lis = {v[0]};
+
+        for (int i = 1; i < v.size(); i++) {
+            if(v[i] > lis.back()){
+                lis.push_back(v[i]);
+            } else {
+                int index = lower_bound(lis.begin(), lis.end(), v[i]) - lis.begin();
+                lis[index] = v[i];
+            }
+
+            lisLen[i] = lis.size();
+        }
+
+        return lisLen;
+    }
+
     int minimumMountainRemovals(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> LIS(n, 1), LDS(n, 1);
+        int N = nums.size();
+        vector<int> lisLength = getLongestIncreasingSubsequenceLength(nums);
 
-        // Compute LIS up to each index
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < i; ++j) {
-                if (nums[i] > nums[j]) {
-                    LIS[i] = max(LIS[i], LIS[j] + 1);
-                }
+        reverse(nums.begin(), nums.end());
+        vector<int> ldsLength = getLongestIncreasingSubsequenceLength(nums);
+        reverse(ldsLength.begin(), ldsLength.end());
+
+        int minRemovals = INT_MAX;
+        for (int i = 0; i < N; i++) {
+            if (lisLength[i] > 1 && ldsLength[i] > 1) {
+                minRemovals =
+                    min(minRemovals, N - lisLength[i] - ldsLength[i] + 1);
             }
         }
 
-        // Compute LDS from each index
-        for (int i = n - 1; i >= 0; --i) {
-            for (int j = n - 1; j > i; --j) {
-                if (nums[i] > nums[j]) {
-                    LDS[i] = max(LDS[i], LDS[j] + 1);
-                }
-            }
-        }
-
-        int maxMountainLength = 0;
-
-        // Find the maximum mountain length
-        for (int i = 1; i < n - 1; ++i) {
-            if (LIS[i] > 1 && LDS[i] > 1) {  // Valid peak
-                maxMountainLength = max(maxMountainLength, LIS[i] + LDS[i] - 1);
-            }
-        }
-
-        return n - maxMountainLength;
+        return minRemovals;
     }
 };
