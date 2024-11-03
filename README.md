@@ -88,6 +88,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0664-strange-printer](https://github.com/ishaggarwal13/LeetCode/tree/master/0664-strange-printer) |
 | [0678-valid-parenthesis-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0768-partition-labels](https://github.com/ishaggarwal13/LeetCode/tree/master/0768-partition-labels) |
+| [0812-rotate-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0812-rotate-string) |
 | [0920-uncommon-words-from-two-sentences](https://github.com/ishaggarwal13/LeetCode/tree/master/0920-uncommon-words-from-two-sentences) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/ishaggarwal13/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 | [1197-parsing-a-boolean-expression](https://github.com/ishaggarwal13/LeetCode/tree/master/1197-parsing-a-boolean-expression) |
@@ -655,6 +656,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0214-shortest-palindrome](https://github.com/ishaggarwal13/LeetCode/tree/master/0214-shortest-palindrome) |
 | [0459-repeated-substring-pattern](https://github.com/ishaggarwal13/LeetCode/tree/master/0459-repeated-substring-pattern) |
+| [0812-rotate-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0812-rotate-string) |
 ## Hash Function
 |  |
 | ------- |
