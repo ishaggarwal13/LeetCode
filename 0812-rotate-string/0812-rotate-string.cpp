@@ -1,25 +1,25 @@
 class Solution {
-private: 
-    bool rotate(string A, string B, int j){
-        for(int i=0; i<A.size(); i++){
-            if(A[i] != B[(i+j)%B.size()]){
-                return false;
-            }
-        }
-        return true;
-    }
 public:
     bool rotateString(string s, string goal) {
-        if(s.size() != goal.size()) return false;
+        int n=s.length();
+        int m=goal.length();
 
-        if(s.size() == 0) return true;
+        if(n!=m) return false;
+        int i=0;
+        while(i<n){
 
-        for(int i=0; i<s.size(); i++){
-            if(rotate(s, goal, i)){
+            if(s==goal){
                 return true;
             }
-        }
 
+            char a=s[0];
+            for( int j=0; j<n-1; j++){
+                s[j]=s[j+1];
+            }
+            s[n-1]=a;
+            i++;
+
+        }
         return false;
     }
 };
