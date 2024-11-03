@@ -2,34 +2,50 @@ class Solution {
 public:
     int minimumMountainRemovals(vector<int>& nums) {
 
-        int n = nums.size();
-
-        vector<int> left(n,1);
-        vector<int> right(n,1);
-
-        int result = 0;
-
-        for(int i=0;i<n;i++){
-            for(int j=0;j<i;j++){
-
-                if(nums[i] > nums[j]) left[i] = max(left[i],left[j]+1);
+        int n=nums.size();
+        vector<int>right(n,0);
+        vector<int>left(n,0);
+        vector<int>dp;
+        dp.push_back(nums[0]);
+        for(int i=1;i<n;i++)
+        {
+            if(nums[i]>dp.back())
+            {
+                dp.push_back(nums[i]);
+                left[i]=dp.size();
+            }
+            else
+            {
+                int ind=lower_bound(dp.begin(), dp.end(), nums[i])-dp.begin();
+                dp[ind]=nums[i];
+                left[i]=ind+1;
             }
         }
-
-        for(int i=n-1;i>=0;i--){
-            for(int j=n-1;j>i;j--){
-
-                if(nums[i] > nums[j]) right[i] = max(right[i],right[j]+1);
+        dp.clear();
+        dp.push_back(nums[n-1]);
+        for(int i=n-2;i>-1;i--)
+        {
+            if(nums[i]>dp.back())
+            {
+                dp.push_back(nums[i]);
+                right[i]=dp.size();
+            }
+            else
+            {
+                int ind=lower_bound(dp.begin(), dp.end(), nums[i])-dp.begin();
+                dp[ind]=nums[i];
+                right[i]=ind+1;
             }
         }
-
-        for(int i=1;i<n;i++){
-            if(left[i] > 1 && right[i] > 1){
-                result = max(result,left[i]+right[i] -1);
+        int ans=n;
+        for(int i=1;i<n-1;i++)
+        {
+            if(left[i]>1 && right[i]>1)
+            {
+                ans=min(ans, n - (left[i] + right[i] - 1));
             }
         }
-
-        return n - result;
+        return ans;
         
     }
 };
