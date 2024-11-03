@@ -1,37 +1,35 @@
 class Solution {
 public:
-    vector<int> lisLength(vector<int>& v){
-        vector<int> lis = {v[0]};
-        vector<int> lisLen(v.size(), 1);
-
-        for(int i = 1 ; i < v.size() ; i++){
-            if(v[i] > lis.back()){
-                lis.push_back(v[i]);
-            } else {
-                int index = lower_bound(lis.begin(), lis.end(), v[i]) - lis.begin();
-                lis[index] = v[i];
-            }
-            lisLen[i] = lis.size();
-        }
-        return lisLen;
-    }
-
     int minimumMountainRemovals(vector<int>& nums) {
+
         int n = nums.size();
-        vector<int> lis = lisLength(nums);
 
-        reverse(nums.begin(), nums.end());
-        vector<int> lds = lisLength(nums);
-        reverse(lds.begin(), lds.end());
+        vector<int> left(n,1);
+        vector<int> right(n,1);
 
-        int removals = INT_MAX;
+        int result = 0;
 
-        for(int i = 0 ; i < n ; i++){
-            if(lis[i] > 1 && lds[i] > 1){
-                removals = min(removals, n + 1 - lis[i] - lds[i]);
+        for(int i=0;i<n;i++){
+            for(int j=0;j<i;j++){
+
+                if(nums[i] > nums[j]) left[i] = max(left[i],left[j]+1);
             }
         }
 
-        return removals;
+        for(int i=n-1;i>=0;i--){
+            for(int j=n-1;j>i;j--){
+
+                if(nums[i] > nums[j]) right[i] = max(right[i],right[j]+1);
+            }
+        }
+
+        for(int i=1;i<n;i++){
+            if(left[i] > 1 && right[i] > 1){
+                result = max(result,left[i]+right[i] -1);
+            }
+        }
+
+        return n - result;
+        
     }
 };
