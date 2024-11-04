@@ -1,12 +1,11 @@
 class Solution {
 public:
     bool rotateString(string s, string goal) {
-        if (s.length() != goal.length()) {
-            return false;
+        if(s.size()!= goal.size()) return false;
+        string ans= s + s;
+        if(ans.find(goal)!= string::npos){
+            return true;
         }
-
-        string concatenated = goal + goal;
-
-        return concatenated.find(s) != string::npos;
+        return false;
     }
 };
