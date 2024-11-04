@@ -1,24 +1,21 @@
 class Solution {
 public:
     int compress(vector<char>& chars) {
-        int ans = 0;
+        int n = chars.size(), write = 0;
+        for(int i = 0, j; i < n; ) {
+            j = i;
+            while(j < n && chars[j] == chars[i]) j++;
 
-        for (int i = 0; i < chars.size();) {
-            const char letter = chars[i];
-            int count = 0;
-
-            while (i < chars.size() && chars[i] == letter) {
-                ++count;
-                ++i;
+            if(j == i + 1) {
+                chars[write++] = chars[i];
+            }else {
+                chars[write++] = chars[i];
+                string count = std::to_string(j - i);
+                for(char ch : count) chars[write++] = ch;
             }
-            chars[ans++] = letter;
 
-            if (count > 1) {
-                for (const char c : to_string(count)) {
-                    chars[ans++] = c;
-                }
-            }
+            i = j;
         }
-        return ans;
+        return write;
     }
 };
