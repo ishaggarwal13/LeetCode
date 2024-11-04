@@ -1,22 +1,28 @@
 class Solution {
 public:
     string compressedString(string word) {
-        string comp = "";
-        int count = 1;
-        int n = word.size();
-        char ch = word[0];
-        for(int i=1; i<n; i++){
-            if(word[i] == ch && count < 9) count++;
-            else {
-                comp += (to_string(count));
-                comp.push_back(ch);
-                ch = word[i];
-                count = 1;
+        string temp;
+        char last=word[0];
+        int cnt=1;
+        for(int i=1; i<word.size(); i++){
+            if(last==word[i]){
+                if(cnt<9){
+                    ++cnt;
+                    continue;
+                }else{
+                    temp.push_back(cnt+'0');
+                    temp.push_back(last);
+                    cnt=1;
+                }
+            }else{
+                temp.push_back(cnt+'0');
+                temp.push_back(last);
+                cnt=1;
+                last=word[i];
             }
         }
-        comp += (to_string(count));
-        comp.push_back(ch);
-
-        return comp;
+        temp.push_back(cnt+'0');
+        temp.push_back(last);
+        return temp;
     }
 };
