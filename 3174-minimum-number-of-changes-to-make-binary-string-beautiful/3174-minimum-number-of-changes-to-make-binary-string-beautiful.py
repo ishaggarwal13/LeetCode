@@ -6,8 +6,10 @@ class Solution(object):
         """
         n = len(s)
         count = 0
-        for i in range(0, n-1, 2):
+        i = 0
+        while i < n - 1:
             if s[i] != s[i+1]:
-                count = count+1
+                count += 1
+            i+=2
         return count
         
