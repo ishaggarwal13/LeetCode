@@ -1,36 +1,27 @@
 class Solution {
 public:
     bool canSortArray(vector<int>& nums) {
-        vector<pair<int,int>>mm;
-        mm.push_back({nums[0],nums[0]});
-        
-        for(int i = 1 ; i < nums.size() ;i++)
-        {
-            int cur = __builtin_popcount(nums[i]);
-            int prev = __builtin_popcount(nums[i-1]);
-            if(cur != prev)
-            {   
-                mm.push_back({nums[i],nums[i]});
-            }
-            mm.back().first = min(mm.back().first,nums[i]);
-            mm.back().second = max(mm.back().second,nums[i]);
-        }
-        for(int i = 1 ; i < mm.size() ; i++)
-        {
-            if(mm[i-1].second > mm[i].first)
-                return false;
-        }
-        return true;
-    }
+        vector<pair<int, int>> maxmin;
+        maxmin.push_back({nums[0], nums[0]});
 
-    int countBits(int num){
-        int count = 0;
-        while(num > 0){
-            if(num & 1){
-                count++;
+        for(int i=1; i<nums.size(); i++){
+            int curr = __builtin_popcount(nums[i]);
+            int prev = __builtin_popcount(nums[i-1]);
+
+            if(curr != prev){
+                maxmin.push_back({nums[i], nums[i]});
             }
-            num >>= 1; // right shift
+            maxmin.back().first = min(maxmin.back().first, nums[i]);
+            maxmin.back().second = max(maxmin.back().second, nums[i]);
         }
-        return count;
+
+        // check the sort condition for the groups end and start element
+        for(int i=1; i<maxmin.size(); i++){
+            if(maxmin[i-1].second > maxmin[i].first){
+                return false;
+            }
+        }
+
+        return true;
     }
 };
