@@ -3,13 +3,27 @@ public:
     bool rotateString(string s, string goal) {
         if(s.size() != goal.size()) return false;
 
-        for(int i=1; i<=s.size(); i++){
-            char temp = s[0]; // storing first begin char
+        string concatenated = goal + goal;
+        int i = 0;
+        int j = 0;
+        int n = s.size();
+        int m = concatenated.size();
 
-            s.erase(s.begin()); // remove first char
-            s += temp; // add first element to last at back
-
-            if(s == goal) return true; // check for the string
+        while (i < m) {
+            if (concatenated[i] == s[j]) {
+                j++;
+                i++;
+                if (j == n) {
+                    return true;
+                }
+            } else {
+                if (j != 0) {
+                    i=i-j+1;
+                    j = 0;
+                } else {
+                    i++;
+                }
+            }
         }
 
         return false;
