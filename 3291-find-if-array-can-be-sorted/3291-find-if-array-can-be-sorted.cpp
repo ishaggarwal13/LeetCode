@@ -1,25 +1,24 @@
 class Solution {
 public:
     bool canSortArray(vector<int>& nums) {
-        vector<int> bits;
-        for(auto num : nums){
-            int count = countBits(num);
-            bits.push_back(count);
-        }
-
-        int prevMax = INT_MIN;
-        for(int i=0; i<nums.size();){
-            int start= i;
-            int end = i;
-            int currMax = INT_MIN, currMin = INT_MAX;
-            while (end < nums.size() && bits[end] == bits[start]) {
-                currMax = max(currMax, nums[end]);
-                currMin = min(currMin, nums[end]);
-                end++;
+        vector<pair<int,int>>mm;
+        mm.push_back({nums[0],nums[0]});
+        
+        for(int i = 1 ; i < nums.size() ;i++)
+        {
+            int cur = __builtin_popcount(nums[i]);
+            int prev = __builtin_popcount(nums[i-1]);
+            if(cur != prev)
+            {   
+                mm.push_back({nums[i],nums[i]});
             }
-            i = end;
-            if(currMin < prevMax) return false;
-            prevMax = currMax;
+            mm.back().first = min(mm.back().first,nums[i]);
+            mm.back().second = max(mm.back().second,nums[i]);
+        }
+        for(int i = 1 ; i < mm.size() ; i++)
+        {
+            if(mm[i-1].second > mm[i].first)
+                return false;
         }
         return true;
     }
