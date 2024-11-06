@@ -1,18 +1,23 @@
 class Solution {
 public:
     string makeFancyString(string s) {
-        if(s.size() < 3) return s;
+        string ans = "";
+        ans.push_back(s[0]);
 
-        int j = 2; // pointer points to third element
-        for(int i=2; i<s.size(); i++){ 
-            //apply condition to check if all three are equal nothg will happen
-            // but not then at j pointer string will shift to left and move j++
-            if(s[i] != s[j-1] || s[i] != s[j-2]){
-                s[j] = s[i];
-                j++;
+        int count = 1;
+        for(int i=1; i<s.size(); i++){
+            // if equal then inc count and check for count < 3 and add the char to ans
+            // skip the third same char
+            if(s[i] == ans.back()){
+                count++;
+                if(count < 3) ans.push_back(s[i]);
+            } else{
+                // reassign count to 1
+                // and add the char to ans
+                count = 1;
+                ans.push_back(s[i]);
             }
         }
-        s.resize(j);
-        return s;
+        return ans;
     }
 };
