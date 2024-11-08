@@ -1,18 +1,17 @@
 class Solution {
 public:
     vector<int> getMaximumXor(vector<int>& nums, int maximumBit) {
-        int n = nums.size();
-        vector<int> prefixXOR(n);
-        vector<int> answer(n);
-        prefixXOR[0] = nums[0];
-        for(int i = 1; i < n; i++){
-           prefixXOR[i] =  prefixXOR[i - 1] ^ nums[i];
+        const int kMask = (1 << maximumBit) - 1;
+        const int n = nums.size();
+        int accu = 0;
+        for (int i : nums)
+            accu ^= i;
+        vector<int> res;
+        res.reserve(n);
+        for (int i = n - 1; i >= 0; i--) {
+            res.push_back((~accu) & kMask);
+            accu ^= nums[i];
         }
-        int mask = 0xFFFFFFFF << maximumBit;
-        for(int i = 0; i < n; i++){
-           int extract = prefixXOR[n-1-i] & ~(mask);
-           answer[i] = ~extract & ~mask;
-        }
-        return answer;
+        return res;
     }
 };
