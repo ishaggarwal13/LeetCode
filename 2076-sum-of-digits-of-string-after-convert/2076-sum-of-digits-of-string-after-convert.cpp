@@ -1,19 +1,29 @@
 class Solution {
 public:
-    int solve(string num, int k) {
-        if(k==0) return stoi(num);
-        int s = 0;
-        for(int i=0; i<num.length(); i++) {
-            s += (int)(num[i]-'1'+1);
+    int getLucky(string s, int k) {
+        int sum=0;
+        for(auto x:s)
+        {
+            int digit=x-'a'+1;
+            sum+=(digit/10)+(digit%10);
+
         }
-        return solve(to_string(s), k-1);
+        while(k>1)
+        {
+            sum=digitsum(sum);
+            k--;
+        }
+        return sum;
     }
 
-    int getLucky(string s, int k) {
-        string num;
-        for(int i=0; i<s.length(); i++) {
-            num += to_string((int)(s[i]-'a'+1));
+        int digitsum(int num)
+        {
+            int sum = 0;
+            while (num > 0)
+             {
+                sum += num % 10;
+                num /= 10;
         }
-        return solve(num, k);
-    }
+            return sum;
+        }
 };
