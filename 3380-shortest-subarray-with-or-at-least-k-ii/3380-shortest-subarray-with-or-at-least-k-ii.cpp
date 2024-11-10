@@ -1,42 +1,40 @@
 class Solution {
+vector<vector<int>> bitts;
+    int answer(vector<int>& nums, int idx, int k) {
+        int left = idx, right = nums.size() - 1, ans = INT_MAX;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            int a = 0;
+            for (int i = 0; i < 32; i++) {
+                int b = (bitts[mid + 1][i] - bitts[idx][i]);
+                if (b)
+                    a += (1 << i);
+            }
+            if (a >= k) {
+                ans = min(ans, mid - idx + 1);
+                right = mid - 1;
+            } else
+                left = mid + 1;
+        }
+        return ans;
+    }
+
 public:
     int minimumSubarrayLength(vector<int>& nums, int k) {
         int n = nums.size();
-        int res = 1e9;
-        int l = 0, r = 0;
-        vector<int> mark(32, 0);
-        int x = 0;
-        int bit;
-        while (r < n) {
-            x |= nums[r];
-            if (nums[r] == 0)
-                bit = 0;
-            else
-                bit = 31 - __builtin_clz(nums[r]);
-            for (int i = 0; i <= bit && i < 32; i++) {
-                if ((nums[r] >> i) & 1) {
-                    mark[i]++;
-                }
-            }
-            while (l <= r && x >= k) {
-                res = min(res, r - l + 1);
-                if (nums[l] == 0)
-                    bit = 0;
-                else
-                    bit = 31 - __builtin_clz(nums[l]);
-                for (int i = 0; i <= bit && i < 32; i++) {
-                    if ((nums[l] >> i) & 1) {
-                        mark[i]--;
-                        if (mark[i] == 0) {
-                            x ^= (1 << i);
-                        }
-                    }
-                }
-                l++;
-            }
-            r++;
-        }
+        int ans = INT_MAX;
+        bitts.resize(n + 1, vector<int>(32, 0));
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < 32; j++)
+                bitts[i + 1][j] = bitts[i][j] + ((nums[i] >> j) & 1);
 
-        return res == 1e9 ? -1 : res;
+        for (int i = 0; i < n; i++) {
+            int temp = answer(nums, i, k);
+            if (temp != INT_MAX)
+                ans = min(ans, temp);
+            else
+                break;
+        }
+        return ans == INT_MAX ? -1 : ans;
     }
 };
