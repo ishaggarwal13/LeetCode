@@ -1,52 +1,33 @@
 class Solution {
-private: 
-void update(vector<int>& bits, int x, int change) {
-        // insert or remove element from window, time: O(32)
-        for (int i = 0; i < 32; i++) {
-            if ((x >> i) & 1) {
-                bits[i] += change;
-            }
-        }
-    }
-    
-    int bitsToNum(vector<int>& bits) {
-        // convert 32-size bits array to integer, time: O(32)
-        int result = 0;
-        for (int i = 0; i < 32; i++) {
-            if (bits[i]) {
-                result |= 1 << i;
-            }
-        }
-        return result;
-    }
-    
-    bool isSpecial(vector<int>& nums, int k, int len) {
-        // checks if special subarray exists for length len, time: O(n)
-        int n = nums.size();
-        vector<int> bits(32);
-        for (int i = 0; i < n; i++) {
-            update(bits, nums[i], 1); // insert nums[i] into window
-            if (i >= len) {
-                update(bits, nums[i - len], -1); // remove nums[i - len] from window
-            }
-            if (i >= len - 1 && bitsToNum(bits) >= k) {
-                // special subarray found
-                return true;
-            }
-        }
-        return false;
-    }
 public:
+    int k;
+    void update(unsigned* freq, unsigned x, bool add=1){
+        bitset<30> b(x);
+        for(int i=0; i<30; i++)
+            freq[i]+=(add)?b[i]:-b[i];
+    }
+
+    bool check(unsigned* freq){
+        int b=0;
+        for(int i=0; i<30; i++)
+            if (freq[i]>0) b|=(1<<i);
+        return b>=k;
+    }
+
     int minimumSubarrayLength(vector<int>& nums, int k) {
-        int n = nums.size(), start = 1, end = n+1, mid;
-        while(start < end){
-            mid = (start + end)/2;
-            if(!isSpecial(nums, k, mid)){
-                start = mid + 1;
-            } else {
-                end = mid;
+        if (k==0) return 1;
+        this->k=k;
+        unsigned freq[30]={0};
+        int n=nums.size(), ans=INT_MAX;
+        for(int l=0, r=0; r<n; r++){
+            int x=nums[r];
+            if (x>=k) return 1;
+            update(freq, nums[r], 1);
+            while(l<n && check(freq)){
+                ans=min(ans, r-l+1);
+                update(freq, nums[l++], 0);
             }
         }
-        return start != n+1 ? start : -1;
+        return (ans==INT_MAX)?-1:ans;
     }
 };
