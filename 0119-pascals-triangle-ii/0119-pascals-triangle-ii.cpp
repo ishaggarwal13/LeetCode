@@ -1,27 +1,15 @@
 class Solution {
 public:
-    unordered_map<string, int> memo;
-
-// Function to get the value with memoization
-int getValue(int row, int col) {
-    string key = to_string(row) + "," + to_string(col);
-    if (memo.find(key) != memo.end()) {
-        return memo[key];
-    }
-    
-    // Base cases
-    if (col == 0 || col == row) {
-        return 1;
-    }
-    // Store the computed value
-    memo[key] = getValue(row - 1, col - 1) + getValue(row - 1, col);
-    return memo[key];
-}
     vector<int> getRow(int rowIndex) {
-        vector<int> row(rowIndex+1);
-        for(int col=0; col<=rowIndex; col++){
-            row[col] = getValue(rowIndex, col);
+       vector<int> row(rowIndex + 1, 1); // Initialize row with all elements as 1
+
+    // Iteratively update the row from the end to the start for each row level
+    for (int i = 1; i < rowIndex; i++) {  
+        for (int j = i; j > 0; j--) {  
+            row[j] = row[j] + row[j - 1]; // Update each element by summing up the two elements above it
         }
-        return row;
+    }
+
+    return row;
     }
 };
