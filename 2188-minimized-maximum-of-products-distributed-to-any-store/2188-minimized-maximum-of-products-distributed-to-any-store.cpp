@@ -10,7 +10,7 @@ public:
         return stores<=n;
     }
     int minimizedMaximum(int n, vector<int>& quantities) {
-        int s=1,e=100000,ans=-1;
+        int s=1,e=*max_element(quantities.begin(),quantities.end()),ans=-1;
         while(s<=e){
             int mid=s+(e-s)/2;
             if(isPossible(n,quantities,mid)){
