@@ -1,32 +1,34 @@
 class Solution {
 public:
     int minSubarray(vector<int>& nums, int p) {
-        long totalSum = 0;
-        for (int num : nums) {
-            totalSum += num;
+        long long sum=0;
+        for(int i=0;i<nums.size();i++){
+            sum=sum+nums[i];
         }
-
-        // Find the remainder when total sum is divided by p
-        int rem = totalSum % p;
-        if (rem == 0) return 0; // If the remainder is 0, no subarray needs to be removed
-
-        unordered_map<int, int> prefixMod;
-        prefixMod[0] = -1;  // Initialize for handling full prefix
-        long prefixSum = 0;
-        int minLength = nums.size();
-
-        for (int i = 0; i < nums.size(); ++i) {
-            prefixSum += nums[i];
-            int currentMod = prefixSum % p;
-            int targetMod = (currentMod - rem + p) % p;
-
-            if (prefixMod.find(targetMod) != prefixMod.end()) {
-                minLength = min(minLength, i - prefixMod[targetMod]);
+        
+        if(sum<p){
+            return -1;
+        }
+        sum=sum%p;
+        if(sum==0){
+            return 0;
+        }
+        unordered_map<int,int> hash;
+        int currsum=0;
+        int minlen=INT_MAX;
+        hash[0]=-1;
+        for(int i=0;i<nums.size();i++){
+            currsum+=nums[i];
+            currsum%=p;
+    
+            if(hash.find((currsum-sum+p)%p)!=hash.end()){
+                minlen=min(minlen,i-hash[(currsum-sum+p)%p]);
             }
-
-            prefixMod[currentMod] = i;
+            hash[currsum]=i;
         }
-
-        return minLength == nums.size() ? -1 : minLength;
+        if(minlen==INT_MAX || minlen==nums.size()){
+            return -1;
+        }
+        return minlen;
     }
 };
