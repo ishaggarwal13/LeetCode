@@ -1,25 +1,26 @@
 class Solution {
 public:
-    int minExtraChar(string s, vector<string>& dictionary) {
-        vector<pair<int, int>> seq;
-        for (const auto& word: dictionary) {
-            int pos = -1, n = word.size();
-            do {
-                pos = s.find(word, pos + 1);
-                if (pos >= 0) seq.push_back(pair<int, int>(pos, pos + n));
-            } while(pos != string::npos);
-        }
-        int n = s.size(), m = seq.size();
-        vector<int> dp(n);
-        for (int i = 0; i < n; ++i) {
-            dp[i] = i ? min(dp[i - 1] + 1, i + 1) : 1;
-            for (int j = 0; j < m; ++j) {
-                if (seq[j].second - 1 == i) {
-                    int front = seq[j].first - 1;
-                    dp[i] = front >= 0 ? min(dp[i], dp[front]) : 0;
-                }
+    int dp[100];
+    int solve(string &s, vector<string> &dict, int ptr){
+        
+        if(ptr >= s.size()) return 0;
+        if(dp[ptr]!=-1) return dp[ptr];
+        // now you can either a single character equal to s[ptr] and get ans from rest 
+        int easyWay = 1 + solve(s,dict,ptr+1);
+        int tougherWay = INT_MAX; // it involves use one of the words from dict
+        for(auto &x : dict){
+            // check if remaining chars are compatible first
+            bool right = true;
+            for(int i = 0; i<x.size();++i){
+                if(ptr + x.size()  > s.size() || x[i] != s[ptr+i]) {right = false; break;}
             }
+            if(!right) continue;
+            tougherWay = min(tougherWay,solve(s,dict,ptr+x.size()));
         }
-        return dp[n - 1];
+        return dp[ptr] = min(easyWay,tougherWay);
+    }
+    int minExtraChar(string s, vector<string>& dict) {
+        for(int i = 80; i>=0;--i) dp[i] = -1;
+        return solve(s,dict,0);
     }
 };
