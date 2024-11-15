@@ -1,46 +1,36 @@
-struct Item {
-    int price;
-    int beauty;
-
-    bool operator<(const Item& other) const {
-        return price < other.price;
-    }
-};
-
-struct Query {
-    int threshold;
-    int index;
-
-    bool operator<(const Query& other) const {
-        return threshold < other.threshold;
-    }
-};
-
 class Solution {
 public:
     vector<int> maximumBeauty(vector<vector<int>>& items, vector<int>& queries) {
-        vector<Item> all;
-        for (const vector<int>& item : items) {
-            all.push_back({.price = item[0], .beauty = item[1]});
-        }
-        sort(all.begin(), all.end());
+        int itemsLen = items.size();
+        int queriesLen = queries.size();
 
-        vector<Query> qs;
-        for (int i = 0; i < queries.size(); ++i) {
-            qs.push_back({.threshold = queries[i], .index = i});
-        }
-        sort(qs.begin(), qs.end());
+        map<int, int> beautyMap;
 
-        vector<int> answer(queries.size());
-        int index = 0;  // index through the `all` array.
-        int max_beauty = 0;
-        for (const Query& q : qs) {
-            while (index < all.size() && all[index].price <= q.threshold) {
-                max_beauty = max(max_beauty, all[index].beauty);
-                ++index;
+        int i = 0;
+        std::map<int, int>::iterator it;
+
+        for (; i < itemsLen; ++i) {
+            it = beautyMap.upper_bound(items[i][0]);
+            it = (it != beautyMap.begin()) ? --it : it;
+            if (it->first > items[i][0] || it->second < items[i][1]) {
+                beautyMap[items[i][0]] = items[i][1];
+
+                for (it = std::next(beautyMap.begin()); it != beautyMap.end(); ++it) {
+                    if (std::prev(it)->second > it->second)
+                        it->second = std::prev(it)->second;
+                }
             }
-            answer[q.index] = max_beauty;
         }
-        return answer;
+
+        for (i = 0; i < queriesLen; ++i) {
+            if (queries[i] < beautyMap.begin()->first) queries[i] = 0;
+            else {
+                it = beautyMap.upper_bound(queries[i]);
+                --it;
+                queries[i] = it->second;
+            }
+        }
+
+        return queries;
     }
 };
