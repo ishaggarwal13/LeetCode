@@ -3,35 +3,34 @@ public:
     int findLengthOfShortestSubarray(vector<int>& arr) {
         int n = arr.size();
         
-        // Step 1: Find the longest non-decreasing prefix
-        int left = 0;
-        while (left + 1 < n && arr[left] <= arr[left + 1]) {
-            left++;
+        // Find longest non-decreasing prefix
+        int left= 0;
+        for (; left+1 < n && arr[left] <= arr[left+1]; left++); 
+        
+        // array is already non-decreasing
+        if (left== n-1) return 0;
+
+        // Monotonic stack for  non-descreasing suffix
+        vector<int> stack={n-1};
+        for (int r= n-2; r>left; r--) {
+            if (arr[r] <= arr[r+1])
+                stack.push_back(r);
+            else break;
         }
-        
-        // If the entire array is already sorted
-        if (left == n - 1) return 0;
-        
-        // Step 2: Find the longest non-decreasing suffix
-        int right = n - 1;
-        while (right > 0 && arr[right - 1] <= arr[right]) {
-            right--;
+
+        // to remove as the smaller of removing all from either end
+        int remove= min(n-left-1, stack.back());
+
+        // Try to merge left and right parts
+        for (int i = 0; i <=left; i++) {
+            // find j=stack.back() s.t. arr[j]>= arr[i] 
+            while (!stack.empty() && arr[i]>arr[stack.back()])
+                stack.pop_back();
+    
+            if (!stack.empty()) 
+                remove = min(remove, stack.back()-i-1);
         }
-        
-        // Step 3: Find the minimum length to remove by comparing prefix and suffix
-        int result = min(n - left - 1, right);
-        
-        // Step 4: Use two pointers to find the smallest middle part to remove
-        int i = 0, j = right;
-        while (i <= left && j < n) {
-            if (arr[i] <= arr[j]) {
-                result = min(result, j - i - 1);
-                i++;
-            } else {
-                j++;
-            }
-        }
-        
-        return result;
+
+        return remove;
     }
 };
