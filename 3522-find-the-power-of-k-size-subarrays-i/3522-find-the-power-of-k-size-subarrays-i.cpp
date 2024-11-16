@@ -1,27 +1,37 @@
 class Solution {
 public:
     vector<int> resultsArray(vector<int>& nums, int k) {
-        vector<int> res;
-        int l = 0;
-        int consec_cnt = 1;
-        
-        for (int r = 0; r < nums.size(); r++) {
-            if (r > 0 && nums[r - 1] + 1 == nums[r]) {
-                consec_cnt++;
-            }
-            
-            if (r - l + 1 > k) {
-                if (nums[l] + 1 == nums[l + 1]) {
-                    consec_cnt--;
-                }
-                l++;
-            }
-            
-            if (r - l + 1 == k) {
-                res.push_back(consec_cnt == k ? nums[r] : -1);
-            }
+        // Skip if k is 1
+        if (k == 1) {
+            return nums;
         }
         
-        return res;
+        int n = nums.size();
+        std::vector<int> result;
+        int left = 0;
+        int right = 1;
+        
+        while (right < n) {
+            // Check if current sequence is not consecutive
+            bool is_not_consecutive = nums[right] - nums[right-1] != 1;
+            
+            if (is_not_consecutive) {
+                // Mark invalid sequences
+                while (left < right && left + k - 1 < n) {
+                    result.push_back(-1);
+                    left++;
+                }
+                left = right;
+            }
+            // Found valid k-length sequence
+            else if (right - left == k - 1) {
+                result.push_back(nums[right]);
+                left++;
+            }
+            
+            right++;
+        }
+        
+        return result;
     }
 };
