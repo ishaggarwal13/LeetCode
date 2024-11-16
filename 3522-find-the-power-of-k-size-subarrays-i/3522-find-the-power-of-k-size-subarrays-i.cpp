@@ -1,35 +1,32 @@
 class Solution {
 public:
     vector<int> resultsArray(vector<int>& nums, int k) {
-        // Skip if k is 1
         if (k == 1) {
             return nums;
         }
         
         int n = nums.size();
-        std::vector<int> result;
-        int left = 0;
-        int right = 1;
+        vector<int> result;
+        deque<int> window;
         
-        while (right < n) {
-            // Check if current sequence is not consecutive
-            bool is_not_consecutive = nums[right] - nums[right-1] != 1;
-            
-            if (is_not_consecutive) {
-                // Mark invalid sequences
-                while (left < right && left + k - 1 < n) {
-                    result.push_back(-1);
-                    left++;
-                }
-                left = right;
-            }
-            // Found valid k-length sequence
-            else if (right - left == k - 1) {
-                result.push_back(nums[right]);
-                left++;
+        for (int i = 0; i < n; i++) {
+            // Remove elements outside window
+            while (!window.empty() && i - window.front() >= k) {
+                window.pop_front();
             }
             
-            right++;
+            // Check consecutive sequence
+            if (window.empty() || nums[i] - nums[i-1] == 1) {
+                window.push_back(i);
+            } else {
+                window.clear();
+                window.push_back(i);
+            }
+            
+            // Add result when window size is k
+            if (i >= k-1) {
+                result.push_back(window.size() == k ? nums[i] : -1);
+            }
         }
         
         return result;
