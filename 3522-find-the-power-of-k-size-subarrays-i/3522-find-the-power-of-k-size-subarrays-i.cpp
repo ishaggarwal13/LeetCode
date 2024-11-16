@@ -1,33 +1,25 @@
 class Solution {
 public:
     vector<int> resultsArray(vector<int>& nums, int k) {
-        int n = nums.size();
-        vector<int> result(n-k+1);
+        int len = nums.size();
+        vector<int> res(len-k+1,-1);
+        deque<int> indexDeque;
+        for(int i=0;i<len;i++)
+        {
+            if(!indexDeque.empty() && indexDeque.front() < i-k+1)
+            indexDeque.pop_front();
 
-        // till n-k because we are taking first element of subarray
-        for(int i=0; i<=n-k; i++){
-            unordered_set<int> uniqueElements;
-            int maxElement = INT_MIN;
-            int minElement = INT_MAX;
-            bool isSorted = true;
+            if(!indexDeque.empty() && nums[i] != nums[i-1] +1)
+            indexDeque.clear();
 
-            // till i+k becuase we are incsering the index of window too
-            for(int j=i; j<i+k; j++){
-                uniqueElements.insert(nums[j]);
-                maxElement = max(maxElement, nums[j]);
-                minElement = min(minElement, nums[j]);
+            indexDeque.push_back(i);
 
-                if(j > i && nums[j] < nums[j-1]){
-                    isSorted = false;
-                }
-            }
-
-            if(uniqueElements.size() == k && (maxElement - minElement) == (k-1) && isSorted){
-                result[i] = maxElement;
-            } else {
-                result[i] = -1;
+            if(i >= k-1)
+            {
+                if(indexDeque.size()==k)
+                res[i-k+1] = nums[indexDeque.back()];
             }
         }
-        return result;
+        return res;
     }
 };
