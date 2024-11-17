@@ -1,20 +1,39 @@
+const int MAX_N = 100000 + 1;
+
+int* nums;
+
+long long st_s[MAX_N];
+int pos[MAX_N];
 
 class Solution {
 public:
-    int shortestSubarray(vector<int>& nums, int k) {
-        priority_queue<pair<long long, long long>,vector<pair<long long,long long>>,greater<pair<long long,long long>>> pq;
-        long long currSum=0, result=INT_MAX;
-        for(long long i=0;i<nums.size();i++){
-            currSum+=nums[i];
-            if(currSum>=k){
-                result=min(result,i+1);
+    int shortestSubarray(vector<int>& _nums, int k) {
+        int n = _nums.size();
+        nums = &_nums[0];
+        
+        long long sp = 0LL;
+        int res = n + 1;
+
+        int b = 0, e = 0;
+        st_s[e] = 0;
+        pos[e++] = -1;
+
+        for (int i = 0; i < n; i++) {
+            sp += nums[i];
+
+            while (b < e && sp - st_s[b] >= k) {
+                res = std::min(res, i - pos[b]);
+                b++;
             }
-            while(!pq.empty() and (currSum-pq.top().first)>=k){
-                result=min(result,i-pq.top().second);
-                pq.pop();
-            }
-            pq.push({currSum,i});
+
+            while (b < e && sp <= st_s[e - 1])
+                e--;
+            st_s[e] = sp;
+            pos[e++] = i;
         }
-    return result==INT_MAX ? -1 : result;
+
+        if (res == n + 1)
+            return -1;
+        return res;
     }
 };
