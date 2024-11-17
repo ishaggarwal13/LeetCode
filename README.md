@@ -169,6 +169,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0731-my-calendar-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0731-my-calendar-ii) |
 | [0739-daily-temperatures](https://github.com/ishaggarwal13/LeetCode/tree/master/0739-daily-temperatures) |
 | [0859-design-circular-deque](https://github.com/ishaggarwal13/LeetCode/tree/master/0859-design-circular-deque) |
+| [0892-shortest-subarray-with-sum-at-least-k](https://github.com/ishaggarwal13/LeetCode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [0906-walking-robot-simulation](https://github.com/ishaggarwal13/LeetCode/tree/master/0906-walking-robot-simulation) |
 | [0924-fair-candy-swap](https://github.com/ishaggarwal13/LeetCode/tree/master/0924-fair-candy-swap) |
 | [0948-sort-an-array](https://github.com/ishaggarwal13/LeetCode/tree/master/0948-sort-an-array) |
@@ -519,6 +520,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/ishaggarwal13/LeetCode/tree/master/0023-merge-k-sorted-lists) |
 | [0632-smallest-range-covering-elements-from-k-lists](https://github.com/ishaggarwal13/LeetCode/tree/master/0632-smallest-range-covering-elements-from-k-lists) |
+| [0892-shortest-subarray-with-sum-at-least-k](https://github.com/ishaggarwal13/LeetCode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [0948-sort-an-array](https://github.com/ishaggarwal13/LeetCode/tree/master/0948-sort-an-array) |
 | [1304-longest-happy-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1304-longest-happy-string) |
 | [1325-path-with-maximum-probability](https://github.com/ishaggarwal13/LeetCode/tree/master/1325-path-with-maximum-probability) |
@@ -544,6 +546,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0729-my-calendar-i](https://github.com/ishaggarwal13/LeetCode/tree/master/0729-my-calendar-i) |
 | [0731-my-calendar-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0731-my-calendar-ii) |
 | [0783-search-in-a-binary-search-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0783-search-in-a-binary-search-tree) |
+| [0892-shortest-subarray-with-sum-at-least-k](https://github.com/ishaggarwal13/LeetCode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [0924-fair-candy-swap](https://github.com/ishaggarwal13/LeetCode/tree/master/0924-fair-candy-swap) |
 | [1679-shortest-subarray-to-be-removed-to-make-array-sorted](https://github.com/ishaggarwal13/LeetCode/tree/master/1679-shortest-subarray-to-be-removed-to-make-array-sorted) |
 | [1766-minimum-number-of-removals-to-make-mountain-array](https://github.com/ishaggarwal13/LeetCode/tree/master/1766-minimum-number-of-removals-to-make-mountain-array) |
@@ -639,6 +642,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0731-my-calendar-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0731-my-calendar-ii) |
+| [0892-shortest-subarray-with-sum-at-least-k](https://github.com/ishaggarwal13/LeetCode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [1435-xor-queries-of-a-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/1435-xor-queries-of-a-subarray) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/ishaggarwal13/LeetCode/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [1694-make-sum-divisible-by-p](https://github.com/ishaggarwal13/LeetCode/tree/master/1694-make-sum-divisible-by-p) |
@@ -653,6 +657,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0219-contains-duplicate-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0219-contains-duplicate-ii) |
 | [0567-permutation-in-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0567-permutation-in-string) |
 | [0632-smallest-range-covering-elements-from-k-lists](https://github.com/ishaggarwal13/LeetCode/tree/master/0632-smallest-range-covering-elements-from-k-lists) |
+| [0892-shortest-subarray-with-sum-at-least-k](https://github.com/ishaggarwal13/LeetCode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [3380-shortest-subarray-with-or-at-least-k-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3380-shortest-subarray-with-or-at-least-k-ii) |
 | [3522-find-the-power-of-k-size-subarrays-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3522-find-the-power-of-k-size-subarrays-i) |
 ## Memoization
@@ -740,6 +745,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0859-design-circular-deque](https://github.com/ishaggarwal13/LeetCode/tree/master/0859-design-circular-deque) |
+| [0892-shortest-subarray-with-sum-at-least-k](https://github.com/ishaggarwal13/LeetCode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 ## Doubly-Linked List
 |  |
 | ------- |
@@ -752,4 +758,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0948-sort-an-array](https://github.com/ishaggarwal13/LeetCode/tree/master/0948-sort-an-array) |
+## Monotonic Queue
+|  |
+| ------- |
+| [0892-shortest-subarray-with-sum-at-least-k](https://github.com/ishaggarwal13/LeetCode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 <!---LeetCode Topics End-->
