@@ -1,36 +1,24 @@
 class Solution {
-private:
-    int forwardCircularSum(vector<int>& vec, int start, int cnt) {
-        int sum = 0;
-        int len = vec.size();
-        for (int i = 0; i < cnt; i++)
-            sum += vec[(start + i) % len];
-        return sum;
-    }
-
-    int backwardCircularSum(vector<int>& vec, int start, int cnt) {
-        int sum = 0;
-        int len = vec.size();
-        for (int i = 0; i < cnt; i++)
-            sum += vec[(start - i - 1 + len) % len];
-        return sum;
-    }
-
 public:
-    vector<int> decrypt(vector<int>& code, int k) {
-        vector<int> res(code.size());
+    vector<int> decrypt(vector<int>& circ, int k) {
+        int n = circ.size(); // circular array
+        vector<int> result(n);
 
-        if (k == 0)
-            return res;
+        if (k == 0) return result;
 
-        else if (k > 0)
-            for (int i = 0; i < code.size(); i++)
-                res[i] = forwardCircularSum(code, i + 1, k);
+        int wSum = 0; 
+        int start = (k > 0) ? 1 : n + k;
+        int end = (k > 0) ? k : n - 1;
+
+        for (int i = start; i <= end; i++) {
+            wSum += circ[i % n];
+        }
+        for (int i = 0; i < n; i++) {
+            result[i] = wSum;
+            wSum -= circ[(start + i) % n];
+            wSum += circ[(end + i + 1) % n];
+        }
         
-        else
-            for (int i = 0; i < code.size(); i++)
-                res[i] = backwardCircularSum(code, i, abs(k));
-
-        return res;
+        return result;
     }
 };
