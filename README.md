@@ -156,6 +156,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0136-single-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0136-single-number) |
 | [0137-single-number-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0137-single-number-ii) |
 | [0179-largest-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0179-largest-number) |
+| [0189-rotate-array](https://github.com/ishaggarwal13/LeetCode/tree/master/0189-rotate-array) |
 | [0217-contains-duplicate](https://github.com/ishaggarwal13/LeetCode/tree/master/0217-contains-duplicate) |
 | [0219-contains-duplicate-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0219-contains-duplicate-ii) |
 | [0228-summary-ranges](https://github.com/ishaggarwal13/LeetCode/tree/master/0228-summary-ranges) |
@@ -240,6 +241,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0141-linked-list-cycle](https://github.com/ishaggarwal13/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0142-linked-list-cycle-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0142-linked-list-cycle-ii) |
 | [0148-sort-list](https://github.com/ishaggarwal13/LeetCode/tree/master/0148-sort-list) |
+| [0189-rotate-array](https://github.com/ishaggarwal13/LeetCode/tree/master/0189-rotate-array) |
 | [0443-string-compression](https://github.com/ishaggarwal13/LeetCode/tree/master/0443-string-compression) |
 | [0455-assign-cookies](https://github.com/ishaggarwal13/LeetCode/tree/master/0455-assign-cookies) |
 | [0567-permutation-in-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0567-permutation-in-string) |
@@ -365,6 +367,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0070-climbing-stairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0070-climbing-stairs) |
 | [0168-excel-sheet-column-title](https://github.com/ishaggarwal13/LeetCode/tree/master/0168-excel-sheet-column-title) |
 | [0171-excel-sheet-column-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0171-excel-sheet-column-number) |
+| [0189-rotate-array](https://github.com/ishaggarwal13/LeetCode/tree/master/0189-rotate-array) |
 | [0241-different-ways-to-add-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [0258-add-digits](https://github.com/ishaggarwal13/LeetCode/tree/master/0258-add-digits) |
 | [0268-missing-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0268-missing-number) |
