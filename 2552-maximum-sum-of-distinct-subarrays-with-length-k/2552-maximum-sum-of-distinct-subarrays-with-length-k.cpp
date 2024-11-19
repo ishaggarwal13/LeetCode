@@ -1,25 +1,27 @@
 class Solution {
+private:
+    long long sum = 0;
+    int dupli = 0, cnt[100001] = {};
+    void pushElement(int &num) {
+        sum += num;
+        if (++cnt[num] == 2) ++dupli;
+    }
+    void popElement(int &num) {
+        sum -= num;
+        if (--cnt[num] == 1) --dupli;
+    }
+        
 public:
     long long maximumSubarraySum(vector<int>& nums, int k) {
-        long long ans = 0, sum = 0;
-        unordered_map<int, int> mp;
-        int i = 0;
-        while(i < k  && i < nums.size()){ // store first k elements in the map
-            mp[nums[i]]++;
-            sum += nums[i];
-            i++;
+        for (int i = 0; i < k; ++i) pushElement(nums[i]);
+        long long res = dupli ? 0 : sum;
+
+        for (int i = 0; i < nums.size() - k; ++i) {
+            popElement(nums[i]);
+            pushElement(nums[i + k]);
+            if (!dupli) res = max(res, sum);
         }
-        if(mp.size() == k) ans = sum; // if all distinct, then ans = sum 
-        while(i < nums.size()){
-            mp[nums[i]]++;
-            mp[nums[i-k]]--;
-            if(mp[nums[i-k]] == 0) mp.erase(nums[i-k]);
-            
-            sum += nums[i];
-            sum -= nums[i-k];
-            if(mp.size() == k) ans = max(ans, sum);
-            i++;
-        }
-        return ans;
+
+        return res;
     }
 };
