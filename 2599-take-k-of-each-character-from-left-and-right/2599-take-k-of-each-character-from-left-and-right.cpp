@@ -1,28 +1,28 @@
 class Solution {
 public:
     int takeCharacters(string s, int k) {
-        int N = s.length(),j = 0, ans = N,window = 0;
-       unordered_map<char,int>count;
-
-       for(auto c : s)
-            count[c]++;
-
-       if(count['a'] < k || count['b'] <k || count['c']<k)  
-            return -1;
-
-       for(int i=0;i<N;i++){
-
-          count[s[i]]--;
-          window++;
-
-            while(count[s[i]]<k){
-                count[s[j++]]++;
-                window--;
+        int ca=0,cb=0,cc=0;
+        int n=s.size();
+        int ans=n;
+        for(int i=0;i<n;i++){
+            if(s[i]=='a') ca++;
+            if(s[i]=='b') cb++;
+            if(s[i]=='c') cc++;
+        }
+        if(ca<k||cb<k||cc<k) return -1;
+        int i=n-1,j=n-1;
+        while(i>=0){
+            if(s[i]=='a') ca--;
+            if(s[i]=='b') cb--;
+            if(s[i]=='c') cc--;
+            while(ca<k||cb<k||cc<k){
+            if(s[j]=='a') ca++;
+            if(s[j]=='b') cb++;
+            if(s[j]=='c') cc++;
+                j--;
             }
-            
-          ans = min(ans,N- window);
-       }
-
+            ans=min(ans,i+n-1-j); i--;
+        }
         return ans;
     }
 };
