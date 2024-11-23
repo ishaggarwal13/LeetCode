@@ -1,30 +1,21 @@
 class Solution {
 public:
-    vector<vector<char>> rotateTheBox(vector<vector<char>>& box) {
-        int m = box.size();
-        int n = box[0].size();
-        
-        for (auto& row : box) {
-            int dropPos = n - 1;
-            
-            for (int currPos = n - 1; currPos >= 0; currPos--) {
-                if (row[currPos] == '*') {
-                    dropPos = currPos - 1;
+    static vector<vector<char>> rotateTheBox(vector<vector<char>>& box) {
+        const int r=box.size(), c=box[0].size();
+        vector<vector<char>> rotate(c, vector<char>(r, '.'));
+        for(int i=0; i<r; i++){
+            int bottom=c-1;
+            for(int j=c-1; j>=0; j--){
+                if (box[i][j]=='#'){
+                    rotate[bottom][r-1-i]='#';
+                    bottom--;
                 }
-                else if (row[currPos] == '#') {
-                    swap(row[dropPos], row[currPos]);
-                    dropPos--;
+                else if (box[i][j]=='*'){
+                    rotate[j][r-1-i]='*';
+                    bottom=j-1;
                 }
             }
         }
-        
-        vector<vector<char>> rotatedBox(n, vector<char>(m));
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                rotatedBox[j][m - 1 - i] = box[i][j];
-            }
-        }
-        
-        return rotatedBox;
+        return rotate;
     }
 };
