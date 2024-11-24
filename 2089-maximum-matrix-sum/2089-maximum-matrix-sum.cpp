@@ -1,25 +1,25 @@
 class Solution {
 public:
     long long maxMatrixSum(vector<vector<int>>& matrix) {
-        int ct=0;
-        long long sum=0,minm=1e9;
-
-        for(int i=0;i<matrix.size();i++)
-        {
-            for(int j=0;j<matrix[i].size();j++)
-            {
-                if(matrix[i][j]<0)
-                ct++;
-
-                sum+=abs(matrix[i][j]);
-
-                minm=min(minm ,(long long) abs(matrix[i][j]));
+        int m = matrix.size();
+        int n = matrix[0].size();
+        
+        long long sum = 0;
+        int negCount = 0;
+        int smallestMin = INT_MAX;
+        
+        for(int i = 0; i<m; i++) {
+            for(int j = 0; j<n; j++) {
+                sum += abs(matrix[i][j]); //Add all the numbers
+                
+                if(matrix[i][j] < 0)
+                    negCount++; //keep track of count of -ve numbers
+                
+				//keep track of the smallest number which can be negative
+                smallestMin = min(smallestMin, abs(matrix[i][j]));
             }
         }
-
-        if(ct%2==0)
-        return sum;
-
-        return sum-2*minm;
+        
+        return negCount%2 == 0 ? sum : sum-2*smallestMin;
     }
 };
