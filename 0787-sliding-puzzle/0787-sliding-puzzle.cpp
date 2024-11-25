@@ -1,53 +1,53 @@
 class Solution {
-string swap(string s, int i, int j){
-        char temp = s[i];
-        s[i] = s[j];
-        s[j] = temp;
-        return s;
-    }
 public:
-    int slidingPuzzle(vector<vector<int>>& board) {
-        int m = 2, n = 3;
-        string target = "123450";
-        string start = "";
-        // convert 2x3 array to a string for BFS
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                start += to_string(board[i][j]);
+    string boardToString(vector<vector<int>>& board)
+    {
+        string str = "";
+        for(int i = 0; i<2; i++)
+            for(int j = 0; j<3; j++)
+                str+=to_string(board[i][j]);
+            
+        return str;
+    }
+    
+    bool checkIsCorrect(string &s)
+    {
+        return s == "123450";
+    }
+    
+    int slidingPuzzle(vector<vector<int>>& board) 
+    {
+        queue<pair<string, int>> boardQ;
+        unordered_set<string> vis;
+        vector<vector<int>> directions = {{1, 3}, {0, 2, 4}, {1, 5},
+                                          {0, 4}, {1, 3, 5}, {2, 4}};
+        
+        string initString = boardToString(board);
+        
+        boardQ.push({initString, 0});
+        vis.insert(initString);
+
+        while(!boardQ.empty())
+        {
+            string temp = boardQ.front().first;
+            int moves = boardQ.front().second;
+            boardQ.pop();
+            
+            if(checkIsCorrect(temp)) return moves;
+            int zeroPos = temp.find('0');
+            
+            for(auto swaps : directions[zeroPos])
+            {
+                string nextTemp = temp;
+                swap(nextTemp[swaps], nextTemp[zeroPos]);
+                if(vis.find(nextTemp) == vis.end())
+                {
+                    vis.insert(nextTemp);
+                    boardQ.push({nextTemp, moves+1});
+                }
             }
         }
-        // record the adjacent indices of the one-dimentional
-        // string
-        vector<vector<int>> neighbors = {{1, 3}, {0, 2, 4}, {1, 5},
-                                            {0, 4}, {3, 1, 5}, {4, 2}};
-        queue<string> q;
-        unordered_set<string> visited;
-        q.push(start);
-        visited.insert(start);
-        int steps = 0;
-        while (!q.empty()) {
-            int sz = q.size();
-            for (int i = 0; i < sz; i++) {
-                string curr = q.front();
-                q.pop();
-                if (target == curr) {
-                    return steps;
-                }
-                // find the index of number 0 i.e., the empty square
-                int emptyIdx = 0;
-                for (; curr[emptyIdx] != '0'; emptyIdx++)
-                    ;
-                // swap the position of number 0 with its adjacent numbers
-                for (int neighborIdx : neighbors[emptyIdx]) {
-                    string new_board = swap(curr, neighborIdx, emptyIdx);
-                    if (!visited.count(new_board)) {
-                        q.push(new_board);
-                        visited.insert(new_board);
-                    }
-                }
-            }
-            steps++;
-        }
+        
         return -1;
     }
 };
