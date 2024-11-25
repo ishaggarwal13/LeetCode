@@ -1,105 +1,53 @@
 class Solution {
+string swap(string s, int i, int j){
+        char temp = s[i];
+        s[i] = s[j];
+        s[j] = temp;
+        return s;
+    }
 public:
     int slidingPuzzle(vector<vector<int>>& board) {
-        int rowSize = 2;
-        int colSize = 3;
-
-        string compare = "";
-        string target  = "123450";
-
-        //Making string of input matrix for comparison
-        for(int i = 0; i < rowSize; i++){
-            for(int j = 0; j < colSize; j++){
-                compare += to_string(board[i][j]);
+        int m = 2, n = 3;
+        string target = "123450";
+        string start = "";
+        // convert 2x3 array to a string for BFS
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                start += to_string(board[i][j]);
             }
         }
-
-        queue<pair<string, int>> q; //String and number of count to reach this string
-        q.push({compare, 0});//No steps done for compare string
-
-        unordered_set<string> visited;//Not visiting same string again and again
-        visited.insert(compare);
-
-
-        while(!q.empty()){
-
-            auto[curr_state, steps] = q.front();
-            q.pop();
-
-            if(curr_state == target){
-                return steps;
-            }
-
-            int zero_index = -1;
-
-            for(int i = 0; i < curr_state.size(); i++){
-                if(curr_state[i] == '0'){
-                    zero_index = i;
-                    break;
+        // record the adjacent indices of the one-dimentional
+        // string
+        vector<vector<int>> neighbors = {{1, 3}, {0, 2, 4}, {1, 5},
+                                            {0, 4}, {3, 1, 5}, {4, 2}};
+        queue<string> q;
+        unordered_set<string> visited;
+        q.push(start);
+        visited.insert(start);
+        int steps = 0;
+        while (!q.empty()) {
+            int sz = q.size();
+            for (int i = 0; i < sz; i++) {
+                string curr = q.front();
+                q.pop();
+                if (target == curr) {
+                    return steps;
+                }
+                // find the index of number 0 i.e., the empty square
+                int emptyIdx = 0;
+                for (; curr[emptyIdx] != '0'; emptyIdx++)
+                    ;
+                // swap the position of number 0 with its adjacent numbers
+                for (int neighborIdx : neighbors[emptyIdx]) {
+                    string new_board = swap(curr, neighborIdx, emptyIdx);
+                    if (!visited.count(new_board)) {
+                        q.push(new_board);
+                        visited.insert(new_board);
+                    }
                 }
             }
-            
-            //Check if We have zero in matrix or not
-            if(zero_index == -1){
-                break;
-            }
-
-            //4- directional traversal
-
-            //Up
-            /*We can't go up for 0th row . So we cant go up for 0, 1, 2 indexes in our string */
-            
-            if(zero_index > 2){
-
-                string temp = curr_state;
-                swap(temp[zero_index], temp[zero_index-3]);
-
-                if(visited.find(temp) == visited.end()){
-                    visited.insert(temp);
-                    q.push({temp, steps+1});
-                }
-            }
-
-            //Down
-            /* We can't go down for 1st row. So, we can't go down for 3, 4, 5 indexes */
-
-            if(zero_index < 3){
-                string temp = curr_state;
-                swap(temp[zero_index], temp[zero_index+3]);
-
-                if(visited.find(temp) == visited.end()){
-                    visited.insert(temp);
-                    q.push({temp, steps+1});
-                }
-            }
-
-            //Left
-            /* We can't go left for 1st column elements. So, we can't go left for 0, 3 indexes */
-
-            if(zero_index != 0 && zero_index != 3){
-                string temp = curr_state;
-                swap(temp[zero_index], temp[zero_index-1]);
-
-                if(visited.find(temp) == visited.end()){
-                    visited.insert(temp);
-                    q.push({temp, steps+1});
-                }
-            }
-
-            //Right
-            /* We can't go right for last column elements. So, we can't go right for 2, 5 indexes */
-
-            if(zero_index != 2 && zero_index != 5){
-                string temp = curr_state;
-                swap(temp[zero_index], temp[zero_index+1]);
-
-                if(visited.find(temp) == visited.end()){
-                    visited.insert(temp);
-                    q.push({temp, steps+1});
-                }
-            }
+            steps++;
         }
-
         return -1;
     }
 };
