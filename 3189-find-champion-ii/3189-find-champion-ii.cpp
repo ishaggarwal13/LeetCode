@@ -1,26 +1,27 @@
 class Solution {
 public:
     int findChampion(int n, vector<vector<int>>& edges) {
-        vector<int> indegree(n, 0);
+        vector<int> in(n+1,0);
 
-        // Calculate indegree for each team
-        for (const vector<int>& edge : edges) {
-            indegree[edge[1]]++;
+        for(int i=0;i<edges.size();i++)
+        {
+            in[edges[i][1]]++;
         }
 
-        int champion = -1; // Start with no champion identified
-
-        // Find the team with zero indegree
-        for (int i = 0; i < n; i++) {
-            if (indegree[i] == 0) {
-                if (champion != -1) {
-                    // More than one team has zero indegree, no single champion
-                    return -1;
-                }
-                champion = i; // Identify the potential champion
+        int ans;
+        int ct=0;
+        for(int i=0;i<n;i++)
+        {
+            if(in[i]==0)
+            {
+                ans=i;
+                ct++;
             }
+
+            if(ct==2)
+            return -1;
         }
 
-        return champion;
+        return ans;
     }
 };
