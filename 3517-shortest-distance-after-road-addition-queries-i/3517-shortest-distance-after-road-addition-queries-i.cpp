@@ -1,38 +1,37 @@
 class Solution {
-    void updateDistances(vector<vector<int>>& graph, int current, vector<int>& distances) {
-        int newDist = distances[current] + 1;
-        for (int neighbor : graph[current]) {
-            if (distances[neighbor] <= newDist) continue;
-            distances[neighbor] = newDist;
-            updateDistances(graph, neighbor, distances);
-        }
-    }
 public:
     vector<int> shortestDistanceAfterQueries(int n, vector<vector<int>>& queries) {
-        vector<int> distances(n);
-        for (int i = 0; i < n; ++i) {
-            distances[i] = n - 1 - i;
+        ios::sync_with_stdio(false);
+        int dp[n];
+        dp[0] = 0;
+
+        vector<vector<int>> from(n);
+
+        for (int i = 1; i < n; i++) {
+            dp[i] = dp[i - 1] + 1;
+            from[i].push_back(i - 1);
         }
-        
-        vector<vector<int>> graph(n);
-        for (int i = 0; i + 1 < n; ++i) {
-            graph[i + 1].push_back(i);
+
+        vector<int> ans(queries.size());
+
+        for (int i = 0; i < queries.size(); i++) {
+            int a = queries[i][0];
+            int b = queries[i][1];
+
+            from[b].push_back(a);
+
+            int change = dp[b];
+
+            for (int k = b; k < n; k++) {
+                for (int r : from[k]) {
+                    dp[k] = min(dp[k], dp[r] + 1);
+                }
+                if (k == b)
+                    if (dp[b] == change)
+                        break;
+            }
+            ans[i] = dp[n - 1];
         }
-        
-        vector<int> answer(queries.size());
-        int queryIdx = 0;
-        
-        for (const auto& query : queries) {
-            int source = query[0];
-            int target = query[1];
-            
-            graph[target].push_back(source);
-            distances[source] = min(distances[source], distances[target] + 1);
-            updateDistances(graph, source, distances);
-            
-            answer[queryIdx++] = distances[0];
-        }
-        
-        return answer;
+        return ans;
     }
 };
