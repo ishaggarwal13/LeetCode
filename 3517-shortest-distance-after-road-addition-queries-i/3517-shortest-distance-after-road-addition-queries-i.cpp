@@ -1,37 +1,42 @@
 class Solution {
 public:
     vector<int> shortestDistanceAfterQueries(int n, vector<vector<int>>& queries) {
-        ios::sync_with_stdio(false);
-        int dp[n];
-        dp[0] = 0;
-
-        vector<vector<int>> from(n);
-
-        for (int i = 1; i < n; i++) {
-            dp[i] = dp[i - 1] + 1;
-            from[i].push_back(i - 1);
+        vector<vector<int>> adj(n);
+        for(int i = 0; i < n - 1; i++)
+        {
+            adj[i].push_back(i+1);
         }
 
-        vector<int> ans(queries.size());
-
-        for (int i = 0; i < queries.size(); i++) {
-            int a = queries[i][0];
-            int b = queries[i][1];
-
-            from[b].push_back(a);
-
-            int change = dp[b];
-
-            for (int k = b; k < n; k++) {
-                for (int r : from[k]) {
-                    dp[k] = min(dp[k], dp[r] + 1);
+        vector<int> dist,result;
+        
+        for(int i = 0; i < n; i++)
+        {
+            dist.push_back(i);
+        }
+        
+        for(const auto &qi: queries) {
+            int src = qi[0];
+            int dest = qi[1];
+            adj[src].push_back(dest);
+            
+            if (dist[src] + 1 < dist[dest]) {
+                queue<int> q;
+                q.push(dest);
+                dist[dest] = dist[src] + 1;
+                
+                while (!q.empty()) {
+                    int v = q.front();
+                    q.pop();
+                    for (auto &next : adj[v]) {
+                        if (dist[v] + 1 < dist[next]) {
+                            dist[next] = dist[v] + 1;
+                            q.push(next);
+                        }
+                    }
                 }
-                if (k == b)
-                    if (dp[b] == change)
-                        break;
-            }
-            ans[i] = dp[n - 1];
+            } 
+            result.push_back(dist.back());
         }
-        return ans;
+        return result;
     }
 };
