@@ -1,38 +1,29 @@
 class Solution {
 public:
     int minimumObstacles(vector<vector<int>>& grid) {
-        int m = grid.size();
-        int n = grid[0].size();
+        priority_queue< tuple<int, int, int> , vector<tuple<int , int, int>>  , greater<tuple<int, int, int >> > pq;
 
-        deque<pair<int, int>> dq;
-        dq.push_front({0,0});
+        pq.push({grid[0][0] , 0 , 0});
+        grid[0][0] = 2;
+        vector<int> dir = {0 , 1 , 0, -1 , 0};
 
-        vector<vector<int>> dp(m, vector<int>(n, INT_MAX));
-        dp[0][0] = 0;
+        while(!pq.empty()){
+            auto tp = pq.top();
+            pq.pop();
+            int bricks = get<0>(tp) , x= get<1>(tp) , y = get<2>(tp);
+            // cout << x << " " << y << endl;
+            for(int i = 0 ; i < 4 ; i++){
+                int newX = x + dir[i];
+                int newY = y + dir[i+1];
 
-        vector<pair<int,int>> directions = {{0,1}, {1,0}, {0,-1}, {-1,0}};
-
-        while(!dq.empty()){
-            auto [x,y] = dq.front();
-            dq.pop_front();
-
-            for(auto [dx,dy] : directions){
-                int newx = x+dx;
-                int newy = y+dy;
-
-                if(newx >=0 && newx < m && newy >= 0 && newy < n){
-                    int newdist = dp[x][y] + grid[newx][newy];
-                    if(newdist < dp[newx][newy]){
-                        dp[newx][newy] = newdist;
-                        if (grid[newx][newy] == 0) {
-                            dq.push_front({newx, newy});
-                        } else {
-                            dq.push_back({newx, newy});
-                        }
-                    }
+                if(newX >= 0 && newX < grid.size() && newY >= 0 && newY < grid[0].size() && grid[newX][newY] != 2){
+                    if(newX == grid.size()-1 && newY == grid[0].size()-1)return bricks;
+                    pq.push({bricks + grid[newX][newY] ,  newX , newY});
+                    grid[newX][newY] = 2;
                 }
             }
         }
-        return dp[m-1][n-1];
+
+        return -1;
     }
 };
