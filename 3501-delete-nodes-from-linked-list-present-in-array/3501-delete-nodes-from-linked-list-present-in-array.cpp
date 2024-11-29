@@ -11,23 +11,24 @@
 class Solution {
 public:
     ListNode* modifiedList(vector<int>& nums, ListNode* head) {
-        ios::sync_with_stdio(false);
-        cin.tie(nullptr);
-
-        bitset<100001> bs;
-        for(const int & i : nums){
-            bs.set(i);
+        std::bitset<100001> bs;
+        for (int num : nums) {
+            bs.set(num);
         }
-        
-        head = new ListNode(-1,head);
-        ListNode * prev = head;
-        while(head->next){
-            if(bs[head->next->val]){
-                head->next = head->next->next;
-            }else{
-                head = head->next;
+        ListNode dummy(0, head);
+        ListNode* prev = &dummy;
+        ListNode* curr = head;
+        while (curr) {
+            ListNode* tmp = curr->next;
+            if (bs[curr->val]) {
+                prev->next = tmp;
             }
+            else {
+                prev = curr;
+            }
+            curr = tmp;
         }
-        return prev->next;
+
+        return dummy.next;
     }  
 };
