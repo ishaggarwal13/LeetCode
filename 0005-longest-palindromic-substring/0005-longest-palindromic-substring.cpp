@@ -1,35 +1,33 @@
 class Solution {
-private: 
-    bool check(string &s, int i, int j){
-        while(i<j){
-            if(s[i] != s[j]){
-                return false;
-            }
-            i++;
-            j--;
-        }
-        return true;
-    } 
 public:
     string longestPalindrome(string s) {
-        if (s.length() <= 1) {
-            return s;
-        }
+        int n = s.length();
+        if(n<=1) return s;
 
-        int n = s.size();
-        int start = 0;
-        int max_len = 0;
-
-        for(int i=0; i<n; i++){
-            for(int j =1; j<n; j++){
-                if(check(s, i, j)){
-                    if(j-i+1 > max_len){
-                        max_len = j-i+1;
-                        start = i;
-                    }
-                }
+        auto expand_from_center = [&](int left, int right)
+        {
+            while(left >= 0 && right < n && s[left] == s[right])
+            {
+                left--;
+                right++;
             }
+            return s.substr(left+1, right-left-1);
+        };
+        
+        string max_str = s.substr(0,1);
+
+        for(int i=0;i<n-1;i++)
+        {
+            string odd = expand_from_center(i,i);
+            string even = expand_from_center(i,i+1);
+
+            if(odd.length() > max_str.length())
+            max_str = odd;
+
+            if(even.length() > max_str.length())
+            max_str = even;
         }
-        return s.substr(start, max_len);
+
+        return max_str;
     }
 };
