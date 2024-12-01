@@ -1,25 +1,18 @@
 class Solution {
 public:
     bool checkIfExist(vector<int>& arr) {
-        unordered_set<int>us;
-        
-        for(int i = 0; i<arr.size(); i++){
-		//if the double of the element existed previously in the array
-            if(us.find(arr[i]*2) != us.end()){
-                return true;
+        unordered_map<int, int> mp; // HashMap to store the occurrence of elements
+
+        for (int i : arr) { // Iterate over the array
+            // Check if 2 * i or i / 2 already exists in the map
+            // Note: We use a special condition for i / 2 to ensure it's valid
+            if (mp[2 * i] || (!(i & 1) && mp[i / 2])) {
+                return true; // Return true if the condition is met
             }
-			
-       //as the array is of integers so no need to check for the half of odd numbers
-	   //here we have checked if the number is even if yess ...then check if there is half of the current number present previously in the array
-            if(arr[i]%2 == 0){
-                if(us.find(arr[i]/2) != us.end()){
-                    return true;
-                }
-            }
-          //if none of the above cases are true then we will insert the current element into the unordered set and will move further checking other elements
-            us.insert(arr[i]);
+            // Add the current number to the map
+            mp[i]++;
         }
-        
+
         return false;
     }
 };
