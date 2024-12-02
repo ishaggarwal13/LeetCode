@@ -1,19 +1,10 @@
 class Solution {
 public:
     int isPrefixOfWord(string sentence, string searchWord) {
-        istringstream stream(sentence);
-        string word;
-        int index = 1; // 1-based index
-        
-        while (stream >> word) {
-            // Check if the word starts with the searchWord
-            if (word.find(searchWord) == 0) {
-                return index;
-            }
-            index++;
-        }
-        
-        // Return -1 if no word starts with the searchWord
-        return -1;
+        string s=" "+sentence, t=" "+searchWord;
+        int n=s.size();
+        int m=s.find(t);
+        if (m==-1) return -1;
+        return 1+count(s.begin(), s.begin()+m, ' ');
     }
 };
