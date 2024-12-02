@@ -1,10 +1,10 @@
 class Solution {
 public:
     int isPrefixOfWord(string sentence, string searchWord) {
-        string s=" "+sentence, t=" "+searchWord;
-        int n=s.size();
-        int m=s.find(t);
-        if (m==-1) return -1;
-        return 1+count(s.begin(), s.begin()+m, ' ');
+        stringstream s(sentence);
+        string t;
+        for(int i = 1; s >> t; i++)
+            if(t.substr(0, searchWord.length()) == searchWord) return i;
+        return -1;
     }
 };
