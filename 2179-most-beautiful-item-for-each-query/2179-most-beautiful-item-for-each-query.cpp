@@ -1,36 +1,41 @@
 class Solution {
 public:
-    vector<int> maximumBeauty(vector<vector<int>>& items, vector<int>& queries) {
-        int itemsLen = items.size();
-        int queriesLen = queries.size();
+    vector<int> maximumBeauty(vector<vector<int>>& items,
+                              vector<int>& queries) {
+        vector<int> ans(queries.size());
 
-        map<int, int> beautyMap;
+        // Sort and store max beauty
+        sort(items.begin(), items.end(),
+             [](vector<int>& a, vector<int>& b) { return a[0] < b[0]; });
 
-        int i = 0;
-        std::map<int, int>::iterator it;
-
-        for (; i < itemsLen; ++i) {
-            it = beautyMap.upper_bound(items[i][0]);
-            it = (it != beautyMap.begin()) ? --it : it;
-            if (it->first > items[i][0] || it->second < items[i][1]) {
-                beautyMap[items[i][0]] = items[i][1];
-
-                for (it = std::next(beautyMap.begin()); it != beautyMap.end(); ++it) {
-                    if (std::prev(it)->second > it->second)
-                        it->second = std::prev(it)->second;
-                }
-            }
+        int maxBeauty = items[0][1];
+        for (int i = 0; i < items.size(); i++) {
+            maxBeauty = max(maxBeauty, items[i][1]);
+            items[i][1] = maxBeauty;
         }
 
-        for (i = 0; i < queriesLen; ++i) {
-            if (queries[i] < beautyMap.begin()->first) queries[i] = 0;
-            else {
-                it = beautyMap.upper_bound(queries[i]);
-                --it;
-                queries[i] = it->second;
-            }
+        for (int i = 0; i < queries.size(); i++) {
+            // answer i-th query
+            ans[i] = binarySearch(items, queries[i]);
         }
 
-        return queries;
+        return ans;
+    }
+
+    int binarySearch(vector<vector<int>>& items, int targetPrice) {
+        int left = 0;
+        int right = items.size() - 1;
+        int maxBeauty = 0;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (items[mid][0] > targetPrice) {
+                right = mid - 1;
+            } else {
+                // Found viable price. Keep moving to right
+                maxBeauty = max(maxBeauty, items[mid][1]);
+                left = mid + 1;
+            }
+        }
+        return maxBeauty;
     }
 };
