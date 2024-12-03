@@ -1,26 +1,23 @@
 class Solution {
 public:
     string addSpaces(string s, vector<int>& spaces) {
-        int i,n=spaces.size(),m=s.size(),j;
-        string ans="";
-        i=0;
-        j=0;
-        
-        //jth pointer for current index of spaces vector
-        //ith pointer for current index of our answer string
-        while(i<m)
-        {
-            //if at our current index i is equals to spaces[j] which means we have space at this index,so we add space right here
-            if(j<n&&i==spaces[j])
-            {
-                ans+=" ";
-                j++;
-                //incrementing j to get next space index location
+        // Final length of the result
+        int totalLength = s.size() + spaces.size(); 
+        // Pre-allocated buffer
+        char result[totalLength]; 
+        int sIndex = 0, spacesIndex = 0, resultIndex = 0;
+
+        while (sIndex < s.size()) {
+            if (spacesIndex < spaces.size() && sIndex == spaces[spacesIndex]) {
+                // Insert space at the correct position
+                result[resultIndex++] = ' '; 
+                spacesIndex++;
             }
-            ans+=s[i];
-            i++;
+            // Copy the current character
+            result[resultIndex++] = s[sIndex++]; 
         }
-        
-        return ans;
+
+        // Convert the buffer to a string
+        return string(result, totalLength); 
     }
 };
