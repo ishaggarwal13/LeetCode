@@ -1,15 +1,22 @@
 class Solution {
 public:
     string addSpaces(string s, vector<int>& spaces) {
-        std::string result(s.size() + spaces.size(), ' ');
-        size_t tracker = 0, k = 0;
-        for (size_t i = 0; i < s.size(); ++i, ++k) {
-            if (tracker < spaces.size() and i == spaces[tracker]) {
-                ++tracker;
-                ++k;
+        string result;
+        // Pre-allocate space for efficiency
+        result.reserve(s.size() + spaces.size());
+
+        int spaceIndex = 0;
+        for (int stringIndex = 0; stringIndex < s.size(); ++stringIndex) {
+            if (spaceIndex < spaces.size() &&
+                stringIndex == spaces[spaceIndex]) {
+                // Insert space at the correct position
+                result += ' ';
+                ++spaceIndex;
             }
-            result[k] = s[i];
+            // Append the current character
+            result += s[stringIndex];
         }
+
         return result;
     }
 };
