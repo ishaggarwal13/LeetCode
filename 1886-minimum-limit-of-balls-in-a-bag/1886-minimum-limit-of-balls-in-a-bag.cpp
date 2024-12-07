@@ -1,17 +1,26 @@
 class Solution {
 public:
     int minimumSize(vector<int>& nums, int maxOperations) {
-        int left = 1, right = 1e9;
-        while(left < right){
-            int mid = (left + right) / 2, count = 0;
-            
-            for(int& i: nums){
-                count += (i-1)/mid;
+        int maxVal = INT_MIN;
+        for(auto ele : nums) maxVal = max(maxVal , ele);
+
+        int low = 1;
+        int high = maxVal;
+
+        while(low <= high){
+            int mid = (high - low)/2 + low;
+
+            int cnt = 0;
+
+            for(auto ele : nums){
+                cnt += (ele - 1)/mid;
             }
-            if(count > maxOperations){
-                left = mid+1;
-            } else right = mid;
+
+            if(cnt > maxOperations) low = mid + 1;
+            else{
+                high = mid - 1;
+            }
         }
-        return left;
+        return low;
     }
 };
