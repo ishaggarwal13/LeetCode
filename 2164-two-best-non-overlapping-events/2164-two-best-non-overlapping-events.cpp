@@ -1,24 +1,20 @@
 class Solution {
 public:
+    using info=tuple<int, bool, int>;
     int maxTwoEvents(vector<vector<int>>& events) {
-        vector<array<int, 3>> times;
-        for (auto& e : events) {
-            // 1 denotes start time.
-            times.push_back({e[0], 1, e[2]});
-            // 0 denotes end time.
-            times.push_back({e[1] + 1, 0, e[2]});
+        const int n=events.size();
+        vector<info> time(n*2);
+        for(int i=0; i<n; i++){
+            int s=events[i][0], e=events[i][1], v=events[i][2];
+            time[2*i]={s, 1, v};
+            time[2*i+1]={e+1, 0, v};
         }
-        int ans = 0, maxValue = 0;
-        sort(begin(times), end(times));
-        for (auto& timeValue : times) {
-            // If current time is a start time, find maximum sum of maximum end
-            // time till now.
-            if (timeValue[1]) {
-                ans = max(ans, timeValue[2] + maxValue);
-            } else {
-                maxValue = max(maxValue, timeValue[2]);
-            }
+        sort(time.begin(), time.end());
+        int ans=0, maxV=0, n2=n*2;
+        for(auto& [t, isStart, v]: time){
+            if (isStart) ans=max(ans, maxV+v);
+            else maxV=max(maxV, v);
         }
-        return ans;
+        return ans;    
     }
 };
