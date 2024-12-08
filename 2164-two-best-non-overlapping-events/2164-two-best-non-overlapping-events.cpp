@@ -1,24 +1,21 @@
 class Solution {
 public:
-    int n;
-    int dp[2][100000];// (i, j=index)
-    vector<int> next;
-    int f(int i, int j, vector<vector<int>>& events){
-        if (i>=2 || j>=n) return 0;
-        if (dp[i][j]!=-1) return dp[i][j];
-        int v=events[j][2];
-        int take=v+f(i+1, next[j], events);
-        int skip=f(i, j+1, events);
-        return dp[i][j]=max(take, skip);
-    }
-    int maxTwoEvents(vector<vector<int>>& events) {
-        n=events.size();
-        sort(events.begin(), events.end());
-        next.resize(n);
-        for(int j=0; j<n; j++)
-            next[j]=upper_bound(events.begin()+j, events.end(), vector<int>{events[j][1], INT_MAX, INT_MAX})-events.begin();
-
-        memset(dp, -1, sizeof(dp));
-        return f(0, 0, events);
+    static int maxTwoEvents(vector<vector<int>>& events) {
+        const int n=events.size();
+        vector<uint64_t> time(n*2);
+        for(int i=0; i<n; i++){
+            int s=events[i][0], e=events[i][1], v=events[i][2];
+            time[2*i]=((uint64_t)s<<21)+v;
+            time[2*i+1]=((uint64_t)e<<21)+(1<<20)+v;
+        }
+        sort(time.begin(), time.end());
+        int ans=0, maxV=0, n2=n*2;
+        for(auto info: time){
+            bool isEnd=(info>>20)&1;
+            int v=info&((1<<20)-1); 
+            if (isEnd) maxV=max(maxV, v);
+            else ans=max(ans, maxV+v);
+        }
+        return ans;   
     }
 };
