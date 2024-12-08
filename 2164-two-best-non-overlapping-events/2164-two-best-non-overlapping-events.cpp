@@ -1,21 +1,24 @@
 class Solution {
 public:
     int maxTwoEvents(vector<vector<int>>& events) {
-        const int n=events.size();
-        vector<uint64_t> time(n*2);
-        for(int i=0; i<n; i++){
-            int s=events[i][0], e=events[i][1], v=events[i][2];
-            time[2*i]=((uint64_t)s<<21)+v;
-            time[2*i+1]=((uint64_t)e<<21)+(1<<20)+v;
+        vector<array<int, 3>> times;
+        for (auto& e : events) {
+            // 1 denotes start time.
+            times.push_back({e[0], 1, e[2]});
+            // 0 denotes end time.
+            times.push_back({e[1] + 1, 0, e[2]});
         }
-        sort(time.begin(), time.end());
-        int ans=0, maxV=0, n2=n*2;
-        for(auto info: time){
-            bool isEnd=(info>>20)&1;
-            int v=info&((1<<20)-1); 
-            if (isEnd) maxV=max(maxV, v);
-            else ans=max(ans, maxV+v);
+        int ans = 0, maxValue = 0;
+        sort(begin(times), end(times));
+        for (auto& timeValue : times) {
+            // If current time is a start time, find maximum sum of maximum end
+            // time till now.
+            if (timeValue[1]) {
+                ans = max(ans, timeValue[2] + maxValue);
+            } else {
+                maxValue = max(maxValue, timeValue[2]);
+            }
         }
-        return ans; 
+        return ans;
     }
 };
