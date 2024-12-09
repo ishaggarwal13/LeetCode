@@ -1,24 +1,20 @@
 class Solution {
 public:
     vector<bool> isArraySpecial(vector<int>& nums, vector<vector<int>>& queries) {
-        int n = nums.size();
-        vector<int> maxR(n);
-        int R = 0;
-        for(int L = 0; L < n; L++) {
-            // if R < L, set R = L
-            R = max(R, L);
-            // While R is not the last idx
-            // And we can expand, then expand it.
-            while(R < (n - 1) && nums[R] % 2 != nums[R+1] % 2) {
-                ++R;
+        int lst=-1,n=nums.size();
+        vector<int> arr(n,-1);
+        arr[0]=0;lst=0;
+        for(int i=1;i<n;i++){
+            if(!((nums[i]&1)^(nums[i-1]&1))){
+                lst=i;
             }
-
-            maxR[L] = R;
+            arr[i]=lst;
         }
-        vector<bool> res(queries.size());
-        for(int i = 0, qn = queries.size(); i < qn; i++) {
-            res[i] = queries[i][1] <= maxR[queries[i][0]];
+        vector<bool> ans;
+        for(auto&a:queries){
+            if(arr[a[0]]!=arr[a[1]]) ans.push_back(0);
+            else ans.push_back(1);
         }
-        return res;
+        return ans;
     }
 };
