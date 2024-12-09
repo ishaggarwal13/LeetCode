@@ -1,10 +1,24 @@
 class Solution {
 public:
     vector<bool> isArraySpecial(vector<int>& nums, vector<vector<int>>& queries) {
-        vector<bool> ans;
-    vector<int> converted(1, 0);
-    for(int i = 1; i < nums.size(); ++i) converted.push_back(converted.back() + (nums[i]%2 == nums[i-1]%2));
-    for(auto q: queries) ans.push_back( converted[q[0]] == converted[q[1]] );
-    return ans;
+        int n = nums.size();
+        vector<int> maxR(n);
+        int R = 0;
+        for(int L = 0; L < n; L++) {
+            // if R < L, set R = L
+            R = max(R, L);
+            // While R is not the last idx
+            // And we can expand, then expand it.
+            while(R < (n - 1) && nums[R] % 2 != nums[R+1] % 2) {
+                ++R;
+            }
+
+            maxR[L] = R;
+        }
+        vector<bool> res(queries.size());
+        for(int i = 0, qn = queries.size(); i < qn; i++) {
+            res[i] = queries[i][1] <= maxR[queries[i][0]];
+        }
+        return res;
     }
 };
