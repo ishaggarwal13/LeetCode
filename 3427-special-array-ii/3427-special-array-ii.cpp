@@ -1,20 +1,19 @@
 class Solution {
 public:
     vector<bool> isArraySpecial(vector<int>& nums, vector<vector<int>>& queries) {
-        int lst=-1,n=nums.size();
-        vector<int> arr(n,-1);
-        arr[0]=0;lst=0;
-        for(int i=1;i<n;i++){
-            if(!((nums[i]&1)^(nums[i-1]&1))){
-                lst=i;
-            }
-            arr[i]=lst;
+        int m = nums.size(), n = queries.size();
+
+        vector<int> prefixSum(m, 0); // while parity change, set 1, then prefixsum
+        for (int i = 1; i < m; i++) {
+            prefixSum[i] = prefixSum[i - 1] + ((nums[i - 1] & 1) ^ (nums[i] & 1));
         }
-        vector<bool> ans;
-        for(auto&a:queries){
-            if(arr[a[0]]!=arr[a[1]]) ans.push_back(0);
-            else ans.push_back(1);
+
+        vector<bool> res(n, false);
+        for (int i = 0; i < n; i++) {
+            int from = queries[i][0];
+            int to = queries[i][1];
+            res[i] = (prefixSum[to] - prefixSum[from] == to - from);
         }
-        return ans;
+        return res;
     }
 };
