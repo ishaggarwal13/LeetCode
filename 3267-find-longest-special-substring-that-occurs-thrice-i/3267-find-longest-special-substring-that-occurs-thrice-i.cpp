@@ -1,24 +1,33 @@
 class Solution {
 public:
     int maximumLength(string s) {
-        unordered_map<string, int>um;
-
-        for (int i{(int)s.size()-2}, ss{(int)s.size()}; i > 0; --i){
-            for (int j{}; j+(i-1) < ss; ++j){
-                bool same{true};
-
-                for (int k{1}; k < i; ++k){
-                    if (s[j+k] != s[(j+k)-1]){
-                        same = false; break;
-                    }
-                }
-
-                if (same && ++um[s.substr(j, i)] == 3){
-                    return i;
+        // Create a map of strings to store the count of all substrings.
+        map<pair<char, int>, int> count;
+        int substringLength = 0;
+        for (int start = 0; start < s.length(); start++) {
+            char character = s[start];
+            substringLength = 0;
+            for (int end = start; end < s.length(); end++) {
+                // If the string is empty, or the current character is equal to
+                // the previously added character, then add it to the map.
+                // Otherwise, break the iteration.
+                if (character == s[end]) {
+                    substringLength++;
+                    count[{character, substringLength}]++;
+                } else {
+                    break;
                 }
             }
         }
 
-        return -1;
+        // Create a variable ans to store the longest length of substring with
+        // frequency atleast 3.
+        int ans = 0;
+        for (auto i : count) {
+            int len = i.first.second;
+            if (i.second >= 3 && len > ans) ans = len;
+        }
+        if (ans == 0) return -1;
+        return ans;
     }
 };
