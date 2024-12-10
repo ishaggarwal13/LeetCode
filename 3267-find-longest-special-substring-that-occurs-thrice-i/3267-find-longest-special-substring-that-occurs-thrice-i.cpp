@@ -1,21 +1,24 @@
 class Solution {
 public:
     int maximumLength(string s) {
-        int l = 0, r = 1, n = s.size();
-        int cnt[26][60] = {};
-        int ans = -1;
-        while(r <= n){
-            while(r < n && s[r] == s[l]) r++;
-            //either reach the end or not equal
-            for(int i = r-1; i>=l;i--){
-                int len = i - l + 1;
-                cnt[s[l]-'a'][len] += r-i;
-                if(cnt[s[l]-'a'][len]>2 && len > ans)
-                    ans = len;
+        unordered_map<string, int>um;
+
+        for (int i{(int)s.size()-2}, ss{(int)s.size()}; i > 0; --i){
+            for (int j{}; j+(i-1) < ss; ++j){
+                bool same{true};
+
+                for (int k{1}; k < i; ++k){
+                    if (s[j+k] != s[(j+k)-1]){
+                        same = false; break;
+                    }
+                }
+
+                if (same && ++um[s.substr(j, i)] == 3){
+                    return i;
+                }
             }
-            l = r;
-            r++;
         }
-        return ans;
+
+        return -1;
     }
 };
