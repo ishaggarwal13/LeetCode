@@ -1,44 +1,34 @@
+const int N = 3e4 + 10;
+int e[N<<1],ne[N<<1],h[N];
+int idx =0 ;
+void add(int u,int v){
+    e[idx] = v;
+    ne[idx] = h[u];
+    h[u] = idx++;
+}
+typedef long long ll;
 class Solution {
-private:
-    unordered_map<int, vector<int>> adj;
-    unordered_set<int> visited;
-    int comp;
-
 public:
     int maxKDivisibleComponents(int n, vector<vector<int>>& edges, vector<int>& values, int k) {
-        comp = 0;
-
-        int src = 0;
-
-        for (const vector<int>& edge : edges) {
-            int u = edge[0];
-            int v = edge[1];
-            adj[u].push_back(v);
-            adj[v].push_back(u);
+        memset(h,-1,sizeof h);
+        idx = 0;
+        for(auto& e : edges){
+            add(e[0], e[1]);
+            add(e[1], e[0]);
         }
-
-        dfs(src, values, k);
-        return comp;
-    }
-
-private:
-    int dfs(int root, vector<int>& values, int k) {
-        if (visited.count(root)) {
-            return 0;
-        }
-
-        visited.insert(root);
-        int ans = values[root];
-
-        for (int neigh : adj[root]) {
-            ans += dfs(neigh, values, k);
-        }
-
-        if (ans % k == 0) {
-            comp++;
-            return 0;
-        }
-
-        return ans % k;
+        int ans= 0;
+        auto dfs = [&](auto && dfs,int u,int fa) -> ll{
+            ll res = values[u];
+            for(int i = h[u]; i != -1; i = ne[i]){
+                int v = e[i];
+                if(v != fa){
+                    res += dfs(dfs,v,u);
+                }
+            }
+            ans += res%k == 0;
+            return res;
+        };
+        dfs(dfs,0,-1);
+        return ans;
     }
 };
