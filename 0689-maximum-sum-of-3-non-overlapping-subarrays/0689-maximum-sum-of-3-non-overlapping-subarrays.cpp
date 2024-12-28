@@ -1,46 +1,59 @@
 class Solution {
+    vector<int> prefix_sum;
+    int max_sum;
+    int mem[20001][3];//[pos][count]
+    vector<int> max_sum_path;
+
+    int findMaxSum(vector<int>& nums,int pos,int count,int& k){
+        if(count==3)              return 0;
+        if(pos>nums.size()-k)     return 0;
+        if(mem[pos][count]!=-1)   return mem[pos][count];
+        
+        //Don't start subarray here
+        int dont_start = findMaxSum(nums,pos+1,count,k);
+
+        //Start subarray here
+        int start_here = findMaxSum(nums,pos+k,count+1,k)
+                         + prefix_sum[pos+k]-prefix_sum[pos];
+
+        return mem[pos][count] = max(dont_start,start_here);
+    }
+    void findMaxSumPath(vector<int>& nums,int pos,int count,int& k,vector<int>& path){
+        if(count==3)             return;
+        if(pos>nums.size()-k)    return;
+
+        //Don't start subarray here
+        int dont_start = findMaxSum(nums,pos+1,count,k);//In O(1) time
+
+        //Start subarray here
+        int start_here = findMaxSum(nums,pos+k,count+1,k)//In O(1) time
+                         + prefix_sum[pos+k]-prefix_sum[pos];
+        
+        //Choose optimal path
+        if(start_here >= dont_start){
+            path.push_back(pos);
+            findMaxSumPath(nums,pos+k,count+1,k,path);//Include pos
+        }else{
+            findMaxSumPath(nums,pos+1,count,k,path);//Don't include pos
+        }
+    }
 public:
     vector<int> maxSumOfThreeSubarrays(vector<int>& nums, int k) {
-        int n = nums.size(), sum1 = 0, sum2 = 0, sum3 = 0;
-        int max1 = 0, max12 = 0, max123 = 0;
-        int idx1 = 0, idx12 = 0, idx123 = k;
+        int n = nums.size();
+        memset(mem,-1,sizeof(mem));
 
-        vector<int> ans = {0, k, 2*k};
+        //Calculate Prefix-Sum
+        prefix_sum = vector<int>(n+1,0);
+        for(int i=0;i<n;++i)
+            prefix_sum[i+1] = prefix_sum[i]+nums[i];
 
-        for(int i=0; i<k; i++){
-            sum1 += nums[i];
-            sum2 += nums[i + k];
-            sum3 += nums[i + 2*k];
-        }
+        //Find max_sum value
+        max_sum = findMaxSum(nums,0,0,k);
 
-        max1 = sum1;
-        max12 = sum1 + sum2;
-        max123 = sum1 + sum2 + sum3;
-
-        for(int i=0; i<= n - 3 * k; i++){
-            if(i>0){
-                sum1 = sum1 - nums[i - 1] + nums[i + k - 1];
-                sum2 = sum2 - nums[i + k - 1] + nums[i + 2 * k - 1];
-                sum3 = sum3 - nums[i + 2 * k - 1] + nums[i + 3 * k - 1];
-            }
-
-            if(sum1 > max1){
-                max1 = sum1;
-                idx1 = i;
-            }
-
-            if (max1 + sum2 > max12) {
-                max12 = max1 + sum2;
-                idx12 = idx1;
-                idx123 = i + k;
-            }
-
-            if (max12 + sum3 > max123) {
-                max123 = max12 + sum3;
-                ans = {idx12, idx123, i + 2 * k};
-            }
-        }
-
-        return ans;
+        //Find subarray start indices with max_sum value
+        vector<int> path;
+        findMaxSumPath(nums,0,0,k,path);
+        
+        return path;
     }
 };
