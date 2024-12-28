@@ -1,59 +1,35 @@
 class Solution {
-    vector<int> prefix_sum;
-    int max_sum;
-    int mem[20001][3];//[pos][count]
-    vector<int> max_sum_path;
-
-    int findMaxSum(vector<int>& nums,int pos,int count,int& k){
-        if(count==3)              return 0;
-        if(pos>nums.size()-k)     return 0;
-        if(mem[pos][count]!=-1)   return mem[pos][count];
-        
-        //Don't start subarray here
-        int dont_start = findMaxSum(nums,pos+1,count,k);
-
-        //Start subarray here
-        int start_here = findMaxSum(nums,pos+k,count+1,k)
-                         + prefix_sum[pos+k]-prefix_sum[pos];
-
-        return mem[pos][count] = max(dont_start,start_here);
+public: 
+    vector<int> maxSumOfThreeSubarrays(vector<int>& nums, int k) {
+    int n = nums.size();
+    vector<int> sum(n + 1, 0);
+    for (int i = 0; i < n; ++i) {
+        sum[i + 1] = sum[i] + nums[i];
     }
-    void findMaxSumPath(vector<int>& nums,int pos,int count,int& k,vector<int>& path){
-        if(count==3)             return;
-        if(pos>nums.size()-k)    return;
 
-        //Don't start subarray here
-        int dont_start = findMaxSum(nums,pos+1,count,k);//In O(1) time
+    vector<vector<int>> dp(4, vector<int>(n + 1, 0));
+    vector<vector<int>> index(4, vector<int>(n + 1, 0));
 
-        //Start subarray here
-        int start_here = findMaxSum(nums,pos+k,count+1,k)//In O(1) time
-                         + prefix_sum[pos+k]-prefix_sum[pos];
-        
-        //Choose optimal path
-        if(start_here >= dont_start){
-            path.push_back(pos);
-            findMaxSumPath(nums,pos+k,count+1,k,path);//Include pos
-        }else{
-            findMaxSumPath(nums,pos+1,count,k,path);//Don't include pos
+    for (int j = 1; j <= 3; ++j) {
+        for (int i = j * k; i <= n; ++i) {
+            int current = sum[i] - sum[i - k] + dp[j - 1][i - k];
+            if (current > dp[j][i - 1]) {
+                dp[j][i] = current;
+                index[j][i] = i - k;
+            } else {
+                dp[j][i] = dp[j][i - 1];
+                index[j][i] = index[j][i - 1];
+            }
         }
     }
-public:
-    vector<int> maxSumOfThreeSubarrays(vector<int>& nums, int k) {
-        int n = nums.size();
-        memset(mem,-1,sizeof(mem));
 
-        //Calculate Prefix-Sum
-        prefix_sum = vector<int>(n+1,0);
-        for(int i=0;i<n;++i)
-            prefix_sum[i+1] = prefix_sum[i]+nums[i];
+    vector<int> result(3);
+    int idx = n;
+    for (int j = 3; j > 0; --j) {
+        result[j - 1] = index[j][idx];
+        idx = result[j - 1];
+    }
 
-        //Find max_sum value
-        max_sum = findMaxSum(nums,0,0,k);
-
-        //Find subarray start indices with max_sum value
-        vector<int> path;
-        findMaxSumPath(nums,0,0,k,path);
-        
-        return path;
+    return result;
     }
 };
