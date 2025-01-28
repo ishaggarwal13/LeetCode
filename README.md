@@ -164,6 +164,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0137-single-number-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0137-single-number-ii) |
 | [0179-largest-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0179-largest-number) |
 | [0189-rotate-array](https://github.com/ishaggarwal13/LeetCode/tree/master/0189-rotate-array) |
+| [0200-number-of-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/0200-number-of-islands) |
 | [0217-contains-duplicate](https://github.com/ishaggarwal13/LeetCode/tree/master/0217-contains-duplicate) |
 | [0219-contains-duplicate-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0219-contains-duplicate-ii) |
 | [0228-summary-ranges](https://github.com/ishaggarwal13/LeetCode/tree/master/0228-summary-ranges) |
@@ -483,6 +484,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0129-sum-root-to-leaf-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/0129-sum-root-to-leaf-numbers) |
 | [0145-binary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0145-binary-tree-postorder-traversal) |
 | [0199-binary-tree-right-side-view](https://github.com/ishaggarwal13/LeetCode/tree/master/0199-binary-tree-right-side-view) |
+| [0200-number-of-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/0200-number-of-islands) |
 | [0226-invert-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0386-lexicographical-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/0386-lexicographical-numbers) |
 | [0419-battleships-in-a-board](https://github.com/ishaggarwal13/LeetCode/tree/master/0419-battleships-in-a-board) |
@@ -508,6 +510,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/ishaggarwal13/LeetCode/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0117-populating-next-right-pointers-in-each-node-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0117-populating-next-right-pointers-in-each-node-ii) |
 | [0199-binary-tree-right-side-view](https://github.com/ishaggarwal13/LeetCode/tree/master/0199-binary-tree-right-side-view) |
+| [0200-number-of-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/0200-number-of-islands) |
 | [0226-invert-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0695-max-area-of-island](https://github.com/ishaggarwal13/LeetCode/tree/master/0695-max-area-of-island) |
 | [0764-n-ary-tree-level-order-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0764-n-ary-tree-level-order-traversal) |
@@ -638,6 +641,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0036-valid-sudoku](https://github.com/ishaggarwal13/LeetCode/tree/master/0036-valid-sudoku) |
 | [0064-minimum-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0064-minimum-path-sum) |
+| [0200-number-of-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/0200-number-of-islands) |
 | [0419-battleships-in-a-board](https://github.com/ishaggarwal13/LeetCode/tree/master/0419-battleships-in-a-board) |
 | [0695-max-area-of-island](https://github.com/ishaggarwal13/LeetCode/tree/master/0695-max-area-of-island) |
 | [0787-sliding-puzzle](https://github.com/ishaggarwal13/LeetCode/tree/master/0787-sliding-puzzle) |
@@ -683,6 +687,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Union Find
 |  |
 | ------- |
+| [0200-number-of-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/0200-number-of-islands) |
 | [0695-max-area-of-island](https://github.com/ishaggarwal13/LeetCode/tree/master/0695-max-area-of-island) |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/ishaggarwal13/LeetCode/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 | [2035-count-sub-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/2035-count-sub-islands) |
