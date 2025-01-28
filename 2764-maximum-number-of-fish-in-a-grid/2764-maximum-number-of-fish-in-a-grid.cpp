@@ -1,5 +1,21 @@
 class Solution {
 public:
+    int dfs(vector<vector<int>>& grid, int r, int c){
+        if(r<0 || r>=grid.size() || c<0 || c>=grid[0].size() || grid[r][c] == 0){
+            return 0;
+        }
+
+        int total = grid[r][c];
+        grid[r][c] = 0;
+
+        total += dfs(grid, r+1, c);
+        total += dfs(grid, r, c+1);
+        total += dfs(grid, r-1, c);
+        total += dfs(grid, r, c-1);
+
+        return total;
+    }
+
     int findMaxFish(vector<vector<int>>& grid) {
         int maxFish=0;
         int row = grid.size();
@@ -14,23 +30,5 @@ public:
             }
         }
         return maxFish;
-    }
-
-    int dfs(vector<vector<int>>& grid, int row, int col){
-        if(row<0 || row>=grid.size() || col<0 || col>=grid[0].size() || grid[row][col] == 0){
-            return 0;
-        }
-
-        int total = grid[row][col];
-        grid[row][col] = 0;
-
-        vector<vector<int>> directions = {{0,1}, {0,-1}, {-1,0}, {1,0}};
-
-        for(const auto& it : directions){
-            int newRow = row + it[0];
-            int newCol = col + it[1];
-            total += dfs(grid, newRow, newCol);
-        }
-        return total;
     }
 };
