@@ -1,17 +1,32 @@
 class Solution {
 public:
     int tupleSameProduct(vector<int>& nums) {
-        int ans = 0;
-        unordered_map<int,int> mp;
+        int result = 0;
+        int n = nums.size();
+        vector<int> productPairs;
 
-        for(int i=0; i<nums.size(); i++){
-            for(int j=i+1; j<nums.size(); j++){
-                int prod = nums[i] * nums[j];
-                ans+=mp[prod] * 8;
-                mp[prod]++;
-            }
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++)
+                productPairs.push_back(nums[i] * nums[j]);
         }
 
-        return ans;
+        sort(productPairs.begin(), productPairs.end());
+
+        int lastProduct = -1;
+        int sameProductCount = 0;
+
+        for (int i = 0; i < productPairs.size(); i++) {
+            if (productPairs[i] == lastProduct)
+                sameProductCount++;
+            else {
+                int equalProductPairs = sameProductCount * (sameProductCount - 1) / 2;
+                result += 8 * equalProductPairs;
+                lastProduct = productPairs[i];
+                sameProductCount = 1;
+            }
+        }
+        int equalProductPairs = sameProductCount * (sameProductCount - 1) / 2;
+        result += 8 * equalProductPairs;
+        return result;
     }
 };
