@@ -236,6 +236,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2494-sum-of-prefix-scores-of-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/2494-sum-of-prefix-scores-of-strings) |
 | [2497-maximum-matching-of-players-with-trainers](https://github.com/ishaggarwal13/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
 | [2503-longest-subarray-with-maximum-bitwise-and](https://github.com/ishaggarwal13/LeetCode/tree/master/2503-longest-subarray-with-maximum-bitwise-and) |
+| [2527-count-subarrays-with-fixed-bounds](https://github.com/ishaggarwal13/LeetCode/tree/master/2527-count-subarrays-with-fixed-bounds) |
 | [2536-determine-if-two-events-have-conflict](https://github.com/ishaggarwal13/LeetCode/tree/master/2536-determine-if-two-events-have-conflict) |
 | [2545-height-of-binary-tree-after-subtree-removal-queries](https://github.com/ishaggarwal13/LeetCode/tree/master/2545-height-of-binary-tree-after-subtree-removal-queries) |
 | [2552-maximum-sum-of-distinct-subarrays-with-length-k](https://github.com/ishaggarwal13/LeetCode/tree/master/2552-maximum-sum-of-distinct-subarrays-with-length-k) |
@@ -787,6 +788,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0632-smallest-range-covering-elements-from-k-lists](https://github.com/ishaggarwal13/LeetCode/tree/master/0632-smallest-range-covering-elements-from-k-lists) |
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/ishaggarwal13/LeetCode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [1755-defuse-the-bomb](https://github.com/ishaggarwal13/LeetCode/tree/master/1755-defuse-the-bomb) |
+| [2527-count-subarrays-with-fixed-bounds](https://github.com/ishaggarwal13/LeetCode/tree/master/2527-count-subarrays-with-fixed-bounds) |
 | [2552-maximum-sum-of-distinct-subarrays-with-length-k](https://github.com/ishaggarwal13/LeetCode/tree/master/2552-maximum-sum-of-distinct-subarrays-with-length-k) |
 | [2599-take-k-of-each-character-from-left-and-right](https://github.com/ishaggarwal13/LeetCode/tree/master/2599-take-k-of-each-character-from-left-and-right) |
 | [2868-continuous-subarrays](https://github.com/ishaggarwal13/LeetCode/tree/master/2868-continuous-subarrays) |
@@ -882,6 +884,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0859-design-circular-deque](https://github.com/ishaggarwal13/LeetCode/tree/master/0859-design-circular-deque) |
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/ishaggarwal13/LeetCode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
+| [2527-count-subarrays-with-fixed-bounds](https://github.com/ishaggarwal13/LeetCode/tree/master/2527-count-subarrays-with-fixed-bounds) |
 | [2868-continuous-subarrays](https://github.com/ishaggarwal13/LeetCode/tree/master/2868-continuous-subarrays) |
 ## Doubly-Linked List
 |  |
@@ -899,6 +902,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/ishaggarwal13/LeetCode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
+| [2527-count-subarrays-with-fixed-bounds](https://github.com/ishaggarwal13/LeetCode/tree/master/2527-count-subarrays-with-fixed-bounds) |
 | [2868-continuous-subarrays](https://github.com/ishaggarwal13/LeetCode/tree/master/2868-continuous-subarrays) |
 ## Eulerian Circuit
 |  |
