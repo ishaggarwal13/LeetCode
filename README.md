@@ -442,6 +442,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2155-find-missing-observations](https://github.com/ishaggarwal13/LeetCode/tree/master/2155-find-missing-observations) |
 | [2716-prime-subtraction-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/2716-prime-subtraction-operation) |
 | [2903-insert-greatest-common-divisors-in-linked-list](https://github.com/ishaggarwal13/LeetCode/tree/master/2903-insert-greatest-common-divisors-in-linked-list) |
+| [3201-distribute-candies-among-children-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3201-distribute-candies-among-children-ii) |
 | [3567-convert-date-to-binary](https://github.com/ishaggarwal13/LeetCode/tree/master/3567-convert-date-to-binary) |
 | [3568-find-the-key-of-the-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/3568-find-the-key-of-the-numbers) |
 ## Simulation
@@ -818,6 +819,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [2122-count-special-quadruplets](https://github.com/ishaggarwal13/LeetCode/tree/master/2122-count-special-quadruplets) |
 | [2170-count-number-of-maximum-bitwise-or-subsets](https://github.com/ishaggarwal13/LeetCode/tree/master/2170-count-number-of-maximum-bitwise-or-subsets) |
+| [3201-distribute-candies-among-children-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3201-distribute-candies-among-children-ii) |
 ## Number Theory
 |  |
 | ------- |
@@ -926,4 +928,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [1558-course-schedule-iv](https://github.com/ishaggarwal13/LeetCode/tree/master/1558-course-schedule-iv) |
+## Combinatorics
+|  |
+| ------- |
+| [3201-distribute-candies-among-children-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3201-distribute-candies-among-children-ii) |
 <!---LeetCode Topics End-->
