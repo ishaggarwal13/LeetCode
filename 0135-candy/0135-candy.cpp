@@ -1,29 +1,32 @@
 class Solution {
 public:
-    //two pass method - greedy algorithm - O(n) TC & O(n) SC
+    //one pass method - greedy algorithm - O(n) TC & O(1) SC
     int candy(vector<int>& ratings) {
+        if(ratings.empty()){
+            return 0;
+        }
+
         int n = ratings.size();
-        vector<int> candy(n, 1);
+        int candy=1, up=0, down=0, peak=0;
 
-        //left to right pass
         for(int i=1; i<n; i++){
-            if(ratings[i] > ratings[i-1]){
-                candy[i] = candy[i-1]+1;
+            if(ratings[i-1]<ratings[i]){
+                down = 0;
+                up += 1;
+                peak = up + 1;
+                candy += peak;
+            } else if(ratings[i - 1] == ratings[i]){
+                down = 0;
+                up = 0;
+                peak = 0;
+                candy += 1;
+            } else {
+                down += 1;
+                up = 0;
+                candy += down + 1 - (peak > down);
             }
         }
 
-        //right to left pass
-        for(int i=n-2; i>=0; i--){
-            if(ratings[i] > ratings[i+1]){
-                candy[i] = max(candy[i], candy[i+1]+1);
-            }
-        }
-
-        int total=0;
-        for(auto c : candy){
-            total += c;
-        }
-
-        return total;
+        return candy;
     }
 };
