@@ -1,6 +1,6 @@
 class Solution {
 public:
-    //two pass method - greedy algorithm
+    //two pass method - greedy algorithm - O(n) TC & O(n) SC
     int candy(vector<int>& ratings) {
         int n = ratings.size();
         vector<int> candy(n, 1);
