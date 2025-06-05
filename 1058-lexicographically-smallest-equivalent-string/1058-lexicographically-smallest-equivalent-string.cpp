@@ -1,44 +1,26 @@
 class Solution {
 public:
-    int find(char x, vector<int>& parent){
-        if(parent[x] != x){
-            parent[x] = find(parent[x], parent);
-        }
-        return parent[x];
-    }
-
-    void unite(char u, char v, vector<int>& parent){
-        int rootU = find(u, parent);
-        int rootV = find(v, parent);
-
-        if(rootU == rootV) return;
-        else if(rootU < rootV){
-            parent[rootV] = rootU;
-        } else{
-            parent[rootU] = rootV;
-        }
-    }
-
     string smallestEquivalentString(string s1, string s2, string baseStr) {
-        //union & find(disjoint sets)
-        //will create a parent vector for int/char to store root of char
-        //union two charters and then find its root and set the root to the smallest
-
-        vector<int> parent(26);
-        for(int i=0; i<26; i++) parent[i] = i;
+        // using array with replacing the largest of two char to teh lowest one
+        char ch[26];
+        for(int i=0; i<26; i++){
+            ch[i] = 'a' + i;
+        }
 
         for(int i=0; i<s1.size(); i++){
-            char u = s1[i] - 'a';
-            char v = s2[i] - 'a';
-            unite(u, v, parent);
+            char toreplace = max(ch[s1[i]-'a'], ch[s2[i]-'a']);
+            char replacewith = min(ch[s1[i]-'a'], ch[s2[i]-'a']);
+            for(int i=0; i<26; i++){
+                if(ch[i] == toreplace){
+                    ch[i] = replacewith;
+                }
+            }
         }
 
-        string res = "";
-        for(char st: baseStr){
-            int root = find(st-'a', parent);
-            res += (char)(root + 'a');
+        for(int i=0; i<baseStr.size(); i++){
+            baseStr[i] = ch[baseStr[i] - 'a'];
         }
-        
-        return res;
+
+        return baseStr;
     }
 };
