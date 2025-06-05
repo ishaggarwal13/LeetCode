@@ -1,36 +1,44 @@
 class Solution {
 public:
-    string smallestEquivalentString(string s1, string s2, string baseStr) {
-        //building teh graph and then use DFS to find smalledt lexi char
-        int n = s1.size();
-        unordered_map<char, vector<char>> adj;
-
-        //building graph
-        for(int i=0; i<n; i++){
-            char u = s1[i];
-            char v = s2[i];
-            adj[u].push_back(v);
-            adj[v].push_back(u);
+    int find(char x, vector<int>& parent){
+        if(parent[x] != x){
+            parent[x] = find(parent[x], parent);
         }
-
-        // replace char with smallest
-        string result;
-        for(auto base : baseStr){
-            vector<int> vis(26, 0);
-            char miniChar = dfs(adj, base, vis);
-            result.push_back(miniChar);
-        }
-        return result;
+        return parent[x];
     }
 
-    char dfs(unordered_map<char, vector<char>>& adj, char base, vector<int>& vis){
-        vis[base - 'a'] = 1;
-        char miniChar = base;
-        for(char u : adj[base]){
-            if(vis[u-'a'] == 0){
-                miniChar = min(miniChar, dfs(adj, u, vis));
-            }
+    void unite(char u, char v, vector<int>& parent){
+        int rootU = find(u, parent);
+        int rootV = find(v, parent);
+
+        if(rootU == rootV) return;
+        else if(rootU < rootV){
+            parent[rootV] = rootU;
+        } else{
+            parent[rootU] = rootV;
         }
-        return miniChar;
+    }
+
+    string smallestEquivalentString(string s1, string s2, string baseStr) {
+        //union & find(disjoint sets)
+        //will create a parent vector for int/char to store root of char
+        //union two charters and then find its root and set the root to the smallest
+
+        vector<int> parent(26);
+        for(int i=0; i<26; i++) parent[i] = i;
+
+        for(int i=0; i<s1.size(); i++){
+            char u = s1[i] - 'a';
+            char v = s2[i] - 'a';
+            unite(u, v, parent);
+        }
+
+        string res = "";
+        for(char st: baseStr){
+            int root = find(st-'a', parent);
+            res += (char)(root + 'a');
+        }
+        
+        return res;
     }
 };
