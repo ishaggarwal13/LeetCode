@@ -1,34 +1,34 @@
 class Solution {
 public:
     string clearStars(string s) {
-        //using priority queue as to remove the smallest char to the left of * need to 
-        //make a prioroty queue asenceding order to remove top char
-        priority_queue<char, vector<char>, greater<char>> pq;
-        //vector of vector to store the index of each char in s
-        vector<vector<int>> pos(26);
+       std::stack<int> charStack[26];     // Use 26 stacks for each lowercase alphabet character.
+        int n = s.length();                // Length of the input string.
+        vector<bool> toRemove(n);     // Vector to indicate which characters to remove.
 
-        for(int i=0; i<s.size(); i++){
-            if(s[i] == '*'){
-                //storing the top smallest left to the star char and 
-                //store * to that smallest char and pop the index from pos
-                //if pos is empty of that char tehn pop it from queue also
-                char ch = pq.top();
-                s[pos[ch - 'a'].back()] = '*';
-                pos[ch-'a'].pop_back();
-                if(pos[ch - 'a'].empty()) pq.pop();
+        // Traverse the string and process each character.
+        for (int i = 0; i < n; ++i) {
+            if (s[i] == '*') {             // If the current character is '*', mark for removal.
+                toRemove[i] = true;
+                // Find the first non-empty stack and remove the character index from it.
+                for (int j = 0; j < 26; ++j) {
+                    if (!charStack[j].empty()) {
+                        toRemove[charStack[j].top()] = true; // Mark the character at the top of the stack for removal.
+                        charStack[j].pop(); // Remove the index from the stack.
+                        break;
+                    }
+                }
             } else {
-                //if char is not already added to pos then we can push to queue
-                //checking to avoid duplicates in queue
-                //then adding teh index to that char to pos vector of vectors
-                if(pos[s[i] - 'a'].empty()) pq.push(s[i]);
-                pos[s[i] - 'a'].push_back(i);
+                charStack[s[i] - 'a'].push(i); // Push the index of the character into the respective stack.
             }
         }
 
-        string res;
-        for(char ch: s){
-            if(ch >= 'a') res += ch;
+        string result;
+        // Build the result string with characters that are not marked for removal.
+        for (int i = 0; i < n; ++i) {
+            if (!toRemove[i]) {
+                result.push_back(s[i]);
+            }
         }
-        return res;
+        return result; 
     }
 };
