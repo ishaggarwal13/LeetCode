@@ -126,6 +126,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3445-lexicographically-minimum-string-after-removing-stars](https://github.com/ishaggarwal13/LeetCode/tree/master/3445-lexicographically-minimum-string-after-removing-stars) |
 | [3451-string-compression-iii](https://github.com/ishaggarwal13/LeetCode/tree/master/3451-string-compression-iii) |
 | [3567-convert-date-to-binary](https://github.com/ishaggarwal13/LeetCode/tree/master/3567-convert-date-to-binary) |
+| [3754-maximum-manhattan-distance-after-k-changes](https://github.com/ishaggarwal13/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -430,6 +431,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2356-largest-combination-with-bitwise-and-greater-than-zero](https://github.com/ishaggarwal13/LeetCode/tree/master/2356-largest-combination-with-bitwise-and-greater-than-zero) |
 | [2494-sum-of-prefix-scores-of-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/2494-sum-of-prefix-scores-of-strings) |
 | [3267-find-longest-special-substring-that-occurs-thrice-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3267-find-longest-special-substring-that-occurs-thrice-i) |
+| [3754-maximum-manhattan-distance-after-k-changes](https://github.com/ishaggarwal13/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
 ## Math
 |  |
 | ------- |
@@ -458,6 +460,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3567-convert-date-to-binary](https://github.com/ishaggarwal13/LeetCode/tree/master/3567-convert-date-to-binary) |
 | [3568-find-the-key-of-the-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/3568-find-the-key-of-the-numbers) |
 | [3682-count-the-number-of-arrays-with-k-matching-adjacent-elements](https://github.com/ishaggarwal13/LeetCode/tree/master/3682-count-the-number-of-arrays-with-k-matching-adjacent-elements) |
+| [3754-maximum-manhattan-distance-after-k-changes](https://github.com/ishaggarwal13/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
 ## Simulation
 |  |
 | ------- |
@@ -789,6 +792,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3329-find-the-length-of-the-longest-common-prefix](https://github.com/ishaggarwal13/LeetCode/tree/master/3329-find-the-length-of-the-longest-common-prefix) |
 | [3445-lexicographically-minimum-string-after-removing-stars](https://github.com/ishaggarwal13/LeetCode/tree/master/3445-lexicographically-minimum-string-after-removing-stars) |
 | [3501-delete-nodes-from-linked-list-present-in-array](https://github.com/ishaggarwal13/LeetCode/tree/master/3501-delete-nodes-from-linked-list-present-in-array) |
+| [3754-maximum-manhattan-distance-after-k-changes](https://github.com/ishaggarwal13/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
 ## Backtracking
 |  |
 | ------- |
