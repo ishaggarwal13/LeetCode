@@ -1,13 +1,16 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        //brute force O(N^2) NEED TO OPTIMIZE IN ONE PASS
-        for(int i=0; i<nums.size()-1; i++){
-            for(int j =i+1; j<nums.size(); j++){
-                if(nums[i] + nums[j] == target){
-                    return {i, j};
-                }
+        //OPTIMIZE IN ONE PASs hash map
+        unordered_map<int, int> mp;
+
+        for(int i=0; i<nums.size(); i++){
+            int num = target - nums[i];
+            if(mp.count(num)){
+                return {mp[num], i};
             }
+            mp[nums[i]] = i;
+
         }
         return {-1, -1};
     }
