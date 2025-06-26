@@ -112,6 +112,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2168-check-if-numbers-are-ascending-in-a-sentence](https://github.com/ishaggarwal13/LeetCode/tree/master/2168-check-if-numbers-are-ascending-in-a-sentence) |
 | [2232-adding-spaces-to-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/2232-adding-spaces-to-a-string) |
 | [2260-divide-a-string-into-groups-of-size-k](https://github.com/ishaggarwal13/LeetCode/tree/master/2260-divide-a-string-into-groups-of-size-k) |
+| [2395-longest-binary-subsequence-less-than-or-equal-to-k](https://github.com/ishaggarwal13/LeetCode/tree/master/2395-longest-binary-subsequence-less-than-or-equal-to-k) |
 | [2414-move-pieces-to-obtain-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/2414-move-pieces-to-obtain-a-string) |
 | [2494-sum-of-prefix-scores-of-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/2494-sum-of-prefix-scores-of-strings) |
 | [2536-determine-if-two-events-have-conflict](https://github.com/ishaggarwal13/LeetCode/tree/master/2536-determine-if-two-events-have-conflict) |
@@ -149,6 +150,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1766-minimum-number-of-removals-to-make-mountain-array](https://github.com/ishaggarwal13/LeetCode/tree/master/1766-minimum-number-of-removals-to-make-mountain-array) |
 | [2061-painting-a-grid-with-three-different-colors](https://github.com/ishaggarwal13/LeetCode/tree/master/2061-painting-a-grid-with-three-different-colors) |
 | [2164-two-best-non-overlapping-events](https://github.com/ishaggarwal13/LeetCode/tree/master/2164-two-best-non-overlapping-events) |
+| [2395-longest-binary-subsequence-less-than-or-equal-to-k](https://github.com/ishaggarwal13/LeetCode/tree/master/2395-longest-binary-subsequence-less-than-or-equal-to-k) |
 | [2554-minimum-total-distance-traveled](https://github.com/ishaggarwal13/LeetCode/tree/master/2554-minimum-total-distance-traveled) |
 | [2586-longest-square-streak-in-an-array](https://github.com/ishaggarwal13/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
 | [2755-extra-characters-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/2755-extra-characters-in-a-string) |
@@ -344,6 +346,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2180-maximum-number-of-tasks-you-can-assign](https://github.com/ishaggarwal13/LeetCode/tree/master/2180-maximum-number-of-tasks-you-can-assign) |
 | [2188-minimized-maximum-of-products-distributed-to-any-store](https://github.com/ishaggarwal13/LeetCode/tree/master/2188-minimized-maximum-of-products-distributed-to-any-store) |
+| [2395-longest-binary-subsequence-less-than-or-equal-to-k](https://github.com/ishaggarwal13/LeetCode/tree/master/2395-longest-binary-subsequence-less-than-or-equal-to-k) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [2488-divide-intervals-into-minimum-number-of-groups](https://github.com/ishaggarwal13/LeetCode/tree/master/2488-divide-intervals-into-minimum-number-of-groups) |
 | [2497-maximum-matching-of-players-with-trainers](https://github.com/ishaggarwal13/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
@@ -859,6 +862,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0070-climbing-stairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0070-climbing-stairs) |
 | [0241-different-ways-to-add-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
+| [2395-longest-binary-subsequence-less-than-or-equal-to-k](https://github.com/ishaggarwal13/LeetCode/tree/master/2395-longest-binary-subsequence-less-than-or-equal-to-k) |
 ## Enumeration
 |  |
 | ------- |
