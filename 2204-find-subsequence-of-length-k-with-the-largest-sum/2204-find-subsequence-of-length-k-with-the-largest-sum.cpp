@@ -1,30 +1,22 @@
 class Solution {
 public:
     vector<int> maxSubsequence(vector<int>& nums, int k) {
-        vector<pair<int, int>> pq;
-        //storing number like a pair with its index
-        for(int i=0; i<nums.size(); i++){
-            pq.push_back({nums[i], i});
+        vector<pair<int, int>> vecValToIndex;
+        for(int i = 0; i < nums.size(); i++) {
+            vecValToIndex.push_back({nums[i], i});
         }
-
-        //sort the pq in dec order for keeping greater num at first
-        sort(pq.begin(), pq.end(), [](auto& a, auto& b){
-            return a.first > b.first;
+        sort(vecValToIndex.begin(), vecValToIndex.end(), 
+            [](const std::pair<int, int>& a, const pair<int, int>& b) {
+        return a.first > b.first;
         });
 
-        //resizeing pq till k length
-        pq.resize(k);
-
-        //sort back acc to index
-        sort(pq.begin(), pq.end(), [](auto& a, auto& b){
-            return a.second < b.second;
+        sort(vecValToIndex.begin(), vecValToIndex.begin() + k, 
+            [](const std::pair<int, int>& a, const pair<int, int>& b) {
+        return a.second < b.second;
         });
 
-        vector<int> ans;
-        for(auto& [var, idx] : pq){
-            ans.push_back(var);
-        }
-
-        return ans;
+        vector<int> result;
+        for(int i = 0; i < k; i++) result.push_back(vecValToIndex[i].first);
+        return result;
     }
 };
