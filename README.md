@@ -108,6 +108,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1933-number-of-different-integers-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1933-number-of-different-integers-in-a-string) |
 | [2076-sum-of-digits-of-string-after-convert](https://github.com/ishaggarwal13/LeetCode/tree/master/2076-sum-of-digits-of-string-after-convert) |
 | [2095-minimum-number-of-swaps-to-make-the-string-balanced](https://github.com/ishaggarwal13/LeetCode/tree/master/2095-minimum-number-of-swaps-to-make-the-string-balanced) |
+| [2140-longest-subsequence-repeated-k-times](https://github.com/ishaggarwal13/LeetCode/tree/master/2140-longest-subsequence-repeated-k-times) |
 | [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2168-check-if-numbers-are-ascending-in-a-sentence](https://github.com/ishaggarwal13/LeetCode/tree/master/2168-check-if-numbers-are-ascending-in-a-sentence) |
 | [2232-adding-spaces-to-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/2232-adding-spaces-to-a-string) |
@@ -343,6 +344,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
 | [2089-maximum-matrix-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/2089-maximum-matrix-sum) |
 | [2095-minimum-number-of-swaps-to-make-the-string-balanced](https://github.com/ishaggarwal13/LeetCode/tree/master/2095-minimum-number-of-swaps-to-make-the-string-balanced) |
+| [2140-longest-subsequence-repeated-k-times](https://github.com/ishaggarwal13/LeetCode/tree/master/2140-longest-subsequence-repeated-k-times) |
 | [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2180-maximum-number-of-tasks-you-can-assign](https://github.com/ishaggarwal13/LeetCode/tree/master/2180-maximum-number-of-tasks-you-can-assign) |
 | [2188-minimized-maximum-of-products-distributed-to-any-store](https://github.com/ishaggarwal13/LeetCode/tree/master/2188-minimized-maximum-of-products-distributed-to-any-store) |
@@ -442,6 +444,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1534-minimum-number-of-frogs-croaking](https://github.com/ishaggarwal13/LeetCode/tree/master/1534-minimum-number-of-frogs-croaking) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/ishaggarwal13/LeetCode/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/1786-count-the-number-of-consistent-strings) |
+| [2140-longest-subsequence-repeated-k-times](https://github.com/ishaggarwal13/LeetCode/tree/master/2140-longest-subsequence-repeated-k-times) |
 | [2356-largest-combination-with-bitwise-and-greater-than-zero](https://github.com/ishaggarwal13/LeetCode/tree/master/2356-largest-combination-with-bitwise-and-greater-than-zero) |
 | [2494-sum-of-prefix-scores-of-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/2494-sum-of-prefix-scores-of-strings) |
 | [3267-find-longest-special-substring-that-occurs-thrice-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3267-find-longest-special-substring-that-occurs-thrice-i) |
@@ -826,6 +829,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0113-path-sum-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0113-path-sum-ii) |
 | [1331-path-with-maximum-gold](https://github.com/ishaggarwal13/LeetCode/tree/master/1331-path-with-maximum-gold) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/ishaggarwal13/LeetCode/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
+| [2140-longest-subsequence-repeated-k-times](https://github.com/ishaggarwal13/LeetCode/tree/master/2140-longest-subsequence-repeated-k-times) |
 | [2170-count-number-of-maximum-bitwise-or-subsets](https://github.com/ishaggarwal13/LeetCode/tree/master/2170-count-number-of-maximum-bitwise-or-subsets) |
 ## Prefix Sum
 |  |
@@ -867,6 +871,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [2122-count-special-quadruplets](https://github.com/ishaggarwal13/LeetCode/tree/master/2122-count-special-quadruplets) |
+| [2140-longest-subsequence-repeated-k-times](https://github.com/ishaggarwal13/LeetCode/tree/master/2140-longest-subsequence-repeated-k-times) |
 | [2170-count-number-of-maximum-bitwise-or-subsets](https://github.com/ishaggarwal13/LeetCode/tree/master/2170-count-number-of-maximum-bitwise-or-subsets) |
 | [2202-sum-of-k-mirror-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/2202-sum-of-k-mirror-numbers) |
 | [3201-distribute-candies-among-children-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3201-distribute-candies-among-children-ii) |
