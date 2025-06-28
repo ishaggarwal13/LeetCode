@@ -1,21 +1,30 @@
 class Solution {
 public:
     vector<int> maxSubsequence(vector<int>& nums, int k) {
-        vector<int> a = nums;
-        sort(nums.begin(),nums.end());
-        reverse(nums.begin(),nums.end());
-        
+        vector<pair<int, int>> pq;
+        //storing number like a pair with its index
+        for(int i=0; i<nums.size(); i++){
+            pq.push_back({nums[i], i});
+        }
+
+        //sort the pq in dec order for keeping greater num at first
+        sort(pq.begin(), pq.end(), [](auto& a, auto& b){
+            return a.first > b.first;
+        });
+
+        //resizeing pq till k length
+        pq.resize(k);
+
+        //sort back acc to index
+        sort(pq.begin(), pq.end(), [](auto& a, auto& b){
+            return a.second < b.second;
+        });
+
         vector<int> ans;
-        map<int,int> mpp;
-        for(int i=0;i<k;i++){
-            mpp[nums[i]]++;
+        for(auto& [var, idx] : pq){
+            ans.push_back(var);
         }
-        for(int i=0;i<a.size();i++){
-            if(mpp.find(a[i]) != mpp.end() && mpp[a[i]] !=0){
-                ans.push_back(a[i]);
-                mpp[a[i]]--;
-            }
-        }
+
         return ans;
     }
 };
