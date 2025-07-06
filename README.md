@@ -230,6 +230,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1923-sentence-similarity-iii](https://github.com/ishaggarwal13/LeetCode/tree/master/1923-sentence-similarity-iii) |
 | [1940-maximum-xor-for-each-query](https://github.com/ishaggarwal13/LeetCode/tree/master/1940-maximum-xor-for-each-query) |
 | [1972-rotating-the-box](https://github.com/ishaggarwal13/LeetCode/tree/master/1972-rotating-the-box) |
+| [1995-finding-pairs-with-a-certain-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/1995-finding-pairs-with-a-certain-sum) |
 | [2006-find-the-student-that-will-replace-the-chalk](https://github.com/ishaggarwal13/LeetCode/tree/master/2006-find-the-student-that-will-replace-the-chalk) |
 | [2035-count-sub-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/2035-count-sub-islands) |
 | [2054-the-number-of-the-smallest-unoccupied-chair](https://github.com/ishaggarwal13/LeetCode/tree/master/2054-the-number-of-the-smallest-unoccupied-chair) |
@@ -811,6 +812,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/ishaggarwal13/LeetCode/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/1786-count-the-number-of-consistent-strings) |
 | [1933-number-of-different-integers-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1933-number-of-different-integers-in-a-string) |
+| [1995-finding-pairs-with-a-certain-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/1995-finding-pairs-with-a-certain-sum) |
 | [2054-the-number-of-the-smallest-unoccupied-chair](https://github.com/ishaggarwal13/LeetCode/tree/master/2054-the-number-of-the-smallest-unoccupied-chair) |
 | [2122-count-special-quadruplets](https://github.com/ishaggarwal13/LeetCode/tree/master/2122-count-special-quadruplets) |
 | [2204-find-subsequence-of-length-k-with-the-largest-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/2204-find-subsequence-of-length-k-with-the-largest-sum) |
@@ -948,6 +950,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0731-my-calendar-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0731-my-calendar-ii) |
 | [0859-design-circular-deque](https://github.com/ishaggarwal13/LeetCode/tree/master/0859-design-circular-deque) |
 | [1497-design-a-stack-with-increment-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/1497-design-a-stack-with-increment-operation) |
+| [1995-finding-pairs-with-a-certain-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/1995-finding-pairs-with-a-certain-sum) |
 ## Segment Tree
 |  |
 | ------- |
