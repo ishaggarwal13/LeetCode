@@ -1,19 +1,23 @@
 class Solution {
 public:
-    int matchPlayersAndTrainers(vector<int>& p, vector<int>& t) {
-        priority_queue<int, vector<int>, greater<int>> pq;
-        for(auto it : p){
-            pq.push(it);
-        }
-        int ans=0, i=0;
-        sort(t.begin(), t.end());
-        while(!pq.empty() && i < t.size()){
-            if(t[i] >= pq.top()){
-                pq.pop();
-                ans++;
+    int matchPlayersAndTrainers(std::vector<int>& players, std::vector<int>& trainers) {
+        std::sort(players.begin(), players.end());
+        std::sort(trainers.begin(), trainers.end());
+
+        int count = 0;
+        int i = 0, j = 0; // pointers for players and trainers
+
+        while (i < players.size() && j < trainers.size()) {
+            if (players[i] <= trainers[j]) {
+                // Match found
+                count++;
+                i++;
+                j++;
+            } else {
+                // Try next trainer
+                j++;
             }
-            i++;
         }
-        return ans;
+        return count;
     }
 };
