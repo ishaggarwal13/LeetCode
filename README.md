@@ -160,6 +160,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2755-extra-characters-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/2755-extra-characters-in-a-string) |
 | [2794-maximum-number-of-moves-in-a-grid](https://github.com/ishaggarwal13/LeetCode/tree/master/2794-maximum-number-of-moves-in-a-grid) |
 | [3142-longest-unequal-adjacent-groups-subsequence-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3142-longest-unequal-adjacent-groups-subsequence-ii) |
+| [3490-find-the-maximum-length-of-valid-subsequence-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3490-find-the-maximum-length-of-valid-subsequence-i) |
 ## Array
 |  |
 | ------- |
@@ -291,6 +292,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3380-shortest-subarray-with-or-at-least-k-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3380-shortest-subarray-with-or-at-least-k-ii) |
 | [3427-special-array-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3427-special-array-ii) |
 | [3471-minimum-average-of-smallest-and-largest-elements](https://github.com/ishaggarwal13/LeetCode/tree/master/3471-minimum-average-of-smallest-and-largest-elements) |
+| [3490-find-the-maximum-length-of-valid-subsequence-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3490-find-the-maximum-length-of-valid-subsequence-i) |
 | [3501-delete-nodes-from-linked-list-present-in-array](https://github.com/ishaggarwal13/LeetCode/tree/master/3501-delete-nodes-from-linked-list-present-in-array) |
 | [3517-shortest-distance-after-road-addition-queries-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3517-shortest-distance-after-road-addition-queries-i) |
 | [3522-find-the-power-of-k-size-subarrays-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3522-find-the-power-of-k-size-subarrays-i) |
