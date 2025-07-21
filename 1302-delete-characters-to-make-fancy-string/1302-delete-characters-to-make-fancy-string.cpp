@@ -1,27 +1,22 @@
 class Solution {
 public:
     string makeFancyString(string s) {
-        string ans = "";
-        int streak = 1;
-        char last = '9';
+        vector<char> chars(s.begin(), s.end());
+        char last = chars[0];
+        int count = 1;
+        int pos = 1;
 
-
-        for(int i = 0; i<s.size(); i++){
-            //cout << last << " " << s[i] << " " << streak << endl;
-            if(last == s[i]){
-                streak++;
-            } else {
-                last = s[i];
-                streak = 1;
+        for (int i = 1; i < chars.size(); ++i) {
+            if (chars[i] != last) {
+                last = chars[i];
+                count = 0;
             }
-            
 
-            if(streak >= 3) continue;
+            if (++count > 2) continue;
 
-            ans.push_back(s[i]);
-            
+            chars[pos++] = chars[i];
         }
 
-        return ans;
+        return string(chars.begin(), chars.begin() + pos);
     }
 };
