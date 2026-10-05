@@ -184,6 +184,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0057-insert-interval](https://github.com/ishaggarwal13/LeetCode/tree/master/0057-insert-interval) |
 | [0064-minimum-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0064-minimum-path-sum) |
 | [0075-sort-colors](https://github.com/ishaggarwal13/LeetCode/tree/master/0075-sort-colors) |
+| [0078-subsets](https://github.com/ishaggarwal13/LeetCode/tree/master/0078-subsets) |
 | [0088-merge-sorted-array](https://github.com/ishaggarwal13/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
 | [0118-pascals-triangle](https://github.com/ishaggarwal13/LeetCode/tree/master/0118-pascals-triangle) |
@@ -443,6 +444,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Bit Manipulation
 |  |
 | ------- |
+| [0078-subsets](https://github.com/ishaggarwal13/LeetCode/tree/master/0078-subsets) |
 | [0136-single-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0136-single-number) |
 | [0137-single-number-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0137-single-number-ii) |
 | [0268-missing-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0268-missing-number) |
@@ -897,6 +899,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0022-generate-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/0022-generate-parentheses) |
+| [0078-subsets](https://github.com/ishaggarwal13/LeetCode/tree/master/0078-subsets) |
 | [0113-path-sum-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0113-path-sum-ii) |
 | [1331-path-with-maximum-gold](https://github.com/ishaggarwal13/LeetCode/tree/master/1331-path-with-maximum-gold) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/ishaggarwal13/LeetCode/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
