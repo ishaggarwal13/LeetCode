@@ -1,19 +1,16 @@
 class Solution {
 public:
+    //O(n) and O(1)
     int minAddToMakeValid(string s) {
         int count = 0;
         int ans = 0;
-        for(int i=0; i<s.length(); i++){
-            if(s[i] == '('){
+        for(char str: s){
+            if(str == '('){
                 count++;
             } else {
-                count--;
-                if(count < 0){
-                    ans++;
-                    count = 0;
-                }
+                (count > 0) ? count-- : ans++;
             }
         }
-        return ans += count;
+        return (ans + count);
     }
 };
