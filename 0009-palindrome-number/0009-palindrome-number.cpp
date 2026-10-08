@@ -1,17 +1,15 @@
 class Solution {
 public:
-    //o(d), o(d)
     bool isPalindrome(int x) {
-        string s = to_string(x);
-        //two pointers
-        int i = 0;
-        int j = s.size()-1;
-
-        while(i < j){
-            if(s[i] != s[j]) return false;
-            i++;
-            j--;
+        //reverse number 
+        long long rev = 0;
+        int temp = x;
+        while(temp>0){
+            rev = rev*10 + temp%10;
+            temp = temp/10;
         }
-        return true;
+
+        if(x == rev) return true;
+        else return false;
     }
 };
