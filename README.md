@@ -107,6 +107,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1350-remove-sub-folders-from-the-filesystem](https://github.com/ishaggarwal13/LeetCode/tree/master/1350-remove-sub-folders-from-the-filesystem) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/ishaggarwal13/LeetCode/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [1534-minimum-number-of-frogs-croaking](https://github.com/ishaggarwal13/LeetCode/tree/master/1534-minimum-number-of-frogs-croaking) |
+| [1541-minimum-insertions-to-balance-a-parentheses-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1541-minimum-insertions-to-balance-a-parentheses-string) |
 | [1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence](https://github.com/ishaggarwal13/LeetCode/tree/master/1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence) |
 | [1637-string-compression-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/1637-string-compression-ii) |
 | [1667-find-kth-bit-in-nth-binary-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1667-find-kth-bit-in-nth-binary-string) |
@@ -378,6 +379,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1304-longest-happy-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1304-longest-happy-string) |
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/ishaggarwal13/LeetCode/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 | [1529-max-difference-you-can-get-from-changing-an-integer](https://github.com/ishaggarwal13/LeetCode/tree/master/1529-max-difference-you-can-get-from-changing-an-integer) |
+| [1541-minimum-insertions-to-balance-a-parentheses-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1541-minimum-insertions-to-balance-a-parentheses-string) |
 | [1766-minimum-number-of-removals-to-make-mountain-array](https://github.com/ishaggarwal13/LeetCode/tree/master/1766-minimum-number-of-removals-to-make-mountain-array) |
 | [1818-maximum-score-from-removing-substrings](https://github.com/ishaggarwal13/LeetCode/tree/master/1818-maximum-score-from-removing-substrings) |
 | [1829-maximum-units-on-a-truck](https://github.com/ishaggarwal13/LeetCode/tree/master/1829-maximum-units-on-a-truck) |
@@ -486,6 +488,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1021-remove-outermost-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/1021-remove-outermost-parentheses) |
 | [1197-parsing-a-boolean-expression](https://github.com/ishaggarwal13/LeetCode/tree/master/1197-parsing-a-boolean-expression) |
 | [1497-design-a-stack-with-increment-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/1497-design-a-stack-with-increment-operation) |
+| [1541-minimum-insertions-to-balance-a-parentheses-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1541-minimum-insertions-to-balance-a-parentheses-string) |
 | [1679-shortest-subarray-to-be-removed-to-make-array-sorted](https://github.com/ishaggarwal13/LeetCode/tree/master/1679-shortest-subarray-to-be-removed-to-make-array-sorted) |
 | [1818-maximum-score-from-removing-substrings](https://github.com/ishaggarwal13/LeetCode/tree/master/1818-maximum-score-from-removing-substrings) |
 | [2095-minimum-number-of-swaps-to-make-the-string-balanced](https://github.com/ishaggarwal13/LeetCode/tree/master/2095-minimum-number-of-swaps-to-make-the-string-balanced) |
@@ -1097,6 +1100,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0856-score-of-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/0856-score-of-parentheses) |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/ishaggarwal13/LeetCode/tree/master/0921-minimum-add-to-make-parentheses-valid) |
 | [1021-remove-outermost-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/1021-remove-outermost-parentheses) |
+| [1541-minimum-insertions-to-balance-a-parentheses-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1541-minimum-insertions-to-balance-a-parentheses-string) |
 ## Primality Test
 |  |
 | ------- |
