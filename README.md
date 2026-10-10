@@ -275,6 +275,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2254-check-if-every-row-and-column-contains-all-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/2254-check-if-every-row-and-column-contains-all-numbers) |
 | [2267-minimum-difference-in-sums-after-removal-of-elements](https://github.com/ishaggarwal13/LeetCode/tree/master/2267-minimum-difference-in-sums-after-removal-of-elements) |
 | [2320-find-all-k-distant-indices-in-an-array](https://github.com/ishaggarwal13/LeetCode/tree/master/2320-find-all-k-distant-indices-in-an-array) |
+| [2333-minimum-sum-of-squared-difference](https://github.com/ishaggarwal13/LeetCode/tree/master/2333-minimum-sum-of-squared-difference) |
 | [2343-count-unguarded-cells-in-the-grid](https://github.com/ishaggarwal13/LeetCode/tree/master/2343-count-unguarded-cells-in-the-grid) |
 | [2356-largest-combination-with-bitwise-and-greater-than-zero](https://github.com/ishaggarwal13/LeetCode/tree/master/2356-largest-combination-with-bitwise-and-greater-than-zero) |
 | [2375-minimum-obstacle-removal-to-reach-corner](https://github.com/ishaggarwal13/LeetCode/tree/master/2375-minimum-obstacle-removal-to-reach-corner) |
@@ -389,6 +390,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2180-maximum-number-of-tasks-you-can-assign](https://github.com/ishaggarwal13/LeetCode/tree/master/2180-maximum-number-of-tasks-you-can-assign) |
 | [2188-minimized-maximum-of-products-distributed-to-any-store](https://github.com/ishaggarwal13/LeetCode/tree/master/2188-minimized-maximum-of-products-distributed-to-any-store) |
+| [2333-minimum-sum-of-squared-difference](https://github.com/ishaggarwal13/LeetCode/tree/master/2333-minimum-sum-of-squared-difference) |
 | [2395-longest-binary-subsequence-less-than-or-equal-to-k](https://github.com/ishaggarwal13/LeetCode/tree/master/2395-longest-binary-subsequence-less-than-or-equal-to-k) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [2488-divide-intervals-into-minimum-number-of-groups](https://github.com/ishaggarwal13/LeetCode/tree/master/2488-divide-intervals-into-minimum-number-of-groups) |
@@ -433,6 +435,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2179-most-beautiful-item-for-each-query](https://github.com/ishaggarwal13/LeetCode/tree/master/2179-most-beautiful-item-for-each-query) |
 | [2180-maximum-number-of-tasks-you-can-assign](https://github.com/ishaggarwal13/LeetCode/tree/master/2180-maximum-number-of-tasks-you-can-assign) |
 | [2204-find-subsequence-of-length-k-with-the-largest-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/2204-find-subsequence-of-length-k-with-the-largest-sum) |
+| [2333-minimum-sum-of-squared-difference](https://github.com/ishaggarwal13/LeetCode/tree/master/2333-minimum-sum-of-squared-difference) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [2479-meeting-rooms-iii](https://github.com/ishaggarwal13/LeetCode/tree/master/2479-meeting-rooms-iii) |
 | [2488-divide-intervals-into-minimum-number-of-groups](https://github.com/ishaggarwal13/LeetCode/tree/master/2488-divide-intervals-into-minimum-number-of-groups) |
@@ -733,6 +736,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2164-two-best-non-overlapping-events](https://github.com/ishaggarwal13/LeetCode/tree/master/2164-two-best-non-overlapping-events) |
 | [2204-find-subsequence-of-length-k-with-the-largest-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/2204-find-subsequence-of-length-k-with-the-largest-sum) |
 | [2267-minimum-difference-in-sums-after-removal-of-elements](https://github.com/ishaggarwal13/LeetCode/tree/master/2267-minimum-difference-in-sums-after-removal-of-elements) |
+| [2333-minimum-sum-of-squared-difference](https://github.com/ishaggarwal13/LeetCode/tree/master/2333-minimum-sum-of-squared-difference) |
 | [2375-minimum-obstacle-removal-to-reach-corner](https://github.com/ishaggarwal13/LeetCode/tree/master/2375-minimum-obstacle-removal-to-reach-corner) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/ishaggarwal13/LeetCode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [2479-meeting-rooms-iii](https://github.com/ishaggarwal13/LeetCode/tree/master/2479-meeting-rooms-iii) |
@@ -775,6 +779,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2179-most-beautiful-item-for-each-query](https://github.com/ishaggarwal13/LeetCode/tree/master/2179-most-beautiful-item-for-each-query) |
 | [2180-maximum-number-of-tasks-you-can-assign](https://github.com/ishaggarwal13/LeetCode/tree/master/2180-maximum-number-of-tasks-you-can-assign) |
 | [2188-minimized-maximum-of-products-distributed-to-any-store](https://github.com/ishaggarwal13/LeetCode/tree/master/2188-minimized-maximum-of-products-distributed-to-any-store) |
+| [2333-minimum-sum-of-squared-difference](https://github.com/ishaggarwal13/LeetCode/tree/master/2333-minimum-sum-of-squared-difference) |
 | [2586-longest-square-streak-in-an-array](https://github.com/ishaggarwal13/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
 | [2640-maximum-number-of-integers-to-choose-from-a-range-i](https://github.com/ishaggarwal13/LeetCode/tree/master/2640-maximum-number-of-integers-to-choose-from-a-range-i) |
 | [2699-count-the-number-of-fair-pairs](https://github.com/ishaggarwal13/LeetCode/tree/master/2699-count-the-number-of-fair-pairs) |
