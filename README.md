@@ -304,6 +304,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2720-minimize-the-maximum-difference-of-pairs](https://github.com/ishaggarwal13/LeetCode/tree/master/2720-minimize-the-maximum-difference-of-pairs) |
 | [2755-extra-characters-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/2755-extra-characters-in-a-string) |
 | [2764-maximum-number-of-fish-in-a-grid](https://github.com/ishaggarwal13/LeetCode/tree/master/2764-maximum-number-of-fish-in-a-grid) |
+| [2778-sum-of-squares-of-special-elements](https://github.com/ishaggarwal13/LeetCode/tree/master/2778-sum-of-squares-of-special-elements) |
 | [2794-maximum-number-of-moves-in-a-grid](https://github.com/ishaggarwal13/LeetCode/tree/master/2794-maximum-number-of-moves-in-a-grid) |
 | [2868-continuous-subarrays](https://github.com/ishaggarwal13/LeetCode/tree/master/2868-continuous-subarrays) |
 | [2891-maximum-beauty-of-an-array-after-applying-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/2891-maximum-beauty-of-an-array-after-applying-operation) |
@@ -974,6 +975,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2140-longest-subsequence-repeated-k-times](https://github.com/ishaggarwal13/LeetCode/tree/master/2140-longest-subsequence-repeated-k-times) |
 | [2170-count-number-of-maximum-bitwise-or-subsets](https://github.com/ishaggarwal13/LeetCode/tree/master/2170-count-number-of-maximum-bitwise-or-subsets) |
 | [2202-sum-of-k-mirror-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/2202-sum-of-k-mirror-numbers) |
+| [2778-sum-of-squares-of-special-elements](https://github.com/ishaggarwal13/LeetCode/tree/master/2778-sum-of-squares-of-special-elements) |
 | [3201-distribute-candies-among-children-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3201-distribute-candies-among-children-ii) |
 | [3741-reschedule-meetings-for-maximum-free-time-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3741-reschedule-meetings-for-maximum-free-time-ii) |
 ## Number Theory
