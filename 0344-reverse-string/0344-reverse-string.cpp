@@ -1,9 +1,6 @@
 class Solution {
 public:
     void reverseString(vector<char>& s) {
-        //stl
-        reverse(s.begin(), s.end());
-
         //two pointers
         // int i = 0;
         // int j = s.size()-1;
@@ -16,5 +13,20 @@ public:
         //     i++;
         //     j--;
         // }
+
+        //swap function
+        int i = 0;
+        int j = s.size()-1;
+        while(i<j){
+            swap(s[i++], s[j--]);
+        }
+
+        //recursion
+        // reverse()
+
+        //stl
+        // reverse(s.begin(), s.end());
+
+        
     }
 };
