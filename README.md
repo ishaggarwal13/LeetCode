@@ -71,6 +71,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0003-longest-substring-without-repeating-characters](https://github.com/ishaggarwal13/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0005-longest-palindromic-substring](https://github.com/ishaggarwal13/LeetCode/tree/master/0005-longest-palindromic-substring) |
 | [0008-string-to-integer-atoi](https://github.com/ishaggarwal13/LeetCode/tree/master/0008-string-to-integer-atoi) |
+| [0014-longest-common-prefix](https://github.com/ishaggarwal13/LeetCode/tree/master/0014-longest-common-prefix) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0020-valid-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/0020-valid-parentheses) |
 | [0022-generate-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/0022-generate-parentheses) |
@@ -183,6 +184,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0001-two-sum) |
+| [0014-longest-common-prefix](https://github.com/ishaggarwal13/LeetCode/tree/master/0014-longest-common-prefix) |
 | [0036-valid-sudoku](https://github.com/ishaggarwal13/LeetCode/tree/master/0036-valid-sudoku) |
 | [0045-jump-game-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0045-jump-game-ii) |
 | [0048-rotate-image](https://github.com/ishaggarwal13/LeetCode/tree/master/0048-rotate-image) |
@@ -1042,6 +1044,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Trie
 |  |
 | ------- |
+| [0014-longest-common-prefix](https://github.com/ishaggarwal13/LeetCode/tree/master/0014-longest-common-prefix) |
 | [0386-lexicographical-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/0386-lexicographical-numbers) |
 | [0440-k-th-smallest-in-lexicographical-order](https://github.com/ishaggarwal13/LeetCode/tree/master/0440-k-th-smallest-in-lexicographical-order) |
 | [1350-remove-sub-folders-from-the-filesystem](https://github.com/ishaggarwal13/LeetCode/tree/master/1350-remove-sub-folders-from-the-filesystem) |
