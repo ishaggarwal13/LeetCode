@@ -1,20 +1,23 @@
 class Solution {
 public:
     string frequencySort(string s) {
-        unordered_map<char, int> freq;
-        for(auto c : s) freq[c]++;
-
-        vector<pair<char, int>> freqVec(freq.begin(), freq.end());
-        sort(freqVec.begin(), freqVec.end(), [](const auto &a, const auto &b) {
-            return a.second > b.second;
-        });
-
-        string result;
-        for (const auto &p : freqVec) {
-            result += string(p.second, p.first);
+        unordered_map<char, int> mp;
+        for(auto c : s) mp[c]++;  
+        string ans="";
+        while(!mp.empty()){
+            char maxChar=0;
+            int maxFreq=0;
+            for(auto it : mp) {
+                if(it.second > maxFreq) {
+                    maxFreq = it.second;
+                    maxChar = it.first;
+                }
+            }
+            while(maxFreq--) {
+                ans.push_back(maxChar);
+            }
+            mp.erase(maxChar);
         }
-
-        return result;   
-
+        return ans;
     }
 };
