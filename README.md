@@ -253,6 +253,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/ishaggarwal13/LeetCode/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
 | [1679-shortest-subarray-to-be-removed-to-make-array-sorted](https://github.com/ishaggarwal13/LeetCode/tree/master/1679-shortest-subarray-to-be-removed-to-make-array-sorted) |
 | [1694-make-sum-divisible-by-p](https://github.com/ishaggarwal13/LeetCode/tree/master/1694-make-sum-divisible-by-p) |
+| [1752-check-if-array-is-sorted-and-rotated](https://github.com/ishaggarwal13/LeetCode/tree/master/1752-check-if-array-is-sorted-and-rotated) |
 | [1755-defuse-the-bomb](https://github.com/ishaggarwal13/LeetCode/tree/master/1755-defuse-the-bomb) |
 | [1766-minimum-number-of-removals-to-make-mountain-array](https://github.com/ishaggarwal13/LeetCode/tree/master/1766-minimum-number-of-removals-to-make-mountain-array) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/1786-count-the-number-of-consistent-strings) |
