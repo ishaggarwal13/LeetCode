@@ -333,6 +333,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3517-shortest-distance-after-road-addition-queries-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3517-shortest-distance-after-road-addition-queries-i) |
 | [3522-find-the-power-of-k-size-subarrays-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3522-find-the-power-of-k-size-subarrays-i) |
 | [3685-count-subarrays-of-length-three-with-a-condition](https://github.com/ishaggarwal13/LeetCode/tree/master/3685-count-subarrays-of-length-three-with-a-condition) |
+| [3727-maximum-alternating-sum-of-squares](https://github.com/ishaggarwal13/LeetCode/tree/master/3727-maximum-alternating-sum-of-squares) |
 | [3741-reschedule-meetings-for-maximum-free-time-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3741-reschedule-meetings-for-maximum-free-time-ii) |
 | [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 | [3788-maximum-unique-subarray-sum-after-deletion](https://github.com/ishaggarwal13/LeetCode/tree/master/3788-maximum-unique-subarray-sum-after-deletion) |
@@ -419,6 +420,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3195-separate-black-and-white-balls](https://github.com/ishaggarwal13/LeetCode/tree/master/3195-separate-black-and-white-balls) |
 | [3360-minimum-deletions-to-make-string-k-special](https://github.com/ishaggarwal13/LeetCode/tree/master/3360-minimum-deletions-to-make-string-k-special) |
 | [3445-lexicographically-minimum-string-after-removing-stars](https://github.com/ishaggarwal13/LeetCode/tree/master/3445-lexicographically-minimum-string-after-removing-stars) |
+| [3727-maximum-alternating-sum-of-squares](https://github.com/ishaggarwal13/LeetCode/tree/master/3727-maximum-alternating-sum-of-squares) |
 | [3741-reschedule-meetings-for-maximum-free-time-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3741-reschedule-meetings-for-maximum-free-time-ii) |
 | [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 | [3788-maximum-unique-subarray-sum-after-deletion](https://github.com/ishaggarwal13/LeetCode/tree/master/3788-maximum-unique-subarray-sum-after-deletion) |
@@ -469,6 +471,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3291-find-if-array-can-be-sorted](https://github.com/ishaggarwal13/LeetCode/tree/master/3291-find-if-array-can-be-sorted) |
 | [3360-minimum-deletions-to-make-string-k-special](https://github.com/ishaggarwal13/LeetCode/tree/master/3360-minimum-deletions-to-make-string-k-special) |
 | [3471-minimum-average-of-smallest-and-largest-elements](https://github.com/ishaggarwal13/LeetCode/tree/master/3471-minimum-average-of-smallest-and-largest-elements) |
+| [3727-maximum-alternating-sum-of-squares](https://github.com/ishaggarwal13/LeetCode/tree/master/3727-maximum-alternating-sum-of-squares) |
 ## Bit Manipulation
 |  |
 | ------- |
