@@ -1,16 +1,19 @@
 class Solution {
 public:
     int sumCounts(vector<int>& nums) {
-        // TC O(n^2) SC O(n)
+        // TC O(n^2) SC O(1)
         //loops for subarrays 
         int n = nums.size();
         int res = 0;
         for(int i=0; i<n; i++){
-            unordered_set<int> set;
+            int freq[101] = {0}; // to reduce space freq array
+            int count = 0;
             for(int j=i; j<n; j++){
-                set.insert(nums[j]);
-                int distinct = set.size();
-                res += distinct * distinct;
+                if(freq[nums[j]] == 0) count++;
+
+                freq[nums[j]]++;
+
+                res += count * count;
             }
         }
         return res;
