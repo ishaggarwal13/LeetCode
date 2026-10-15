@@ -319,6 +319,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2868-continuous-subarrays](https://github.com/ishaggarwal13/LeetCode/tree/master/2868-continuous-subarrays) |
 | [2891-maximum-beauty-of-an-array-after-applying-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/2891-maximum-beauty-of-an-array-after-applying-operation) |
 | [2897-apply-operations-on-array-to-maximize-sum-of-squares](https://github.com/ishaggarwal13/LeetCode/tree/master/2897-apply-operations-on-array-to-maximize-sum-of-squares) |
+| [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/ishaggarwal13/LeetCode/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
 | [3034-points-that-intersect-with-cars](https://github.com/ishaggarwal13/LeetCode/tree/master/3034-points-that-intersect-with-cars) |
 | [3142-longest-unequal-adjacent-groups-subsequence-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3142-longest-unequal-adjacent-groups-subsequence-ii) |
 | [3291-find-if-array-can-be-sorted](https://github.com/ishaggarwal13/LeetCode/tree/master/3291-find-if-array-can-be-sorted) |
@@ -937,6 +938,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2695-find-score-of-an-array-after-marking-all-elements](https://github.com/ishaggarwal13/LeetCode/tree/master/2695-find-score-of-an-array-after-marking-all-elements) |
 | [2755-extra-characters-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/2755-extra-characters-in-a-string) |
 | [2897-apply-operations-on-array-to-maximize-sum-of-squares](https://github.com/ishaggarwal13/LeetCode/tree/master/2897-apply-operations-on-array-to-maximize-sum-of-squares) |
+| [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/ishaggarwal13/LeetCode/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
 | [3034-points-that-intersect-with-cars](https://github.com/ishaggarwal13/LeetCode/tree/master/3034-points-that-intersect-with-cars) |
 | [3267-find-longest-special-substring-that-occurs-thrice-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3267-find-longest-special-substring-that-occurs-thrice-i) |
 | [3329-find-the-length-of-the-longest-common-prefix](https://github.com/ishaggarwal13/LeetCode/tree/master/3329-find-the-length-of-the-longest-common-prefix) |
@@ -1086,6 +1088,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0729-my-calendar-i](https://github.com/ishaggarwal13/LeetCode/tree/master/0729-my-calendar-i) |
 | [0731-my-calendar-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0731-my-calendar-ii) |
+| [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/ishaggarwal13/LeetCode/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
 ## Ordered Set
 |  |
 | ------- |
@@ -1155,4 +1158,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0204-count-primes](https://github.com/ishaggarwal13/LeetCode/tree/master/0204-count-primes) |
+## Binary Indexed Tree
+|  |
+| ------- |
+| [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/ishaggarwal13/LeetCode/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
 <!---LeetCode Topics End-->
