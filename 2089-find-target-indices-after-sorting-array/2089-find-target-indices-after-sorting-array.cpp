@@ -1,16 +1,18 @@
 class Solution {
 public:
     vector<int> targetIndices(vector<int>& nums, int target) {
-        //O(n) - without sorting - can use iota filling a range of values sequentially
+        //O(n) - without sorting 
         int less = 0;
-        int same = 0;
-        for(int num : nums){
+        int greator = 0;
+        for(auto num : nums){
             if(num < target) less++;
-            if(num == target) same++;
+            if(num > target) greator++;
         }
-        // creating same number of target res vector
-        vector<int> res(same);
-        iota(res.begin(), res.end(), less);
+        int n = nums.size() - less - greator;
+        vector<int> res;
+        for(int i=0; i<n; i++){
+            res.push_back(i + less);
+        }
         return res;
     }
 };
