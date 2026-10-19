@@ -1,14 +1,16 @@
 class Solution {
 public:
     vector<int> targetIndices(vector<int>& nums, int target) {
-        //O(nlogn) - sort 
-        vector<int> t;
-        sort(nums.begin(), nums.end());
-        for(int i=0; i<nums.size(); i++){
-            if(nums[i] == target){
-                t.push_back(i);
-            }
+        //O(n) - without sorting - can use iota filling a range of values sequentially
+        int less = 0;
+        int same = 0;
+        for(int num : nums){
+            if(num < target) less++;
+            if(num == target) same++;
         }
-        return t;
+        // creating same number of target res vector
+        vector<int> res(same);
+        iota(res.begin(), res.end(), less);
+        return res;
     }
 };
