@@ -3,10 +3,10 @@ public:
     int sortableIntegers(vector<int>& nums) {
         //O(n * d(n))
         int n = nums.size();
-        int total = 0;
+        int res = 0;
         for(int k=1; k<=n; k++){
             if(n % k) continue;
-            bool ok = true;
+            bool valid = true;
             int preMax = 0;
             for(int base=0; base<n; base+=k){
                 int desc = 0;
@@ -20,13 +20,13 @@ public:
                     maxi = max(maxi, a);
                 }
                 if(desc > 1 || preMax > mini){
-                    ok = false;
+                    valid = false;
                     break;
                 } 
                 preMax = maxi;
             }
-            if(ok) total += k;
+            if(valid) res += k;
         }
-        return total;
+        return res;
     }
 };
