@@ -150,6 +150,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3451-string-compression-iii](https://github.com/ishaggarwal13/LeetCode/tree/master/3451-string-compression-iii) |
 | [3567-convert-date-to-binary](https://github.com/ishaggarwal13/LeetCode/tree/master/3567-convert-date-to-binary) |
 | [3754-maximum-manhattan-distance-after-k-changes](https://github.com/ishaggarwal13/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
+| [3863-minimum-operations-to-sort-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/3863-minimum-operations-to-sort-a-string) |
 ## Dynamic Programming
 |  |
 | ------- |
