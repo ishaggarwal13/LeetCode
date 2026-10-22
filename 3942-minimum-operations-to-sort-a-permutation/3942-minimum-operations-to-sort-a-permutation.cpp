@@ -27,7 +27,7 @@ public:
             return min(p, (n-p)+2);
         
         if(desc)
-            return min((n-p), (1+(p+1)%n));
+            return min((n-p), (p+2));
         
         return -1;
     }
