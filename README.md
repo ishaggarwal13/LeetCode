@@ -343,6 +343,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 | [3788-maximum-unique-subarray-sum-after-deletion](https://github.com/ishaggarwal13/LeetCode/tree/master/3788-maximum-unique-subarray-sum-after-deletion) |
 | [3886-sum-of-sortable-integers](https://github.com/ishaggarwal13/LeetCode/tree/master/3886-sum-of-sortable-integers) |
+| [3942-minimum-operations-to-sort-a-permutation](https://github.com/ishaggarwal13/LeetCode/tree/master/3942-minimum-operations-to-sort-a-permutation) |
 ## Two Pointers
 |  |
 | ------- |
