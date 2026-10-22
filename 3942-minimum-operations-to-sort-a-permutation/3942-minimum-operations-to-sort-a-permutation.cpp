@@ -2,33 +2,38 @@ class Solution {
 public:
     int minOperations(vector<int>& nums) {
         int n = nums.size();
-        if(n == 1) return 0;
 
-        bool inc = true, desc = true;
-        int p = 0;
+        if (n == 1)
+            return 0;
 
-        for(int i=0; i<n; i++){
-            if(nums[i] == 0) p=i;
+        // Find index of 0
+        int start = find(nums.begin(), nums.end(), 0)
+                    - nums.begin();
 
-            int next = nums[(i+1) % n];
+        bool asc = true, desc = true;
 
-            //check if nums is increasing
-            if(next != (nums[i]+1) % n){
-                inc = false;
-            }
+        // Check cyclic order starting from 0
+        for (int i = 1; i < n; i++) {
+            int value = nums[(start + i) % n];
 
-            //check if nums is decreasing
-            if(next != (nums[i]-1+n) % n){
+            // Expected: 0, 1, 2, ..., n-1
+            if (value != i)
+                asc = false;
+
+            // Expected: 0, n-1, n-2, ..., 1
+            if (value != n - i)
                 desc = false;
-            }
+
+            // Neither pattern is possible
+            if (!asc && !desc)
+                return -1;
         }
 
-        if(inc)
-            return min(p, (n-p)+2);
-        
-        if(desc)
-            return min((n-p), (p+2));
-        
-        return -1;
+        // Cyclically increasing
+        if (asc)
+            return min(start, n - start + 2);
+
+        // Cyclically decreasing
+        return min(n - start, start + 2);
     }
 };
