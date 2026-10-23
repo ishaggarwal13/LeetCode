@@ -338,6 +338,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3517-shortest-distance-after-road-addition-queries-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3517-shortest-distance-after-road-addition-queries-i) |
 | [3522-find-the-power-of-k-size-subarrays-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3522-find-the-power-of-k-size-subarrays-i) |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/3551-minimum-swaps-to-sort-by-digit-sum) |
+| [3644-maximum-k-to-sort-a-permutation](https://github.com/ishaggarwal13/LeetCode/tree/master/3644-maximum-k-to-sort-a-permutation) |
 | [3685-count-subarrays-of-length-three-with-a-condition](https://github.com/ishaggarwal13/LeetCode/tree/master/3685-count-subarrays-of-length-three-with-a-condition) |
 | [3727-maximum-alternating-sum-of-squares](https://github.com/ishaggarwal13/LeetCode/tree/master/3727-maximum-alternating-sum-of-squares) |
 | [3741-reschedule-meetings-for-maximum-free-time-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3741-reschedule-meetings-for-maximum-free-time-ii) |
@@ -507,6 +508,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3380-shortest-subarray-with-or-at-least-k-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3380-shortest-subarray-with-or-at-least-k-ii) |
 | [3394-minimum-array-end](https://github.com/ishaggarwal13/LeetCode/tree/master/3394-minimum-array-end) |
 | [3601-find-the-k-th-character-in-string-game-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3601-find-the-k-th-character-in-string-game-ii) |
+| [3644-maximum-k-to-sort-a-permutation](https://github.com/ishaggarwal13/LeetCode/tree/master/3644-maximum-k-to-sort-a-permutation) |
 ## Stack
 |  |
 | ------- |
