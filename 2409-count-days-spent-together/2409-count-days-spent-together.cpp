@@ -23,9 +23,15 @@ public:
         int dayBobArrive = findDay(arriveBob);
         int dayBobLeave = findDay(leaveBob);
 
-        int start = max(dayAliceArrive, dayBobArrive);
-        int end = min(dayAliceLeave, dayBobLeave);
+        int count=0;
+        
+        for(int i=1; i<=365; i++){
+            if(i >= dayAliceArrive && i <= dayAliceLeave && 
+            i >= dayBobArrive && i <= dayBobLeave){
+                count++;
+            }
+        }
 
-        return max(0, (end-start+1));
+        return count;
     }
 };
