@@ -4,12 +4,23 @@ public:
         int n = nums.size();
         k %= n;
 
-        vector<int> temp(n);
+        int count = 0;
 
-        for (int i = 0; i < n; i++) {
-            temp[(i + k) % n] = nums[i];
+        for (int start = 0; count < n; start++) {
+            int current = start;
+            int prev = nums[start];
+
+            do {
+                int next = (current + k) % n;
+
+                int temp = nums[next];
+                nums[next] = prev;
+                prev = temp;
+
+                current = next;
+                count++;
+
+            } while (current != start);
         }
-
-        nums = temp;
     }
 };
