@@ -132,6 +132,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2232-adding-spaces-to-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/2232-adding-spaces-to-a-string) |
 | [2260-divide-a-string-into-groups-of-size-k](https://github.com/ishaggarwal13/LeetCode/tree/master/2260-divide-a-string-into-groups-of-size-k) |
 | [2395-longest-binary-subsequence-less-than-or-equal-to-k](https://github.com/ishaggarwal13/LeetCode/tree/master/2395-longest-binary-subsequence-less-than-or-equal-to-k) |
+| [2409-count-days-spent-together](https://github.com/ishaggarwal13/LeetCode/tree/master/2409-count-days-spent-together) |
 | [2414-move-pieces-to-obtain-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/2414-move-pieces-to-obtain-a-string) |
 | [2494-sum-of-prefix-scores-of-strings](https://github.com/ishaggarwal13/LeetCode/tree/master/2494-sum-of-prefix-scores-of-strings) |
 | [2536-determine-if-two-events-have-conflict](https://github.com/ishaggarwal13/LeetCode/tree/master/2536-determine-if-two-events-have-conflict) |
@@ -581,6 +582,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2155-find-missing-observations](https://github.com/ishaggarwal13/LeetCode/tree/master/2155-find-missing-observations) |
 | [2202-sum-of-k-mirror-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/2202-sum-of-k-mirror-numbers) |
+| [2409-count-days-spent-together](https://github.com/ishaggarwal13/LeetCode/tree/master/2409-count-days-spent-together) |
 | [2704-maximum-difference-by-remapping-a-digit](https://github.com/ishaggarwal13/LeetCode/tree/master/2704-maximum-difference-by-remapping-a-digit) |
 | [2716-prime-subtraction-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/2716-prime-subtraction-operation) |
 | [2903-insert-greatest-common-divisors-in-linked-list](https://github.com/ishaggarwal13/LeetCode/tree/master/2903-insert-greatest-common-divisors-in-linked-list) |
