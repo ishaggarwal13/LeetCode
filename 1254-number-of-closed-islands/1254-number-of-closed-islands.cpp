@@ -1,53 +1,50 @@
 class Solution {
 public:
-    // by removing boundary connected islands first 
-    // then counting for rest inbetween 
+    // using BFS using queue as DS
     // O(n x m) TC and O(n x m) SC
-    void dfs(vector<vector<int>>& grid, int row, int col){
-        int n = grid.size();
-        int m = grid[0].size();
-
-        // base case - Reached outside the grid
-        if(row<0 || row>=n || col<0 || col>=m || grid[row][col] == 1){
-            return;
-        }
-
-        //mark cell as visited
-        grid[row][col] = 1;
-
-        // recursive check for up, down, left and right
-        dfs(grid, row-1, col);
-        dfs(grid, row+1, col);
-        dfs(grid, row, col-1);
-        dfs(grid, row, col+1);
-    }
-
     int closedIsland(vector<vector<int>>& grid) {
         int n = grid.size();
         int m = grid[0].size();
-
-        // Step 1: Remove boundary-connected islands
-        for(int i=0; i<n; i++){
-            dfs(grid, i, 0);
-            dfs(grid, i, m-1);
-        }
-
-        for(int j=0; j<m; j++){
-            dfs(grid, 0, j);
-            dfs(grid, n-1, j);
-        }
-
-        // Step 2: Count remaining islands
         int count = 0;
-        //DFS - RECURSION
+
+        // directions for up down left and right (dr, dc)
+        int dr[] = {-1, 1, 0, 0};
+        int dc[] = {0, 0, -1, 1};
+
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
-                if(grid[i][j] == 0){
-                    count++;
-                    dfs(grid, i, j);
+
+                if(grid[i][j] != 0) continue;
+
+                queue<pair<int, int>> q;
+                q.push({i, j});
+                grid[i][j] = 1; //mark as visited
+                bool closed = true;
+
+                while(!q.empty()){
+                    auto [r, c] = q.front();
+                    q.pop();
+
+                    // condition - for outer
+                    if(r == 0 || c == 0 || r == n-1 || c == m-1){
+                        closed = false;
+                    }
+
+                    for(int d = 0; d<4; d++){
+                        int nr = r + dr[d];
+                        int nc = c + dc[d];
+
+                        if(nr>=0 && nc>=0 && nr<n && nc<m && grid[nr][nc] == 0){
+                            grid[nr][nc] = 1;
+                            q.push({nr, nc});
+                        }
+                    }
                 }
+
+                if(closed) count++;
             }
         }
+        
         return count;
     }
 };
