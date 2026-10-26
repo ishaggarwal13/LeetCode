@@ -216,6 +216,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0219-contains-duplicate-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0219-contains-duplicate-ii) |
 | [0228-summary-ranges](https://github.com/ishaggarwal13/LeetCode/tree/master/0228-summary-ranges) |
 | [0268-missing-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0268-missing-number) |
+| [0283-move-zeroes](https://github.com/ishaggarwal13/LeetCode/tree/master/0283-move-zeroes) |
 | [0419-battleships-in-a-board](https://github.com/ishaggarwal13/LeetCode/tree/master/0419-battleships-in-a-board) |
 | [0455-assign-cookies](https://github.com/ishaggarwal13/LeetCode/tree/master/0455-assign-cookies) |
 | [0485-max-consecutive-ones](https://github.com/ishaggarwal13/LeetCode/tree/master/0485-max-consecutive-ones) |
@@ -364,6 +365,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0148-sort-list](https://github.com/ishaggarwal13/LeetCode/tree/master/0148-sort-list) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/ishaggarwal13/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0189-rotate-array](https://github.com/ishaggarwal13/LeetCode/tree/master/0189-rotate-array) |
+| [0283-move-zeroes](https://github.com/ishaggarwal13/LeetCode/tree/master/0283-move-zeroes) |
 | [0344-reverse-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0344-reverse-string) |
 | [0443-string-compression](https://github.com/ishaggarwal13/LeetCode/tree/master/0443-string-compression) |
 | [0455-assign-cookies](https://github.com/ishaggarwal13/LeetCode/tree/master/0455-assign-cookies) |
