@@ -243,6 +243,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1047-maximize-sum-of-array-after-k-negations](https://github.com/ishaggarwal13/LeetCode/tree/master/1047-maximize-sum-of-array-after-k-negations) |
 | [1137-height-checker](https://github.com/ishaggarwal13/LeetCode/tree/master/1137-height-checker) |
 | [1147-flip-columns-for-maximum-number-of-equal-rows](https://github.com/ishaggarwal13/LeetCode/tree/master/1147-flip-columns-for-maximum-number-of-equal-rows) |
+| [1254-number-of-closed-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/1254-number-of-closed-islands) |
 | [1256-rank-transform-of-an-array](https://github.com/ishaggarwal13/LeetCode/tree/master/1256-rank-transform-of-an-array) |
 | [1325-path-with-maximum-probability](https://github.com/ishaggarwal13/LeetCode/tree/master/1325-path-with-maximum-probability) |
 | [1331-path-with-maximum-gold](https://github.com/ishaggarwal13/LeetCode/tree/master/1331-path-with-maximum-gold) |
@@ -668,6 +669,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0776-n-ary-tree-postorder-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0776-n-ary-tree-postorder-traversal) |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/ishaggarwal13/LeetCode/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 | [0988-flip-equivalent-binary-trees](https://github.com/ishaggarwal13/LeetCode/tree/master/0988-flip-equivalent-binary-trees) |
+| [1254-number-of-closed-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/1254-number-of-closed-islands) |
 | [1350-remove-sub-folders-from-the-filesystem](https://github.com/ishaggarwal13/LeetCode/tree/master/1350-remove-sub-folders-from-the-filesystem) |
 | [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
 | [1558-course-schedule-iv](https://github.com/ishaggarwal13/LeetCode/tree/master/1558-course-schedule-iv) |
@@ -695,6 +697,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0764-n-ary-tree-level-order-traversal](https://github.com/ishaggarwal13/LeetCode/tree/master/0764-n-ary-tree-level-order-traversal) |
 | [0787-sliding-puzzle](https://github.com/ishaggarwal13/LeetCode/tree/master/0787-sliding-puzzle) |
 | [0945-snakes-and-ladders](https://github.com/ishaggarwal13/LeetCode/tree/master/0945-snakes-and-ladders) |
+| [1254-number-of-closed-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/1254-number-of-closed-islands) |
 | [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
 | [1558-course-schedule-iv](https://github.com/ishaggarwal13/LeetCode/tree/master/1558-course-schedule-iv) |
 | [2035-count-sub-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/2035-count-sub-islands) |
@@ -846,6 +849,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0787-sliding-puzzle](https://github.com/ishaggarwal13/LeetCode/tree/master/0787-sliding-puzzle) |
 | [0945-snakes-and-ladders](https://github.com/ishaggarwal13/LeetCode/tree/master/0945-snakes-and-ladders) |
 | [1147-flip-columns-for-maximum-number-of-equal-rows](https://github.com/ishaggarwal13/LeetCode/tree/master/1147-flip-columns-for-maximum-number-of-equal-rows) |
+| [1254-number-of-closed-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/1254-number-of-closed-islands) |
 | [1331-path-with-maximum-gold](https://github.com/ishaggarwal13/LeetCode/tree/master/1331-path-with-maximum-gold) |
 | [1402-count-square-submatrices-with-all-ones](https://github.com/ishaggarwal13/LeetCode/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [1972-rotating-the-box](https://github.com/ishaggarwal13/LeetCode/tree/master/1972-rotating-the-box) |
@@ -1183,4 +1187,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/ishaggarwal13/LeetCode/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
 | [2916-subarrays-distinct-element-sum-of-squares-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/2916-subarrays-distinct-element-sum-of-squares-ii) |
+## Union-Find
+|  |
+| ------- |
+| [1254-number-of-closed-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/1254-number-of-closed-islands) |
 <!---LeetCode Topics End-->
