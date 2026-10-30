@@ -173,6 +173,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0678-valid-parenthesis-string](https://github.com/ishaggarwal13/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0689-maximum-sum-of-3-non-overlapping-subarrays](https://github.com/ishaggarwal13/LeetCode/tree/master/0689-maximum-sum-of-3-non-overlapping-subarrays) |
 | [1402-count-square-submatrices-with-all-ones](https://github.com/ishaggarwal13/LeetCode/tree/master/1402-count-square-submatrices-with-all-ones) |
+| [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/ishaggarwal13/LeetCode/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 | [1637-string-compression-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/1637-string-compression-ii) |
 | [1766-minimum-number-of-removals-to-make-mountain-array](https://github.com/ishaggarwal13/LeetCode/tree/master/1766-minimum-number-of-removals-to-make-mountain-array) |
 | [1851-maximum-number-of-events-that-can-be-attended-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/1851-maximum-number-of-events-that-can-be-attended-ii) |
@@ -259,6 +260,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/ishaggarwal13/LeetCode/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 | [1497-design-a-stack-with-increment-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/1497-design-a-stack-with-increment-operation) |
 | [1510-find-lucky-integer-in-an-array](https://github.com/ishaggarwal13/LeetCode/tree/master/1510-find-lucky-integer-in-an-array) |
+| [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/ishaggarwal13/LeetCode/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/ishaggarwal13/LeetCode/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
 | [1679-shortest-subarray-to-be-removed-to-make-array-sorted](https://github.com/ishaggarwal13/LeetCode/tree/master/1679-shortest-subarray-to-be-removed-to-make-array-sorted) |
 | [1694-make-sum-divisible-by-p](https://github.com/ishaggarwal13/LeetCode/tree/master/1694-make-sum-divisible-by-p) |
@@ -588,6 +590,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1018-largest-perimeter-triangle](https://github.com/ishaggarwal13/LeetCode/tree/master/1018-largest-perimeter-triangle) |
 | [1411-convert-binary-number-in-a-linked-list-to-integer](https://github.com/ishaggarwal13/LeetCode/tree/master/1411-convert-binary-number-in-a-linked-list-to-integer) |
 | [1529-max-difference-you-can-get-from-changing-an-integer](https://github.com/ishaggarwal13/LeetCode/tree/master/1529-max-difference-you-can-get-from-changing-an-integer) |
+| [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/ishaggarwal13/LeetCode/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 | [1903-largest-odd-number-in-string](https://github.com/ishaggarwal13/LeetCode/tree/master/1903-largest-odd-number-in-string) |
 | [1922-count-good-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/1922-count-good-numbers) |
 | [2149-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/ishaggarwal13/LeetCode/tree/master/2149-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
@@ -649,6 +652,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0783-search-in-a-binary-search-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0783-search-in-a-binary-search-tree) |
 | [0988-flip-equivalent-binary-trees](https://github.com/ishaggarwal13/LeetCode/tree/master/0988-flip-equivalent-binary-trees) |
 | [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
+| [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/ishaggarwal13/LeetCode/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 | [2400-minimum-score-after-removals-on-a-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/2400-minimum-score-after-removals-on-a-tree) |
 | [2545-height-of-binary-tree-after-subtree-removal-queries](https://github.com/ishaggarwal13/LeetCode/tree/master/2545-height-of-binary-tree-after-subtree-removal-queries) |
 | [2646-kth-largest-sum-in-a-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/2646-kth-largest-sum-in-a-binary-tree) |
@@ -743,6 +747,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0783-search-in-a-binary-search-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0783-search-in-a-binary-search-tree) |
 | [0988-flip-equivalent-binary-trees](https://github.com/ishaggarwal13/LeetCode/tree/master/0988-flip-equivalent-binary-trees) |
 | [1484-linked-list-in-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/1484-linked-list-in-binary-tree) |
+| [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/ishaggarwal13/LeetCode/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 | [2545-height-of-binary-tree-after-subtree-removal-queries](https://github.com/ishaggarwal13/LeetCode/tree/master/2545-height-of-binary-tree-after-subtree-removal-queries) |
 | [2646-kth-largest-sum-in-a-binary-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/2646-kth-largest-sum-in-a-binary-tree) |
 | [2677-cousins-in-binary-tree-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/2677-cousins-in-binary-tree-ii) |
@@ -782,6 +787,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0109-convert-sorted-list-to-binary-search-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/0109-convert-sorted-list-to-binary-search-tree) |
 | [0148-sort-list](https://github.com/ishaggarwal13/LeetCode/tree/master/0148-sort-list) |
 | [0948-sort-an-array](https://github.com/ishaggarwal13/LeetCode/tree/master/0948-sort-an-array) |
+| [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/ishaggarwal13/LeetCode/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 | [3841-palindromic-path-queries-in-a-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/3841-palindromic-path-queries-in-a-tree) |
 ## Heap (Priority Queue)
 |  |
@@ -832,6 +838,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/ishaggarwal13/LeetCode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [0924-fair-candy-swap](https://github.com/ishaggarwal13/LeetCode/tree/master/0924-fair-candy-swap) |
 | [1468-check-if-n-and-its-double-exist](https://github.com/ishaggarwal13/LeetCode/tree/master/1468-check-if-n-and-its-double-exist) |
+| [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/ishaggarwal13/LeetCode/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 | [1679-shortest-subarray-to-be-removed-to-make-array-sorted](https://github.com/ishaggarwal13/LeetCode/tree/master/1679-shortest-subarray-to-be-removed-to-make-array-sorted) |
 | [1766-minimum-number-of-removals-to-make-mountain-array](https://github.com/ishaggarwal13/LeetCode/tree/master/1766-minimum-number-of-removals-to-make-mountain-array) |
 | [1851-maximum-number-of-events-that-can-be-attended-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/1851-maximum-number-of-events-that-can-be-attended-ii) |
@@ -1039,6 +1046,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0070-climbing-stairs](https://github.com/ishaggarwal13/LeetCode/tree/master/0070-climbing-stairs) |
 | [0241-different-ways-to-add-parentheses](https://github.com/ishaggarwal13/LeetCode/tree/master/0241-different-ways-to-add-parentheses) |
 | [0509-fibonacci-number](https://github.com/ishaggarwal13/LeetCode/tree/master/0509-fibonacci-number) |
+| [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/ishaggarwal13/LeetCode/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 | [2028-the-earliest-and-latest-rounds-where-players-compete](https://github.com/ishaggarwal13/LeetCode/tree/master/2028-the-earliest-and-latest-rounds-where-players-compete) |
 | [2395-longest-binary-subsequence-less-than-or-equal-to-k](https://github.com/ishaggarwal13/LeetCode/tree/master/2395-longest-binary-subsequence-less-than-or-equal-to-k) |
 ## Enumeration
@@ -1178,6 +1186,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Combinatorics
 |  |
 | ------- |
+| [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/ishaggarwal13/LeetCode/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 | [3201-distribute-candies-among-children-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3201-distribute-candies-among-children-ii) |
 | [3682-count-the-number-of-arrays-with-k-matching-adjacent-elements](https://github.com/ishaggarwal13/LeetCode/tree/master/3682-count-the-number-of-arrays-with-k-matching-adjacent-elements) |
 ## Bracket Sequences
@@ -1213,9 +1222,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0200-number-of-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/0200-number-of-islands) |
 | [1254-number-of-closed-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/1254-number-of-closed-islands) |
+| [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/ishaggarwal13/LeetCode/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 | [3619-count-islands-with-total-value-divisible-by-k](https://github.com/ishaggarwal13/LeetCode/tree/master/3619-count-islands-with-total-value-divisible-by-k) |
 ## Graph Theory
 |  |
 | ------- |
 | [3970-shortest-path-with-at-most-k-consecutive-identical-characters](https://github.com/ishaggarwal13/LeetCode/tree/master/3970-shortest-path-with-at-most-k-consecutive-identical-characters) |
+## Fermat's Little Theorem
+|  |
+| ------- |
+| [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/ishaggarwal13/LeetCode/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 <!---LeetCode Topics End-->
