@@ -1,9 +1,9 @@
 class Solution {
 public:
     int minMoves(vector<int>& nums) {
-        int low = *min_element(nums.begin(), nums.end());
-        int moves = 0;
-        for(int num : nums) moves += num - low;
-        return moves;
+        int sum = accumulate(nums.begin(), nums.end(), 0);
+        int mini = ranges::min(nums);
+        int n = nums.size();
+        return sum - (mini * n);
     }
 };
