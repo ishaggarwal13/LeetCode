@@ -355,6 +355,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3665-twisted-mirror-path-count](https://github.com/ishaggarwal13/LeetCode/tree/master/3665-twisted-mirror-path-count) |
 | [3685-count-subarrays-of-length-three-with-a-condition](https://github.com/ishaggarwal13/LeetCode/tree/master/3685-count-subarrays-of-length-three-with-a-condition) |
 | [3727-maximum-alternating-sum-of-squares](https://github.com/ishaggarwal13/LeetCode/tree/master/3727-maximum-alternating-sum-of-squares) |
+| [3736-minimum-moves-to-equal-array-elements-iii](https://github.com/ishaggarwal13/LeetCode/tree/master/3736-minimum-moves-to-equal-array-elements-iii) |
 | [3741-reschedule-meetings-for-maximum-free-time-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3741-reschedule-meetings-for-maximum-free-time-ii) |
 | [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 | [3788-maximum-unique-subarray-sum-after-deletion](https://github.com/ishaggarwal13/LeetCode/tree/master/3788-maximum-unique-subarray-sum-after-deletion) |
@@ -616,6 +617,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3601-find-the-k-th-character-in-string-game-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3601-find-the-k-th-character-in-string-game-ii) |
 | [3682-count-the-number-of-arrays-with-k-matching-adjacent-elements](https://github.com/ishaggarwal13/LeetCode/tree/master/3682-count-the-number-of-arrays-with-k-matching-adjacent-elements) |
 | [3723-maximize-sum-of-squares-of-digits](https://github.com/ishaggarwal13/LeetCode/tree/master/3723-maximize-sum-of-squares-of-digits) |
+| [3736-minimum-moves-to-equal-array-elements-iii](https://github.com/ishaggarwal13/LeetCode/tree/master/3736-minimum-moves-to-equal-array-elements-iii) |
 | [3754-maximum-manhattan-distance-after-k-changes](https://github.com/ishaggarwal13/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
 | [3886-sum-of-sortable-integers](https://github.com/ishaggarwal13/LeetCode/tree/master/3886-sum-of-sortable-integers) |
 ## Simulation
