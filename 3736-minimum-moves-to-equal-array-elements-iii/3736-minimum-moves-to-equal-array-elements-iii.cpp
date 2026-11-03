@@ -1,10 +1,9 @@
 class Solution {
 public:
     int minMoves(vector<int>& nums) {
-        int high = *max_element(nums.begin(), nums.end());
-        int moves = 0;
-        for(int num : nums) moves += high - num;
-
-        return moves;
+        int n = nums.size();
+        int mx = *max_element(nums.begin(), nums.end());
+        int sum = accumulate(nums.begin(), nums.end(), 0LL);
+        return n * mx - sum;
     }
 };
