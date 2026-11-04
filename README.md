@@ -200,6 +200,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0036-valid-sudoku](https://github.com/ishaggarwal13/LeetCode/tree/master/0036-valid-sudoku) |
 | [0045-jump-game-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/0045-jump-game-ii) |
 | [0048-rotate-image](https://github.com/ishaggarwal13/LeetCode/tree/master/0048-rotate-image) |
+| [0054-spiral-matrix](https://github.com/ishaggarwal13/LeetCode/tree/master/0054-spiral-matrix) |
 | [0055-jump-game](https://github.com/ishaggarwal13/LeetCode/tree/master/0055-jump-game) |
 | [0056-merge-intervals](https://github.com/ishaggarwal13/LeetCode/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/ishaggarwal13/LeetCode/tree/master/0057-insert-interval) |
@@ -626,6 +627,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Simulation
 |  |
 | ------- |
+| [0054-spiral-matrix](https://github.com/ishaggarwal13/LeetCode/tree/master/0054-spiral-matrix) |
 | [0258-add-digits](https://github.com/ishaggarwal13/LeetCode/tree/master/0258-add-digits) |
 | [0495-teemo-attacking](https://github.com/ishaggarwal13/LeetCode/tree/master/0495-teemo-attacking) |
 | [0592-fraction-addition-and-subtraction](https://github.com/ishaggarwal13/LeetCode/tree/master/0592-fraction-addition-and-subtraction) |
@@ -881,6 +883,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0036-valid-sudoku](https://github.com/ishaggarwal13/LeetCode/tree/master/0036-valid-sudoku) |
 | [0048-rotate-image](https://github.com/ishaggarwal13/LeetCode/tree/master/0048-rotate-image) |
+| [0054-spiral-matrix](https://github.com/ishaggarwal13/LeetCode/tree/master/0054-spiral-matrix) |
 | [0064-minimum-path-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/0064-minimum-path-sum) |
 | [0200-number-of-islands](https://github.com/ishaggarwal13/LeetCode/tree/master/0200-number-of-islands) |
 | [0419-battleships-in-a-board](https://github.com/ishaggarwal13/LeetCode/tree/master/0419-battleships-in-a-board) |
