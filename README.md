@@ -189,6 +189,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3142-longest-unequal-adjacent-groups-subsequence-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3142-longest-unequal-adjacent-groups-subsequence-ii) |
 | [3490-find-the-maximum-length-of-valid-subsequence-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3490-find-the-maximum-length-of-valid-subsequence-i) |
 | [3491-find-the-maximum-length-of-valid-subsequence-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3491-find-the-maximum-length-of-valid-subsequence-ii) |
+| [3505-minimum-operations-to-make-elements-within-k-subarrays-equal](https://github.com/ishaggarwal13/LeetCode/tree/master/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) |
 | [3665-twisted-mirror-path-count](https://github.com/ishaggarwal13/LeetCode/tree/master/3665-twisted-mirror-path-count) |
 | [3882-minimum-xor-path-in-a-grid](https://github.com/ishaggarwal13/LeetCode/tree/master/3882-minimum-xor-path-in-a-grid) |
 ## Array
@@ -347,6 +348,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3490-find-the-maximum-length-of-valid-subsequence-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3490-find-the-maximum-length-of-valid-subsequence-i) |
 | [3491-find-the-maximum-length-of-valid-subsequence-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3491-find-the-maximum-length-of-valid-subsequence-ii) |
 | [3501-delete-nodes-from-linked-list-present-in-array](https://github.com/ishaggarwal13/LeetCode/tree/master/3501-delete-nodes-from-linked-list-present-in-array) |
+| [3505-minimum-operations-to-make-elements-within-k-subarrays-equal](https://github.com/ishaggarwal13/LeetCode/tree/master/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) |
 | [3517-shortest-distance-after-road-addition-queries-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3517-shortest-distance-after-road-addition-queries-i) |
 | [3522-find-the-power-of-k-size-subarrays-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3522-find-the-power-of-k-size-subarrays-i) |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/3551-minimum-swaps-to-sort-by-digit-sum) |
@@ -612,6 +614,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2716-prime-subtraction-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/2716-prime-subtraction-operation) |
 | [2903-insert-greatest-common-divisors-in-linked-list](https://github.com/ishaggarwal13/LeetCode/tree/master/2903-insert-greatest-common-divisors-in-linked-list) |
 | [3201-distribute-candies-among-children-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3201-distribute-candies-among-children-ii) |
+| [3505-minimum-operations-to-make-elements-within-k-subarrays-equal](https://github.com/ishaggarwal13/LeetCode/tree/master/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) |
 | [3567-convert-date-to-binary](https://github.com/ishaggarwal13/LeetCode/tree/master/3567-convert-date-to-binary) |
 | [3568-find-the-key-of-the-numbers](https://github.com/ishaggarwal13/LeetCode/tree/master/3568-find-the-key-of-the-numbers) |
 | [3601-find-the-k-th-character-in-string-game-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3601-find-the-k-th-character-in-string-game-ii) |
@@ -829,6 +832,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2803-modify-graph-edge-weights](https://github.com/ishaggarwal13/LeetCode/tree/master/2803-modify-graph-edge-weights) |
 | [2868-continuous-subarrays](https://github.com/ishaggarwal13/LeetCode/tree/master/2868-continuous-subarrays) |
 | [3445-lexicographically-minimum-string-after-removing-stars](https://github.com/ishaggarwal13/LeetCode/tree/master/3445-lexicographically-minimum-string-after-removing-stars) |
+| [3505-minimum-operations-to-make-elements-within-k-subarrays-equal](https://github.com/ishaggarwal13/LeetCode/tree/master/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) |
 | [3970-shortest-path-with-at-most-k-consecutive-identical-characters](https://github.com/ishaggarwal13/LeetCode/tree/master/3970-shortest-path-with-at-most-k-consecutive-identical-characters) |
 ## Merge Sort
 |  |
@@ -1007,6 +1011,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3360-minimum-deletions-to-make-string-k-special](https://github.com/ishaggarwal13/LeetCode/tree/master/3360-minimum-deletions-to-make-string-k-special) |
 | [3445-lexicographically-minimum-string-after-removing-stars](https://github.com/ishaggarwal13/LeetCode/tree/master/3445-lexicographically-minimum-string-after-removing-stars) |
 | [3501-delete-nodes-from-linked-list-present-in-array](https://github.com/ishaggarwal13/LeetCode/tree/master/3501-delete-nodes-from-linked-list-present-in-array) |
+| [3505-minimum-operations-to-make-elements-within-k-subarrays-equal](https://github.com/ishaggarwal13/LeetCode/tree/master/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/3551-minimum-swaps-to-sort-by-digit-sum) |
 | [3754-maximum-manhattan-distance-after-k-changes](https://github.com/ishaggarwal13/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
 | [3788-maximum-unique-subarray-sum-after-deletion](https://github.com/ishaggarwal13/LeetCode/tree/master/3788-maximum-unique-subarray-sum-after-deletion) |
@@ -1053,6 +1058,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2891-maximum-beauty-of-an-array-after-applying-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/2891-maximum-beauty-of-an-array-after-applying-operation) |
 | [3267-find-longest-special-substring-that-occurs-thrice-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3267-find-longest-special-substring-that-occurs-thrice-i) |
 | [3380-shortest-subarray-with-or-at-least-k-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3380-shortest-subarray-with-or-at-least-k-ii) |
+| [3505-minimum-operations-to-make-elements-within-k-subarrays-equal](https://github.com/ishaggarwal13/LeetCode/tree/master/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) |
 | [3522-find-the-power-of-k-size-subarrays-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3522-find-the-power-of-k-size-subarrays-i) |
 | [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 ## Memoization
