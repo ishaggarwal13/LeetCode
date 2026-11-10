@@ -191,6 +191,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3491-find-the-maximum-length-of-valid-subsequence-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3491-find-the-maximum-length-of-valid-subsequence-ii) |
 | [3505-minimum-operations-to-make-elements-within-k-subarrays-equal](https://github.com/ishaggarwal13/LeetCode/tree/master/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) |
 | [3665-twisted-mirror-path-count](https://github.com/ishaggarwal13/LeetCode/tree/master/3665-twisted-mirror-path-count) |
+| [3693-climbing-stairs-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3693-climbing-stairs-ii) |
 | [3882-minimum-xor-path-in-a-grid](https://github.com/ishaggarwal13/LeetCode/tree/master/3882-minimum-xor-path-in-a-grid) |
 ## Array
 |  |
@@ -359,6 +360,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3644-maximum-k-to-sort-a-permutation](https://github.com/ishaggarwal13/LeetCode/tree/master/3644-maximum-k-to-sort-a-permutation) |
 | [3665-twisted-mirror-path-count](https://github.com/ishaggarwal13/LeetCode/tree/master/3665-twisted-mirror-path-count) |
 | [3685-count-subarrays-of-length-three-with-a-condition](https://github.com/ishaggarwal13/LeetCode/tree/master/3685-count-subarrays-of-length-three-with-a-condition) |
+| [3693-climbing-stairs-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3693-climbing-stairs-ii) |
 | [3727-maximum-alternating-sum-of-squares](https://github.com/ishaggarwal13/LeetCode/tree/master/3727-maximum-alternating-sum-of-squares) |
 | [3736-minimum-moves-to-equal-array-elements-iii](https://github.com/ishaggarwal13/LeetCode/tree/master/3736-minimum-moves-to-equal-array-elements-iii) |
 | [3741-reschedule-meetings-for-maximum-free-time-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3741-reschedule-meetings-for-maximum-free-time-ii) |
