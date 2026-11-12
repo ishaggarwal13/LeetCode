@@ -342,6 +342,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/ishaggarwal13/LeetCode/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
 | [2916-subarrays-distinct-element-sum-of-squares-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/2916-subarrays-distinct-element-sum-of-squares-ii) |
 | [3034-points-that-intersect-with-cars](https://github.com/ishaggarwal13/LeetCode/tree/master/3034-points-that-intersect-with-cars) |
+| [3105-longest-strictly-increasing-or-strictly-decreasing-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/3105-longest-strictly-increasing-or-strictly-decreasing-subarray) |
 | [3142-longest-unequal-adjacent-groups-subsequence-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3142-longest-unequal-adjacent-groups-subsequence-ii) |
 | [3291-find-if-array-can-be-sorted](https://github.com/ishaggarwal13/LeetCode/tree/master/3291-find-if-array-can-be-sorted) |
 | [3329-find-the-length-of-the-longest-common-prefix](https://github.com/ishaggarwal13/LeetCode/tree/master/3329-find-the-length-of-the-longest-common-prefix) |
