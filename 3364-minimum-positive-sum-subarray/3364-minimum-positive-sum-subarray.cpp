@@ -5,12 +5,11 @@ public:
         int best = INT_MAX;
 
         for(int len=l; len<=r; len++){
-            for(int i=0; i+len<=n; i++){
-                int sum = 0;
-                for(int k=i; k<i+len; k++){
-                    sum += nums[k];
-                }
-                if(sum>0 && sum<best) best=sum;
+            int sum = 0;
+            for(int i=0; i<n; i++){
+                sum += nums[i];
+                if(i>=len) sum -= nums[i-len];
+                if(i>=len-1 && sum>0 && sum<best) best=sum;
             }
         }
 
