@@ -141,6 +141,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2599-take-k-of-each-character-from-left-and-right](https://github.com/ishaggarwal13/LeetCode/tree/master/2599-take-k-of-each-character-from-left-and-right) |
 | [2755-extra-characters-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/2755-extra-characters-in-a-string) |
 | [2800-minimum-string-length-after-removing-substrings](https://github.com/ishaggarwal13/LeetCode/tree/master/2800-minimum-string-length-after-removing-substrings) |
+| [2911-minimum-changes-to-make-k-semi-palindromes](https://github.com/ishaggarwal13/LeetCode/tree/master/2911-minimum-changes-to-make-k-semi-palindromes) |
 | [3142-longest-unequal-adjacent-groups-subsequence-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3142-longest-unequal-adjacent-groups-subsequence-ii) |
 | [3174-minimum-number-of-changes-to-make-binary-string-beautiful](https://github.com/ishaggarwal13/LeetCode/tree/master/3174-minimum-number-of-changes-to-make-binary-string-beautiful) |
 | [3195-separate-black-and-white-balls](https://github.com/ishaggarwal13/LeetCode/tree/master/3195-separate-black-and-white-balls) |
@@ -188,6 +189,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2586-longest-square-streak-in-an-array](https://github.com/ishaggarwal13/LeetCode/tree/master/2586-longest-square-streak-in-an-array) |
 | [2755-extra-characters-in-a-string](https://github.com/ishaggarwal13/LeetCode/tree/master/2755-extra-characters-in-a-string) |
 | [2794-maximum-number-of-moves-in-a-grid](https://github.com/ishaggarwal13/LeetCode/tree/master/2794-maximum-number-of-moves-in-a-grid) |
+| [2911-minimum-changes-to-make-k-semi-palindromes](https://github.com/ishaggarwal13/LeetCode/tree/master/2911-minimum-changes-to-make-k-semi-palindromes) |
 | [3142-longest-unequal-adjacent-groups-subsequence-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3142-longest-unequal-adjacent-groups-subsequence-ii) |
 | [3490-find-the-maximum-length-of-valid-subsequence-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3490-find-the-maximum-length-of-valid-subsequence-i) |
 | [3491-find-the-maximum-length-of-valid-subsequence-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3491-find-the-maximum-length-of-valid-subsequence-ii) |
@@ -415,6 +417,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2497-maximum-matching-of-players-with-trainers](https://github.com/ishaggarwal13/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
 | [2581-divide-players-into-teams-of-equal-skill](https://github.com/ishaggarwal13/LeetCode/tree/master/2581-divide-players-into-teams-of-equal-skill) |
 | [2699-count-the-number-of-fair-pairs](https://github.com/ishaggarwal13/LeetCode/tree/master/2699-count-the-number-of-fair-pairs) |
+| [2911-minimum-changes-to-make-k-semi-palindromes](https://github.com/ishaggarwal13/LeetCode/tree/master/2911-minimum-changes-to-make-k-semi-palindromes) |
 | [3195-separate-black-and-white-balls](https://github.com/ishaggarwal13/LeetCode/tree/master/3195-separate-black-and-white-balls) |
 | [3471-minimum-average-of-smallest-and-largest-elements](https://github.com/ishaggarwal13/LeetCode/tree/master/3471-minimum-average-of-smallest-and-largest-elements) |
 ## Greedy
