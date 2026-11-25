@@ -379,6 +379,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3841-palindromic-path-queries-in-a-tree](https://github.com/ishaggarwal13/LeetCode/tree/master/3841-palindromic-path-queries-in-a-tree) |
 | [3882-minimum-xor-path-in-a-grid](https://github.com/ishaggarwal13/LeetCode/tree/master/3882-minimum-xor-path-in-a-grid) |
 | [3886-sum-of-sortable-integers](https://github.com/ishaggarwal13/LeetCode/tree/master/3886-sum-of-sortable-integers) |
+| [3934-smallest-unique-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/3934-smallest-unique-subarray) |
 | [3942-minimum-operations-to-sort-a-permutation](https://github.com/ishaggarwal13/LeetCode/tree/master/3942-minimum-operations-to-sort-a-permutation) |
 ## Two Pointers
 |  |
@@ -904,6 +905,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2891-maximum-beauty-of-an-array-after-applying-operation](https://github.com/ishaggarwal13/LeetCode/tree/master/2891-maximum-beauty-of-an-array-after-applying-operation) |
 | [3267-find-longest-special-substring-that-occurs-thrice-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3267-find-longest-special-substring-that-occurs-thrice-i) |
 | [3427-special-array-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3427-special-array-ii) |
+| [3934-smallest-unique-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/3934-smallest-unique-subarray) |
 ## Matrix
 |  |
 | ------- |
@@ -1047,6 +1049,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/3551-minimum-swaps-to-sort-by-digit-sum) |
 | [3754-maximum-manhattan-distance-after-k-changes](https://github.com/ishaggarwal13/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
 | [3788-maximum-unique-subarray-sum-after-deletion](https://github.com/ishaggarwal13/LeetCode/tree/master/3788-maximum-unique-subarray-sum-after-deletion) |
+| [3934-smallest-unique-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/3934-smallest-unique-subarray) |
 ## Backtracking
 |  |
 | ------- |
@@ -1156,6 +1159,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0214-shortest-palindrome](https://github.com/ishaggarwal13/LeetCode/tree/master/0214-shortest-palindrome) |
+| [3934-smallest-unique-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/3934-smallest-unique-subarray) |
 ## String Matching
 |  |
 | ------- |
@@ -1170,6 +1174,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0214-shortest-palindrome](https://github.com/ishaggarwal13/LeetCode/tree/master/0214-shortest-palindrome) |
 | [2079-delete-duplicate-folders-in-system](https://github.com/ishaggarwal13/LeetCode/tree/master/2079-delete-duplicate-folders-in-system) |
+| [3934-smallest-unique-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/3934-smallest-unique-subarray) |
 ## Trie
 |  |
 | ------- |
@@ -1298,4 +1303,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0169-majority-element](https://github.com/ishaggarwal13/LeetCode/tree/master/0169-majority-element) |
+## Suffix Array
+|  |
+| ------- |
+| [3934-smallest-unique-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/3934-smallest-unique-subarray) |
 <!---LeetCode Topics End-->
