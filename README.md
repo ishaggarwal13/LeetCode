@@ -383,6 +383,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3934-smallest-unique-subarray](https://github.com/ishaggarwal13/LeetCode/tree/master/3934-smallest-unique-subarray) |
 | [3942-minimum-operations-to-sort-a-permutation](https://github.com/ishaggarwal13/LeetCode/tree/master/3942-minimum-operations-to-sort-a-permutation) |
 | [3946-maximum-number-of-items-from-sale-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3946-maximum-number-of-items-from-sale-i) |
+| [3947-maximum-number-of-items-from-sale-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3947-maximum-number-of-items-from-sale-ii) |
 ## Two Pointers
 |  |
 | ------- |
@@ -477,6 +478,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3788-maximum-unique-subarray-sum-after-deletion](https://github.com/ishaggarwal13/LeetCode/tree/master/3788-maximum-unique-subarray-sum-after-deletion) |
 | [3789-minimum-cost-to-acquire-required-items](https://github.com/ishaggarwal13/LeetCode/tree/master/3789-minimum-cost-to-acquire-required-items) |
 | [3946-maximum-number-of-items-from-sale-i](https://github.com/ishaggarwal13/LeetCode/tree/master/3946-maximum-number-of-items-from-sale-i) |
+| [3947-maximum-number-of-items-from-sale-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3947-maximum-number-of-items-from-sale-ii) |
 ## Sorting
 |  |
 | ------- |
@@ -531,6 +533,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/ishaggarwal13/LeetCode/tree/master/3551-minimum-swaps-to-sort-by-digit-sum) |
 | [3727-maximum-alternating-sum-of-squares](https://github.com/ishaggarwal13/LeetCode/tree/master/3727-maximum-alternating-sum-of-squares) |
 | [3886-sum-of-sortable-integers](https://github.com/ishaggarwal13/LeetCode/tree/master/3886-sum-of-sortable-integers) |
+| [3947-maximum-number-of-items-from-sale-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3947-maximum-number-of-items-from-sale-ii) |
 ## Bit Manipulation
 |  |
 | ------- |
@@ -865,6 +868,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2868-continuous-subarrays](https://github.com/ishaggarwal13/LeetCode/tree/master/2868-continuous-subarrays) |
 | [3445-lexicographically-minimum-string-after-removing-stars](https://github.com/ishaggarwal13/LeetCode/tree/master/3445-lexicographically-minimum-string-after-removing-stars) |
 | [3505-minimum-operations-to-make-elements-within-k-subarrays-equal](https://github.com/ishaggarwal13/LeetCode/tree/master/3505-minimum-operations-to-make-elements-within-k-subarrays-equal) |
+| [3947-maximum-number-of-items-from-sale-ii](https://github.com/ishaggarwal13/LeetCode/tree/master/3947-maximum-number-of-items-from-sale-ii) |
 | [3970-shortest-path-with-at-most-k-consecutive-identical-characters](https://github.com/ishaggarwal13/LeetCode/tree/master/3970-shortest-path-with-at-most-k-consecutive-identical-characters) |
 ## Merge Sort
 |  |
